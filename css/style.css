@@ -1,0 +1,265 @@
+@charset "UTF-8";
+/* 要素基本設定 */
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: #212121;
+  font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+  line-height: 1.4;
+  font-weight: 500;
+  background: #fff;
+  font-family: var(--main-font);
+  min-width: 375px;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: top;
+}
+a {
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: 0.4s;
+}
+/* 操作アクション */
+/* ホバー時 */
+@media (hover: hover) {
+  a:hover {
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+  a:active {
+    transition: 0.1s;
+    opacity: 0.6;
+  }
+  .aLink:hover {
+    opacity: 0.6;
+    transition: 0.4s;
+  }
+  .aLink:active {
+    transition: 0.1s;
+    opacity: 0.6;
+  }
+  .aLink:hover img {
+    transform: scale(1.05);
+    transition: 0.4s;
+  }
+  .aLink:active img {
+    transform: scale(1.05);
+    transition: 0.1s;
+  }
+}
+/* クリック（タップ）時 */
+@media (hover: none) {
+  a:active {
+    transition: 0.01s;
+    opacity: 0.6;
+  }
+  .aLink:active {
+    transition: 0.01s;
+    opacity: 0.6;
+  }
+  .aLink:active img {
+    transform: scale(1.05);
+    transition: 0.1s;
+  }
+}
+
+/* 共通クラス */
+.fade {
+  opacity: 0;
+  transition: opacity 3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fade.is_show {
+  opacity: 1;
+}
+.fade_in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.fade_in.is_show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.highlight {
+  padding: 0 0.3em;
+  background-image: linear-gradient(
+    0deg,
+    transparent 0.4em,
+    #fff13f 0.4em,
+    #fff13f 0.95em,
+    transparent 0.95em
+  );
+}
+/* リンク */
+.aLink {
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: 0.4s;
+}
+.aLink img {
+  transition: 0.4s;
+}
+.aLink div {
+  overflow: hidden;
+}
+.bold {
+  font-weight: bold;
+}
+/* フォント */
+:root {
+  --font-noto: "Noto Sans JP", sans-serif;
+  --font-zenkaku: "Zen Kaku Gothic New", sans-serif;
+  --font-jost: "Jost", sans-serif;
+  --font-oswald: "Oswald", sans-serif;
+}
+.fontNoto {
+  font-family: var(--font-noto);
+}
+.fontZenkaku {
+  font-family: var(--font-zenkaku);
+}
+.fontJost {
+  font-family: var(--font-jost);
+}
+.fontOswald {
+  font-family: var(--font-oswald);
+}
+/* 要素最大幅 */
+.mw {
+  width: min(84%, 630px);
+  margin: 0 auto;
+}
+.mws {
+  width: min(66%, 490px);
+  margin: 0 auto;
+}
+/* フレックス */
+.flex {
+  display: flex;
+}
+/* 非表示 */
+.none {
+  display: none;
+}
+/* テキストリンク */
+.tLink {
+  text-decoration: underline;
+  display: inline-block;
+}
+/* 注意書き */
+.notes {
+  display: block;
+  font-size: clamp(0.8rem, 2.15vw, 1.6rem);
+  font-weight: 400;
+  line-height: 2.375;
+  letter-spacing: 0.02em;
+}
+/* ボタン */
+.comMore__link {
+  position: relative;
+  overflow: hidden;
+  width: min(50%, 360px);
+  text-align: center;
+  line-height: 1.65;
+  margin: clamp(9px, 2vw, 15px) auto 0;
+  cursor: pointer;
+  padding: clamp(4px, 1vw, 8px) 0;
+  border-radius: clamp(15px, 4vw, 30px);
+  background: #fff;
+  transition: 0.4s;
+  border: clamp(1px, 0.26vw, 2px) solid #333333;
+}
+.comMore__link::before {
+  content: "店舗ページはこちら";
+  position: absolute;
+  inset: 0;
+  padding: clamp(4px, 1vw, 8px) 0;
+  line-height: 1.65;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 184, 238, 0.3),
+    rgba(58, 129, 196, 0.3) 50%,
+    rgba(55, 77, 223, 0.3)
+  );
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 0;
+}
+.comMore__link > * {
+  position: relative;
+  z-index: 1;
+}
+.comMore__link:hover {
+  opacity: 1;
+}
+.comMore__link:hover::before {
+  opacity: 1;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+footer .footer__link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+footer .footer__link__item {
+  border-right: 1px solid #212121;
+  padding: 0 22px;
+  line-height: 1;
+}
+
+footer .footer__link__item:first-child {
+  border-left: 1px solid #212121;
+}
+
+footer .footer__link__item--a {
+  font-size: 20px;
+  line-height: 1.8;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+footer .footer__copy {
+  font-size: 16px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding-bottom: calc(29px + 11.8666666667vw + 30px);
+  }
+
+  footer .footer__link {
+    margin-bottom: 10px;
+  }
+
+  footer .footer__link__item {
+    padding: 0 11px;
+  }
+
+  footer .footer__link__item--a,
+  footer .footer__copy {
+    font-size: 11px;
+  }
+}

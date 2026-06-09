@@ -1,647 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <!-- サイト情報 -->
-  <!-- <meta name="description" content="ディスクリプションテキスト"> -->
-  <!-- <title>サイトタイトル</title> -->
-  <!-- <link rel="canonical" href="正規アドレス"> -->
-  <!-- ファビコン -->
-  <link rel="icon" href="./img/favicon.ico">
-  <link rel="apple-touch-icon" href="./img/favicon.png">
-  <!-- CSS -->
-  <link rel="stylesheet" href="./destyle.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <!-- OGP -->
-  <!-- <meta property="og:url" content="サイトURL"> -->
-  <!-- <meta property="og:type" content="website">トップページ -->
-  <!-- <meta property="og:type" content="article">トップページ以外 -->
-  <!-- <meta property="og:title" content="サイトタイトル"> -->
-  <!-- <meta property="og:description" content="ディスクリプションテキスト"> -->
-  <!-- <meta property="og:site_name" content="サイトタイトル"> -->
-  <!-- <meta property="og:image" content="./img/ogpImg.png"> -->
-  <!-- <meta property="fb:app_id" content="アプリID"> -->
-  <!-- <meta name="twitter:card" content="summary_large_image"> -->
-  <!-- <meta name="twitter:site" content="ユーザー名"> -->
-  <!-- フォント -->
-
-  <!-- CDN -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" crossorigin="anonymous">
-</head>
-
-<body>
-  <div class="lpWrap">
-    <header class="header">
-      <div class="header__fixedCta flex">
-        <div class="header__fixedCta__btnWrap header__fixedCta__btnWrap--left">
-          <a href="#newPlan" class="header__fixedCta__btnWrap__link aLink" aria-label="アイレクス スポーツクラブの新料金プラン">
-            <span class="header__fixedCta__btnWrap__link__txt--top bold">
-              アイレクス スポーツクラブ
-            </span>
-
-            <span class="header__fixedCta__btnWrap__link__txt--bottom yellow bold">
-              新料金プランSTART
-            </span>
-          </a>
-        </div>
-
-        <div class="header__fixedCta__btnWrap header__fixedCta__btnWrap--right" aria-label="アイレクス スポーツクラブの店舗情報">
-          <a href="#shop" class="header__fixedCta__btnWrap__link aLink">
-            <span class="header__fixedCta__btnWrap__link__txt--top bold">
-              まずは見学や体験!
-            </span>
-
-            <span class="header__fixedCta__btnWrap__link__txt--bottom yellow bold">
-              お近くの店舗を探す
-            </span>
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <main class="main">
-      <article class="main__mv fade">
-        <h1 class="main__mv__imgWrap">
-          <img src="./img/MV.png" alt="Let's Meet キャンペーン" class="main__mv__imgWrap__img">
-        </h1>
-      </article>
-
-      <article class="main__plan">
-        <section class="main__plan__container main__plan__container--bgRight fade_in">
-          <h2 class="main__plan__container__ttl">
-            <img src="./img/plan1-ttl.png" alt="新春特別企画１" class="main__plan__container__ttl__img">
-          </h2>
-
-          <h3 class="main__plan__container__subTtl subTtl bold">
-            <span class="main__plan__container__subTtl--small subTtl--small">
-              ご入会の方から抽選で
-            </span>
-
-            <span class="main__plan__container__subTtl--span bold highlight subTtl--span">
-              豪華賞品プレゼント
-            </span>
-          </h3>
-
-          <div class="main__plan__container__imgWrap">
-            <img src="./img/plan1-present.png" alt="新春特別企画１商品画像"
-              class="main__plan__container__imgWrap__img main__plan__container__imgWrap__img--wide">
-          </div>
-
-          <h4 class="main__plan__container__bottomTtl bold red">
-            2026年の運試し!<br>
-            豪華賞品で幸多き1年に。
-          </h4>
-
-          <p class="main__plan__container__txt content_txt mws">
-            本キャンペーンでご入会の方から抽選で豪華賞品をプレゼントします。カニ、米、すき焼き肉、スマートウォッチなど、新年を祝うめでたい賞品をゲットしよう！
-          </p>
-
-          <small class="main__plan__container__smallTxt main__plan__container__smallTxt--left notes mws">
-            ※2月中旬頃に当選者の方へご連絡いたします。
-          </small>
-        </section>
-
-        <section class="main__plan__container main__plan__container--bgLeft fade_in">
-          <h2 class="main__plan__container__ttl">
-            <img src="./img/plan2-ttl.png" alt="新春特別企画２" class="main__plan__container__ttl">
-          </h2>
-
-          <h3 class="main__plan__container__subTtl  subTtl bold">
-            <span class="main__plan__container__subTtl--span highlight subTtl--span">
-              3日坊主
-            </span><br>
-
-            <span class="main__plan__container__subTtl--span highlight subTtl--span">
-              リプレイチャレンジ
-            </span>
-          </h3>
-
-          <div class="main__plan__container__imgWrap main__plan__container__imgWrap--tight">
-            <img src="./img/plan2-challenge.png" alt="新春特別企画２トレーニング画像" class="main__plan__container__imgWrap__img">
-          </div>
-
-          <h4 class="main__plan__container__bottomTtl main__plan__container__bottomTtl--high bold red">
-            3日坊主も繰り返せば、<br>
-            立派な習慣になる!
-          </h4>
-
-          <p class="main__plan__container__txt content_txt mws">
-            専用スタンプカードを配布。来館に応じてスタンプを付与します。達成度合いに応じて、プロテインなどをプレゼント。新しい年の新しいチャレンジを始めよう！
-          </p>
-        </section>
-
-        <section class="main__plan__container main__plan__container--bgRight fade_in">
-          <h2 class="main__plan__container__ttl">
-            <img src="./img/plan3-ttl.png" alt="新春特別企画３" class="main__plan__container__ttl">
-          </h2>
-
-          <h3 class="main__plan__container__subTtl main__plan__container__subTtl--server bold  subTtl">
-            <span class="main__plan__container__subTtl--small subTtl--small">
-              水素水&AIサプリメントサーバー
-            </span>
-
-            <span class="main__plan__container__subTtl--span highlight subTtl--span">
-              無料トライアル
-            </span>
-          </h3>
-
-          <div class="main__plan__container__imgWrap  main__plan__container__imgWrap--trial">
-            <img src="./img/plan3-trial.png" alt="新春特別企画３女性画像" class="main__plan__container__imgWrap__img">
-          </div>
-
-          <h4 class="main__plan__container__bottomTtl bold red main__plan__container__bottomTtl--high">
-            カラダの内側から、<br>
-            カラダを整えていく。
-          </h4>
-
-          <p class="main__plan__container__txt content_txt mws">
-            クラブに設置してある高濃度水素水サーバーに加えて、一人ひとりのカラダに合わせて最適なサプリメントを提供するサプリメントサーバーもご利用いただけます。
-          </p>
-
-          <div class="main__plan__container__trial flex">
-            <div class="main__plan__container__trial__imgWrap main__plan__container__trial__imgWrap--hydrogen">
-              <img src="./img/hydrogen.png" alt="水素水サーバー" class="main__plan__container__trial__imgWrap__img">
-            </div>
-
-            <div class="main__plan__container__trial__imgWrap main__plan__container__trial__imgWrap--supplement">
-              <img src="./img/supplement.png" alt="AIサプリメントサーバー" class="main__plan__container__trial__imgWrap__img">
-            </div>
-          </div>
-
-          <small class="main__plan__container__smallTxt notes">
-            ※画像は他店舗及びイメージです。実際の施設とは異なる場合がございます。
-          </small>
-        </section>
-      </article>
-
-      <article class="main__quality">
-        <h2 class="main__quality__ttl secTtl bold fade_in mws">
-          <span class="main__quality__ttl__txt--top secTtl--top">
-            楽しみながら続けられる理由
-          </span>
-
-          <span class="main__quality__ttl__txt--bottom secTtl--bottom">
-            アイレクスクオリティ
-          </span>
-        </h2>
-
-        <section class="main__quality__container fade_in mws">
-          <h3 class="main__quality__container__subTtl ilexBlue bold subTtl">
-            <span class="main__quality__container__subTtl--small subTtl--small">
-              スタッフがいるから
-            </span>
-
-            <span class="main__quality__container__subTtl--span highlight subTtl--span">
-              初めてでも安心できる!
-            </span>
-          </h3>
-
-          <div class="main__quality__container__imgWrap">
-            <img src="./img/trainer-img.png" alt="トレーナーサポート画像" class="main__quality__container__imgWrap__img">
-          </div>
-
-          <p class="main__quality__container__txt content_txt">
-            独自の3スタートレーナー制度で認められたトレーナーが安全に効果的な運動をサポート。ジムが初めてで不安な方も、安心してご利用いただけます。
-          </p>
-
-          <div class="main__quality__container__3starBox flex">
-            <div class="main__quality__container__3starBox__left">
-              <h4 class="main__quality__container__3starBox__left__ttl subFont ilexBlue">
-                3-Star Trainer<br>
-                System
-              </h4>
-
-              <p class="main__quality__container__3starBox__left__txt">
-                <span class="main__quality__container__3starBox__left__txt__span bold">
-                  3スタートレーナー制度
-                </span><br>
-                信頼の教育・認定システム
-              </p>
-            </div>
-
-            <div class="main__quality__container__3starBox__right">
-              <img src="./img/3star.png" alt="3スタートレーナー制度" class="main__quality__container__3starBox__right__img">
-            </div>
-          </div>
-        </section>
-
-        <section class="main__quality__container fade_in mws">
-          <h3 class="main__quality__container__subTtl ilexBlue bold subTtl">
-            <span class="main__quality__container__subTtl--small subTtl--small">
-              スパもサウナもあるから
-            </span>
-
-            <span class="main__quality__container__subTtl--span highlight subTtl--span">
-              整うこともできる!
-            </span>
-          </h3>
-
-          <div class="main__quality__container__gridWrap">
-            <div class="main__quality__container__gridWrap__imgWrap">
-              <img src="./img/spa1.png" alt="入浴する女性" class="main__quality__container__gridWrap__imgWrap__img">
-            </div>
-
-            <div class="main__quality__container__gridWrap__imgWrap">
-              <img src="./img/spa2.png" alt="浴室" class="main__quality__container__gridWrap__imgWrap__img">
-            </div>
-
-            <div class="main__quality__container__gridWrap__imgWrap">
-              <img src="./img/sauna.png" alt="サウナ" class="main__quality__container__gridWrap__imgWrap__img">
-            </div>
-          </div>
-
-          <p class="main__quality__container__txt content_txt main__quality__container__txt--low">
-            総合ジムならではの本格的なマシンジムやスタジオはもちろん、スパもサウナも完備。運動後も、運動しない日も、体を癒やすことが可能です。
-          </p>
-        </section>
-
-        <section class="main__quality__container fade_in mws">
-          <h3 class="main__quality__container__subTtl ilexBlue bold subTtl">
-            <span class="main__quality__container__subTtl--small subTtl--small">
-              プログラムが豊富だから
-            </span>
-
-            <span class="main__quality__container__subTtl--span subTtl--span highlight">
-              飽きずに楽しめる!!
-            </span>
-          </h3>
-
-          <div class="main__quality__container__gridWrap">
-            <div class="main__quality__container__gridWrap__imgWrap">
-              <img src="./img/exercise.png" alt="エクササイズ" class="main__quality__container__gridWrap__imgWrap">
-            </div>
-
-            <div class="main__quality__container__gridWrap__imgWrap">
-              <img src="./img/ubound.png" alt="ubound" class="main__quality__container__gridWrap__imgWrap">
-            </div>
-
-            <div class="main__quality__container__gridWrap__imgWrap">
-              <img src="./img/yoga.png" alt="ヨガ" class="main__quality__container__gridWrap__imgWrap">
-            </div>
-          </div>
-
-          <p class="main__quality__container__txt content_txt main__quality__container__txt--low">
-            いつでも楽しく体を動かせる多彩なスタジオプログラムで、初心者から上級者まで毎日飽きのこないフィットネスをお届けします。
-          </p>
-        </section>
-      </article>
-
-      <article class="main__newPlan" id="newPlan">
-        <h2 class="main__newPlan__ttl secTtl bold fade_in mws">
-          <span class="main__newPlan__ttl__txt--top secTtl--top">
-            総合スポーツクラブ
-          </span>
-
-          <span class="main__newPlan__ttl__txt--bottom secTtl--bottom">
-            新料金プラン
-          </span>
-        </h2>
-
-        <h3 class="main__newPlan__subTtl  bold fade_in">
-          さらにご利用しやすくなった<br>
-          新しい料金プランがスタートします。
-        </h3>
-
-        <small class="main__newPlan__smallTxt notes fade_in">
-          ※下記料金はアイレクス スポーツクラブGRANDE+24の場合となります。
-        </small>
-
-        <div class="main__newPlan__content mw fade_in">
-          <img src="./img/gym-spa.png" alt="ジム＆スパ会員" class="main__newPlan__content__img">
-        </div>
-
-        <div class="main__newPlan__content mw fade_in">
-          <img src="./img/entry.png" alt="エントリー会員" class="main__newPlan__content__img">
-        </div>
-
-        <div class="main__newPlan__content mw fade_in">
-          <img src="./img/standard.png" alt="スタンダード会員" class="main__newPlan__content__img">
-        </div>
-
-        <div class="main__newPlan__content mw fade_in">
-          <img src="./img/prime.png" alt="プライム会員" class="main__newPlan__content__img">
-        </div>
-
-        <div class="main__newPlan__content mw fade_in">
-          <img src="./img/company.png" alt="カンパニー会員" class="main__newPlan__content__img">
-        </div>
-
-        <p class="main__newPlan__attention fade_in">
-          ※キャンペーン適用は6ヶ月以上の在籍が必要です。<br>
-          ※表記の金額はすべて税込になります。<br>
-          ※カンパニー会員は1口につき無記名カード1枚発行。<br>
-          1口で同時2名以上のご利用はできません。
-        </p>
-      </article>
-
-      <article class="main__facility">
-        <h2 class="main__facility__ttl secTtl bold fade_in mws">
-          <span class="main__facility__ttl__txt--top secTtl--top">
-            自分らしく楽しめる<br>
-            多彩なコンテンツ
-          </span>
-
-          <span class="main__facility__ttl__txt--bottom secTtl--bottom">
-            施設のご案内
-          </span>
-        </h2>
-
-        <div class="main__facility__slider fade_in">
-          <div class="main__facility__slider__swiper swiper">
-            <div class="main__facility__slider__swiper__wrapper swiper-wrapper">
-              <!-- slide 1 -->
-              <div class="main__facility__slider__swiper__wrapper__slide swiper-slide">
-                <figure class="main__facility__slider__swiper__wrapper__slide__figure">
-                  <img src="./img/powderRoom.png" alt="パウダールーム"
-                    class="main__facility__slider__swiper__wrapper__slide__figure__img">
-                </figure>
-
-                <h3 class="main__facility__slider__swiper__wrapper__slide__ttl bold ilexBlue">
-                  パウダールーム
-                </h3>
-
-                <p class="main__facility__slider__swiper__wrapper__slide__txt">
-                  落ち着いて身だしなみを整えられます。<br>
-                  明るく清潔感があり、<br>
-                  ゆとりを持った設計です。
-                </p>
-              </div>
-
-              <!-- slide 2 -->
-              <div class="main__facility__slider__swiper__wrapper__slide swiper-slide">
-                <figure class="main__facility__slider__swiper__wrapper__slide__figure">
-                  <img src="./img/front.png" alt="フロント"
-                    class="main__facility__slider__swiper__wrapper__slide__figure__img">
-                </figure>
-
-                <h3 class="main__facility__slider__swiper__wrapper__slide__ttl bold ilexBlue">
-                  フロント
-                </h3>
-
-                <p class="main__facility__slider__swiper__wrapper__slide__txt">
-                  フロントではコンシェルジュが<br>
-                  会員様のクラブライフを<br>
-                  きめ細やかにサポート。
-                </p>
-              </div>
-
-              <!-- slide 3 -->
-              <div class="main__facility__slider__swiper__wrapper__slide swiper-slide">
-                <figure class="main__facility__slider__swiper__wrapper__slide__figure">
-                  <img src="./img/gym.png" alt="ジムエリア"
-                    class="main__facility__slider__swiper__wrapper__slide__figure__img">
-                </figure>
-
-                <h3 class="main__facility__slider__swiper__wrapper__slide__ttl bold ilexBlue">
-                  ジムエリア
-                </h3>
-
-                <p class="main__facility__slider__swiper__wrapper__slide__txt">
-                  有酸素運動や、多様な筋力トレーニング、<br>
-                  ストレッチ専用のマシンなどが<br>
-                  豊富に揃っています。<br>
-                  利用方法はトレーナーが丁寧にご案内。
-                </p>
-              </div>
-
-              <!-- slide 4 -->
-              <div class="main__facility__slider__swiper__wrapper__slide swiper-slide">
-                <figure class="main__facility__slider__swiper__wrapper__slide__figure">
-                  <img src="./img/studio.png" alt="スタジオエリア"
-                    class="main__facility__slider__swiper__wrapper__slide__figure__img">
-                </figure>
-
-                <h3 class="main__facility__slider__swiper__wrapper__slide__ttl bold ilexBlue">
-                  スタジオエリア
-                </h3>
-
-                <p class="main__facility__slider__swiper__wrapper__slide__txt">
-                  人気のダンスやホットヨガ、<br>
-                  低強度なストレッチなど<br>
-                  多彩なプログラムをご用意。<br>
-                  音響や演出照明にもこだわった空間。
-                </p>
-              </div>
-
-              <!-- slide 5 -->
-              <div class="main__facility__slider__swiper__wrapper__slide swiper-slide">
-                <figure class="main__facility__slider__swiper__wrapper__slide__figure">
-                  <img src="./img/rounge.png" alt="コミュニケーションラウンジ"
-                    class="main__facility__slider__swiper__wrapper__slide__figure__img">
-                </figure>
-
-                <h3 class="main__facility__slider__swiper__wrapper__slide__ttl bold ilexBlue">
-                  コミュニケーションラウンジ
-                </h3>
-
-                <p class="main__facility__slider__swiper__wrapper__slide__txt">
-                  ホッと一息つけるカフェラウンジ。<br>
-                  フリーのWi-Fi環境も完備。
-                </p>
-              </div>
-
-              <!-- slide 6 -->
-              <div class="main__facility__slider__swiper__wrapper__slide swiper-slide">
-                <figure class="main__facility__slider__swiper__wrapper__slide__figure">
-                  <img src="./img/lockerRoom.png" alt="ロッカールーム"
-                    class="main__facility__slider__swiper__wrapper__slide__figure__img">
-                </figure>
-
-                <h3 class="main__facility__slider__swiper__wrapper__slide__ttl bold ilexBlue">
-                  ロッカールーム
-                </h3>
-
-                <p class="main__facility__slider__swiper__wrapper__slide__txt">
-                  間接照明を用いて<br>
-                  落ち着いた雰囲気を醸し出しています。
-                </p>
-              </div>
-
-              <!-- slide 7 -->
-              <div class="main__facility__slider__swiper__wrapper__slide swiper-slide">
-                <figure class="main__facility__slider__swiper__wrapper__slide__figure">
-                  <img src="./img/showerRoom.png" alt="シャワーブース"
-                    class="main__facility__slider__swiper__wrapper__slide__figure__img">
-                </figure>
-
-                <h3 class="main__facility__slider__swiper__wrapper__slide__ttl bold ilexBlue">
-                  シャワールーム
-                </h3>
-
-                <p class="main__facility__slider__swiper__wrapper__slide__txt">
-                  1人で気兼ねなく使える<br>
-                  個室のシャワーブースです。
-                </p>
-              </div>
-            </div>
-
-            <!-- navigation -->
-            <div
-              class="main__facility__slider__swiper__button main__facility__slider__swiper__button--prev swiper-button-prev">
-            </div>
-            <div
-              class="main__facility__slider__swiper__button main__facility__slider__swiper__button--next swiper-button-next">
-            </div>
-          </div>
-        </div>
-
-        <p class="main__facility__attention fade_in">
-          ※画像はアイレクス スポーツクラブ豊橋ミラまち+24です。<br>
-          他店舗の施設とは異なる場合がございます。
-        </p>
-      </article>
-
-      <article class="main__shop" id="shop">
-        <h2 class="main__shop__ttl secTtl bold fade_in mws">
-          <span class="main__shop__ttl__txt--top secTtl--top">
-            アイレクススポーツクラブ
-          </span>
-
-          <span class="main__shop__ttl__txt--bottom secTtl--bottom">
-            店舗情報
-          </span>
-        </h2>
-
-        <ul class="main__shop__list">
-          <li class="main__shop__list__item fade_in">
-            <h3 class="main__shop__list__item__ttl bold ilexBlue">
-              アイレクススポーツクラブ春日井+24
-            </h3>
-
-            <p class="main__shop__list__item__add">
-              〒486-0851<br>
-              春日井市篠木町7丁目43-6
-            </p>
-
-            <div class="main__shop__list__item__linkWrap bold">
-              <a href="https://www.ilex-sports.com/kasugai/"
-                class="main__shop__list__item__linkWrap__link comMore__link" target="_blank" rel="noopener noreferrer">
-                店舗ページはこちら
-              </a>
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- サイト情報 -->
+    <!-- <meta name="description" content="ディスクリプションテキスト"> -->
+    <!-- <title>サイトタイトル</title> -->
+    <!-- <link rel="canonical" href="正規アドレス"> -->
+    <!-- ファビコン -->
+    <link rel="icon" href="./img/favicon.ico" />
+    <link rel="apple-touch-icon" href="./img/favicon.png" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./destyle.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- OGP -->
+    <!-- <meta property="og:url" content="サイトURL"> -->
+    <!-- <meta property="og:type" content="website">トップページ -->
+    <!-- <meta property="og:type" content="article">トップページ以外 -->
+    <!-- <meta property="og:title" content="サイトタイトル"> -->
+    <!-- <meta property="og:description" content="ディスクリプションテキスト"> -->
+    <!-- <meta property="og:site_name" content="サイトタイトル"> -->
+    <!-- <meta property="og:image" content="./img/ogpImg.png"> -->
+    <!-- <meta property="fb:app_id" content="アプリID"> -->
+    <!-- <meta name="twitter:card" content="summary_large_image"> -->
+    <!-- <meta name="twitter:site" content="ユーザー名"> -->
+    <!-- フォント -->
+
+    <!-- CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header class="header"></header>
+
+    <main class="main"></main>
+
+    <footer class="footer">
+      <div>
+        <ul class="footer__link">
+          <li class="footer__link__item">
+            <a
+              class="footer__link__item--a"
+              href="https://www.ilex-sports.com/company/"
+              >企業情報</a
+            >
           </li>
 
-          <li class="main__shop__list__item fade_in">
-            <h3 class="main__shop__list__item__ttl bold ilexBlue">
-              アイレクススポーツクラブPREMIA+24
-            </h3>
-
-            <p class="main__shop__list__item__add">
-              〒471-0027<br>
-              豊田市喜多町2-160 コモ・スクエア3F
-            </p>
-
-            <div class="main__shop__list__item__linkWrap bold">
-              <a href="https://www.ilex-sports.com/premia/" class="main__shop__list__item__linkWrap__link comMore__link"
-                target="_blank" rel="noopener noreferrer">
-                店舗ページはこちら
-              </a>
-            </div>
+          <li class="footer__link__item">
+            <a
+              class="footer__link__item--a"
+              href="https://www.ilex-sports.com/privacy/"
+              >個人情報保護方針</a
+            >
           </li>
 
-          <li class="main__shop__list__item fade_in">
-            <h3 class="main__shop__list__item__ttl bold ilexBlue">
-              アイレクススポーツクラブGRANDE+24
-            </h3>
-
-            <p class="main__shop__list__item__add">
-              〒442-0029<br>
-              豊川市末広通3-45-1
-            </p>
-
-            <div class="main__shop__list__item__linkWrap bold">
-              <a href="https://www.ilex-sports.com/grande/" class="main__shop__list__item__linkWrap__link comMore__link"
-                target="_blank" rel="noopener noreferrer">
-                店舗ページはこちら
-              </a>
-            </div>
-          </li>
-
-          <li class="main__shop__list__item fade_in">
-            <h3 class="main__shop__list__item__ttl bold ilexBlue">
-              アイレクススポーツクラブ豊橋ミラまち+24
-            </h3>
-
-            <p class="main__shop__list__item__add">
-              〒441-8151<br>
-              豊橋市曙町字松並101-9 コモンステージミラまち内
-            </p>
-
-            <div class="main__shop__list__item__linkWrap bold">
-              <a href="https://www.ilex-sports.com/toyohashi/"
-                class="main__shop__list__item__linkWrap__link comMore__link" target="_blank" rel="noopener noreferrer">
-                店舗ページはこちら
-              </a>
-            </div>
-          </li>
-
-          <li class="main__shop__list__item fade_in">
-            <h3 class="main__shop__list__item__ttl bold ilexBlue">
-              アイレクススポーツクラブ田原+24
-            </h3>
-
-            <p class="main__shop__list__item__add">
-              〒441-3421<br>
-              田原市田原町萱町1番地 セントファーレ内
-            </p>
-
-            <div class="main__shop__list__item__linkWrap bold">
-              <a href="https://www.ilex-sports.com/tahara/" class="main__shop__list__item__linkWrap__link comMore__link"
-                target="_blank" rel="noopener noreferrer">
-                店舗ページはこちら
-              </a>
-            </div>
+          <li class="footer__link__item">
+            <a
+              class="footer__link__item--a"
+              href="https://ilex-sports.jp/recruit/"
+              target="_blank"
+              >採用情報</a
+            >
           </li>
         </ul>
-      </article>
-    </main>
-
-    <footer class="footer fade_in">
-      <ul class="footer__list flex">
-        <li class="footer__list__item">
-          <a href="https://www.ilex-sports.com/company/" class="footer__list__item__link" target="_blank"
-            rel="noopener noreferrer">
-            企業情報
-          </a>
-        </li>
-
-        <li class="footer__list__item">
-          <a href="https://www.ilex-sports.com/privacy/" class="footer__list__item__link" target="_blank"
-            rel="noopener noreferrer">
-            個人情報保護方針
-          </a>
-        </li>
-
-        <li class="footer__list__item">
-          <a href="https://ilex-sports.com/recruit/" class="footer__list__item__link" target="_blank"
-            rel="noopener noreferrer">
-            採用情報
-          </a>
-        </li>
-      </ul>
-
-      <small class="footer__copyright">
-        Copyright &copy; 2025 ILEX SPORTS LIFE INC. All Rights Reserved.
-      </small>
+        <small class="footer__copy"
+          >Copyright© 2026 ILEX SPORTS LIFE INC. All Rights Reserved.</small
+        >
+      </div>
     </footer>
-  </div>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" crossorigin="anonymous"></script>
-  <!-- Original -->
-  <script src="./script/main.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Original -->
+    <script src="./script/main.js"></script>
+  </body>
 </html>
