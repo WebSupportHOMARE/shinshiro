@@ -245,11 +245,11 @@ main .sectionInner {
   margin: 0rem auto 2rem;
 }
 
-#lineSec {
-  position: relative;
-}
 #lineSec h2 {
   margin-bottom: 0;
+}
+#lineSec {
+  position: relative;
 }
 #lineSec .line_btn {
   position: absolute;
