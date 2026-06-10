@@ -1,4 +1,3 @@
-<?php require_once('../include/function.php'); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#">
@@ -34,13 +33,11 @@
 <link rel="stylesheet" href="./shared/css/destyle.css">
 <link rel="stylesheet" href="./shared/css/swiper-bundle.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
-<link rel="stylesheet" href="./shared/css/style.css?<?php echo date('Ymd-Hi'); ?>">
+<link rel="stylesheet" href="./shared/css/style.css">
 
-<? include '../inc/head-gtm.php'; ?>
 </head>
 
 	<body>
-	<? include '../inc/body-gtm.php'; ?>
 
 		<header>
 			<div class="tb-pc header-pc">
@@ -58,7 +55,7 @@
 							<li><a href="./#price-area">料金<br>プラン</a></li>
 							<li><a href="./#voice-anc">お客様<br>の声</a></li>
 							<li><a href="./#qa-area">よくある<br>ご質問</a></li>
-							<li><a href="<?php lesson(); ?>">レッスン<br>日程</a></li>
+							<li><a href="./schedule/">レッスン<br>日程</a></li>
 							<li><a href="./#shopinfo-anc">店舗<br>情報</a></li>
 							
 						</ul>
@@ -82,7 +79,7 @@
 						<a href="./"><img src="./shared/img/img_light-logo.svg" alt="アイレクス・ライト+24 新城"	></a>
 					</h1>
 					<div class="left-header-icon">
-						<a href="<?php lesson(); ?>">
+						<a href="./schedule/">
 							<img src="./shared/img/img_header-icon-lesson-sp.svg" alt="レッスンスケジュール">
 						</a>
 						<a href="https://www.slim-sng.jp/slim/web/d/sng/member_login/?c=Pq7Hr8dEzU&f=00026" target="_blank" class="">
@@ -100,7 +97,7 @@
 						<li><a href="./#voice-anc">お客様の声<i class="arrow"></i></a></li>
 						<li><a href="./#qa-area">よくあるご質問<i class="arrow"></i></a></li>
 						<li><a href="./#news-area">お知らせ<i class="arrow"></i></a></li>
-						<li><a href="<?php lesson(); ?>">レッスン日程<i class="arrow"></i></a></li>
+						<li><a href="./schedule/">レッスン日程<i class="arrow"></i></a></li>
 						<li><a href="./#shopinfo-anc">店舗情報<i class="arrow"></i></a></li>
 						<li><a href="./reservation">施設見学・体験申し込み<i class="arrow"></i></a></li>
 						<li class="border-none"><a href="./contact">お問い合わせはこちら<i class="arrow"></i></a></li>
@@ -165,29 +162,9 @@
 			<div id="campaign-area">
 				<div class="inner">
 
-					<div>
-						<? include '../inc/count/count.php'; ?>
-					</div>
-					<style>
-						.title{
-							font-size:20px;
-						}
-					</style>
 
 					<div class="op-bnr">
 
-                        <?php foreach (slider('毎月のキャンペーン') as $slider) : ?>
-                        <p>
-                            <a href="https://www.slim-sng.jp/slim/web/d/sng/web_admission_procedure/?c=Pq7Hr8dEzU&f=00026" target="_blank">
-                                <picture>
-                                    <?php if ($slider['sp_src']) : ?>
-                                    <source media="(max-width:575px)" srcset="<?php echo $slider['sp_src'] ?>">
-                                    <?php endif; ?>
-                                    <img src="<?php echo $slider['pc_src'] ?>" alt="<?php echo $slider['alt'] ?>">
-                                </picture>
-                            </a>
-                        </p>
-                        <?php endforeach; ?>
 
                         <p style="margin-top:2rem;">
                             <a href="/lp/diet/">
@@ -599,7 +576,7 @@
 							</a>
 						</div> -->
 						<div class="cmn-btn01">
-							<a href="<?php lesson(); ?>">
+							<a href="./schedule/">
 								<img src="./shared/img/yoga_btn02_2510.png" alt="レッスンスケジュール（10月公開予定）">
 							</a>
 						</div>
@@ -1062,18 +1039,6 @@
 					</p>
 
 					<div class="op-bnr">
-                        <?php foreach (slider('毎月のキャンペーン') as $slider) : ?>
-                        <p>
-                            <a href="https://www.slim-sng.jp/slim/web/d/sng/web_admission_procedure/?c=Pq7Hr8dEzU&f=00026" target="_blank">
-                                <picture>
-                                    <?php if ($slider['sp_src']) : ?>
-                                    <source media="(max-width:575px)" srcset="<?php echo $slider['sp_src'] ?>">
-                                    <?php endif; ?>
-                                    <img src="<?php echo $slider['pc_src'] ?>" alt="<?php echo $slider['alt'] ?>">
-                                </picture>
-                            </a>
-                        </p>
-                        <?php endforeach; ?>
 					</div>
 
 					<div class="btn-area">
@@ -1280,19 +1245,42 @@
 				<div class="inner">
 					<div class="scroll__inner" data-simplebar data-simplebar-auto-hide="false">
 						<ul>
-							<?php foreach (voice() as $voice) : ?>
 							<li>
-								<p class="date"><?php echo $voice['date']; ?></p>
-								<p class="text"><?php echo $voice['text']; ?></p>
+								<p class="date">2026年5月</p>
+								<p class="text">スタッフの方がとても親切で、初めてでも安心して通えています。マシンの使い方も丁寧に教えていただき、楽しく続けられています。</p>
 								<div class="tag">
-								<p><?php echo $voice['gender']; ?></p>
-								<p><?php echo $voice['age']; ?></p>
-								<?php foreach ($voice['option'] as $option) : ?>
-										<p><?php echo $option; ?></p>
-								<?php endforeach; ?>
+									<p>女性</p>
+									<p>30代</p>
+									<p>ジム</p>
 								</div>
 							</li>
-							<?php endforeach; ?>
+							<li>
+								<p class="date">2026年5月</p>
+								<p class="text">ホットヨガのクラスが充実していて、毎週通うのが楽しみです。インストラクターの指導がわかりやすく、体の変化を実感しています。</p>
+								<div class="tag">
+									<p>女性</p>
+									<p>40代</p>
+									<p>ヨガ</p>
+								</div>
+							</li>
+							<li>
+								<p class="date">2026年4月</p>
+								<p class="text">24時間利用できるのがとても便利です。仕事帰りの遅い時間でも気軽に立ち寄れます。マシンが最新で使いやすいです。</p>
+								<div class="tag">
+									<p>男性</p>
+									<p>40代</p>
+									<p>ジム</p>
+								</div>
+							</li>
+							<li>
+								<p class="date">2026年4月</p>
+								<p class="text">シニアの方にも安心のトレーニングができる環境が整っています。スタッフがいつも明るく声をかけてくれるので通いやすいです。</p>
+								<div class="tag">
+									<p>男性</p>
+									<p>60代</p>
+									<p>ジム</p>
+								</div>
+							</li>
 						</ul>
 					</div>
 					<p class="cmn-note01">※アイレクス・ライト+24各店の会員様からのお声</p>
@@ -1552,21 +1540,21 @@
 						<span class="jp">お知らせ</span>
 					</h2>
 					<dl>
-						<?php foreach (news() as $news) : ?>
 						<div>
-							<dt><?php echo $news['dt']; ?></dt>
-							<dd class="news-date"><time datetime="<?php echo $news['time']; ?>"><?php echo $news['date']; ?></time></dd>
-							<dd>
-							<?php if ($news['href']) : ?>
-								<a href="<?php echo $news['href']; ?>" <?php echo $news['target']; ?>>
-								<?php endif; ?>
-								<?php echo $news['text']; ?>
-								<?php if ($news['href']) : ?>
-								<i class="arrow"></i></a>
-							<?php endif; ?>
-							</dd>
+							<dt>お知らせ</dt>
+							<dd class="news-date"><time datetime="2026-06-01">2026.06.01</time></dd>
+							<dd>6月のキャンペーン情報を更新しました。</dd>
 						</div>
-						<?php endforeach; ?>
+						<div>
+							<dt>お知らせ</dt>
+							<dd class="news-date"><time datetime="2026-05-01">2026.05.01</time></dd>
+							<dd>5月のレッスンスケジュールを公開しました。</dd>
+						</div>
+						<div>
+							<dt>お知らせ</dt>
+							<dd class="news-date"><time datetime="2026-04-01">2026.04.01</time></dd>
+							<dd>新しいプログラムが追加されました。</dd>
+						</div>
 					</dl>
 				</div>
 			</section>
@@ -1903,7 +1891,7 @@
 					<li><a href="https://www.ilex-sports.com/privacy/">個人情報保護方針</a></li>
 					<li><a href="https://ilex-sports.jp/recruit/" target="_blank">採用情報</a></li>
 				</ul>
-				<p class="tac footer-copy">Copyright&copy; <?php echo date("Y") ?> ILEX SPORTS LIFE INC. All Rights Reserved.</p>
+				<p class="tac footer-copy">Copyright&copy; 2026 ILEX SPORTS LIFE INC. All Rights Reserved.</p>
 			</div>
 		</footer>
 
