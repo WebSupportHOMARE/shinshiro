@@ -2195,17 +2195,17 @@ section:has(.cmn-swiper) {
 voice-area
 ---------------------------------------- */
 #voice-area {
-  padding: 100px 0 120px;
-  background: #fff;
+  padding: 100px 0 130px;
+  background: #eeebe5;
   margin-bottom: 158px;
   @include mq-down(md) {
-    padding: 60px 0 60px;
+    padding: 60px 0 70px;
     margin-bottom: 53.5px;
   }
   .cmn-ttl01 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     @include mq-down(md) {
-      margin-bottom: 25px;
+      margin-bottom: 24px;
     }
   }
 }
@@ -2215,30 +2215,31 @@ voice-area
   font-weight: 700;
   line-height: 1.7;
   letter-spacing: 0.02em;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   @include mq-down(md) {
     font-size: 1.6rem;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
 }
 .voice-area__inner {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
   display: flex;
   flex-direction: column;
-  row-gap: 80px;
+  row-gap: 90px;
   @include mq-down(md) {
-    row-gap: 50px;
+    padding: 0 16px;
+    row-gap: 55px;
   }
 }
 .voice-area__block {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 50px;
   @include mq-down(md) {
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
   }
   &--rev {
     flex-direction: row-reverse;
@@ -2251,55 +2252,51 @@ voice-area
   flex: 1;
   min-width: 0;
   position: relative;
-  padding-top: 36px;
+  padding-top: 40px;
+  padding-bottom: 36px;
   @include mq-down(md) {
     width: 100%;
-    padding-top: 24px;
+    padding-top: 28px;
+    padding-bottom: 26px;
   }
 }
 .voice-area__quote-icon {
   position: absolute;
   top: 0;
-  left: 0;
-  font-size: 7rem;
+  left: 4px;
+  font-size: 7.5rem;
   line-height: 1;
   color: var(--main_green);
   font-family: Georgia, "Times New Roman", serif;
   @include mq-down(md) {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 }
 .voice-area__card {
   background: #fff;
-  border-radius: 12px;
-  padding: 28px 30px 30px;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  border-radius: 16px;
+  padding: 28px 30px 28px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   position: relative;
   &::after {
     content: "";
-    width: 30px;
-    height: 48px;
+    width: 28px;
+    height: 44px;
     background: url("../img/speech_bubble.svg") no-repeat center / cover;
     position: absolute;
-    left: 20px;
-    bottom: -30px;
-    filter: drop-shadow(0 6px 3px rgba(33, 33, 33, 0.08));
+    left: 24px;
+    bottom: -38px;
+    filter: drop-shadow(0 6px 3px rgba(33, 33, 33, 0.06));
     will-change: filter;
-    z-index: -1;
-  }
-  .voice-area__block--rev & {
-    &::after {
-      left: auto;
-      right: 20px;
-      transform: scaleX(-1);
-    }
   }
   @include mq-down(md) {
-    padding: 16px 18px 18px;
+    padding: 18px 18px 18px;
+    border-radius: 12px;
     &::after {
-      width: 15px;
-      height: 24px;
-      bottom: -15px;
+      width: 18px;
+      height: 28px;
+      bottom: -24px;
+      left: 16px;
     }
   }
 }
@@ -2311,17 +2308,17 @@ voice-area
   span {
     font-size: 2rem;
     font-weight: 700;
-    background: linear-gradient(transparent 55%, #f5ee6e 55%);
+    background: linear-gradient(transparent 60%, #f5ee6e 60%);
     padding: 0 2px;
     @include mq-down(md) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
     }
   }
 }
 .voice-area__list {
   display: flex;
   flex-direction: column;
-  row-gap: 12px;
+  row-gap: 10px;
   @include mq-down(md) {
     row-gap: 8px;
   }
@@ -2331,23 +2328,23 @@ voice-area
   align-items: flex-start;
   gap: 10px;
   @include mq-down(md) {
-    gap: 6px;
+    gap: 8px;
   }
 }
 .voice-area__person-icon {
   flex-shrink: 0;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: #d9d9d9;
+  background: #c8d8e8;
   position: relative;
   overflow: hidden;
   &::before {
     content: "";
-    width: 12px;
-    height: 12px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
-    background: #a5a5a5;
+    background: #7da6c8;
     position: absolute;
     top: 4px;
     left: 50%;
@@ -2355,47 +2352,48 @@ voice-area
   }
   &::after {
     content: "";
-    width: 20px;
-    height: 14px;
-    border-radius: 10px 10px 0 0;
-    background: #a5a5a5;
+    width: 22px;
+    height: 15px;
+    border-radius: 11px 11px 0 0;
+    background: #7da6c8;
     position: absolute;
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
   }
   @include mq-down(md) {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     &::before {
-      width: 9px;
-      height: 9px;
+      width: 10px;
+      height: 10px;
       top: 3px;
     }
     &::after {
-      width: 15px;
-      height: 10px;
+      width: 17px;
+      height: 12px;
     }
   }
 }
 .voice-area__text {
-  font-size: 1.6rem;
-  line-height: 1.65;
-  background: #f5f5f5;
+  font-size: 1.5rem;
+  line-height: 1.7;
+  background: #f5f5f0;
   border-radius: 8px;
   padding: 10px 14px;
+  flex: 1;
   @include mq-down(md) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 8px 10px;
     border-radius: 6px;
   }
 }
 .voice-area__illust {
-  width: 260px;
+  width: 280px;
   flex-shrink: 0;
   @include mq-down(md) {
-    width: 65%;
-    max-width: 260px;
+    width: 70%;
+    max-width: 240px;
     margin: 0 auto;
   }
   img {
