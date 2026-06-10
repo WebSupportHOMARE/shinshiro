@@ -1,0 +1,336 @@
+
+@import url(../../shared/css/reset.css);
+
+/* ===============================================
+全体スタイル
+=============================================== */
+/* --- カラーコード --- */
+$base: #333333;
+$white:#fff;
+$light:#aed052;
+
+html {
+  font-family: YakuHanJP,"Noto Sans JP", "Hiragino Kaku Gothic Pro", "Hiragino Sans", "游ゴシック体", YuGothic, "游ゴシック", Meiryo, sans-serif;
+  font-feature-settings: "palt";
+  letter-spacing: 2px;
+  color:$base;
+}
+
+.tac{
+  text-align: center;
+}
+
+small{
+  display: block;
+  font-size: 10px;
+}
+
+img{
+  width: 100%;
+  vertical-align:top;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.spNone{
+  display: block;
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.pcNone{
+  display: none;
+  @media (max-width: 767px) {
+    display: block;
+  }
+}
+
+.container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1{
+    max-width: 170px;
+}
+
+h2 {
+  padding-bottom: 30px;
+  font-size: 23px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  strong{
+    padding-bottom: 0.25em;
+    font-size: 1.6em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    display: block;
+  }
+  &.hor{
+  padding-right: 0.3em;
+  display: inline;
+  }
+}
+
+
+/* ===============================================
+header
+=============================================== */
+header{
+    background: $light;
+}
+header .header-top .container {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  justify-content: center;
+  @media (max-width: 767px) {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+  }
+}
+
+/* ===============================================
+contents
+=============================================== */
+/* main */  
+#form{
+    section{
+        /*background: #ededed;*/
+        padding: 3rem 0rem;
+        @media (max-width: 767px) {
+            padding: 2rem 1rem;
+        }
+    }
+    .contact{
+        background: #fff;
+        max-width: 700px;
+        margin: 0 auto;
+        border-radius: 20px;
+        @media (max-width: 767px) {
+            border-radius: 10px;
+        }
+
+        ul{
+            padding: 1rem 0rem;
+            @media (max-width: 767px) {
+                padding: 1rem 1.5rem;
+            }
+            li{
+                max-width: 600px;
+                margin: 1.4rem auto 0;
+                @media (max-width: 767px) {
+                    margin-top: 1.2rem;
+                }
+                textarea{
+                    height: 7em;
+                    line-height: 1.5em;
+                }
+                [type="radio"],
+                [type="checkbox"]{
+                    background: inherit;
+                    border: inherit;
+                    border-radius: inherit;
+                    width: auto;
+                }
+                input{
+                    &.date{
+                        width: 4rem;
+                    }
+                    &.input{
+                        width: 35%;
+                        @media (max-width: 767px) {
+                            width: 100%;
+                        }
+                    }
+                }
+                small{
+                    display: block;
+                    margin-top: 0.6rem;
+                    line-height: 1.5em;
+                }
+            }
+            .ttl{
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                + span{
+                    display: block;
+                }
+            }
+            .required{
+                line-height: 1;
+                font-size: 0.8rem;
+                color: #ffffff;
+                margin-left: 1em;
+                padding: 0.25em 0.5em 0.25em 0.5em;
+                background: #ee0000;
+            }
+        }
+    }
+    .submit{
+        padding: 1rem 0rem 2rem;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 1em;
+        background-color: #eb6031;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1.3rem;
+        border: none;
+        @media (max-width: 767px) {
+            width: 90%;
+        }
+    }
+    .form-text{
+        max-width: 700px;
+        margin: 0rem auto;
+        line-height: 1.6rem;
+        @media (max-width: 767px) {
+            font-size: 0.9rem;
+            line-height: 1.4rem;
+        }
+        .privacy{
+            text-decoration: underline;
+            &:hover{
+                color:blue;
+            }
+        }
+        &_thanks{
+            text-align: center;
+        }
+    }
+    
+    .radiocheck {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .3em 2em;
+        border: none;
+        margin-top:1rem;
+        @media (max-width: 767px) {
+            gap: 0.7em 1em;
+        }
+        label{
+            display: flex;
+            align-items: center;
+            gap: 0 .5em;
+            position: relative;
+            cursor: pointer;
+            &:before,
+            &:has(:checked)::after{
+                border-radius: 50%;
+                content: '';
+            }
+            &:before{
+                width: 25px;
+                height: 25px;
+                background-color: #ededed;
+            }
+            &:after{
+                position: absolute;
+                top: 50%;
+                left: 13px;
+                transform: translate(-50%, -50%);
+                width: 16px;
+                height: 16px;
+                background-color: #2589d0;
+            }
+        }
+        input{
+            display: none;
+        }
+    }
+
+}
+
+#form .ttl + span,
+#form li input,
+#form li textarea,
+#form li select {
+  width: 100%;
+  line-height: 1.15;
+  margin-top: 10px;
+  padding: 15px;
+  background: #ededed;
+  //border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+/*テキストエリア 備考欄文字数制限*/
+.TextareaWrapper {
+  position: relative;
+}
+
+
+.CharCounter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #898989;
+}
+
+/* ===============================================
+footer
+=============================================== */
+footer{
+    .copyright{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        font-size: 15px;
+        line-height: 24px;
+        text-align: center;
+        background-color: #000;
+    }
+    .map{
+        iframe{
+            width: 100%;
+        }
+    }
+    ul.link{
+        padding-top: 16px;
+        padding-bottom: 16px;
+        color: #fff;
+        font-size: 13px;
+        background-color: #4c4c4c;
+        justify-content: center;
+        li{
+            padding-left: 30px;
+            padding-right: 30px;
+            border-right: 1px solid #fff;
+            @media (max-width: 767px) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            &:last-child{
+                border-right: unset;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+# BASIC認証
+AuthUserFile /home/xs275689/ilex-light.com/public_html/shinshiro/.htpasswd
+AuthName "Input ID and Password."
+AuthType Basic
+require valid-user
