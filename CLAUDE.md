@@ -71,6 +71,7 @@ shinshiro/
 ### クラス命名
 
 - 全タグに **BEM** でクラス名を付与する
+- main**inner**wrapなど
 
 ### HTML
 
@@ -106,3 +107,43 @@ Prepros を使用。`style.scss` を保存すると自動で `style.css` が生�
 - 過度なabsolute禁止
 - 保守性を優先
 - HTMLとSCSSを分けて出力
+
+  # コーディングルール
+
+  ## Figmaデザイン実装ルール
+
+  ### サイズ・スペーシング
+  - Figma MCPで取得した数値をpxそのまま使用すること
+
+  - 余白やサイズはpx,フォントはrem指定
+
+  - destyleでfont-size:10px;を入れてあります
+
+  - ブレイクポイントは既存のポイントを参考に
+
+  - レスポンシブ対応は基本的に動的にclampやvwなどで対応,固定でも中身に変化がない箇所は固定でも可
+
+  - 値の推測・丸め・補完禁止
+
+  ### 画像・アセット
+  - 画像をスクリーンショットで代替することを禁止
+
+  - 画像をAIで自己生成することを禁止
+
+  - /img/renew フォルダの素材を使用すること
+
+  - 素材がない場合は img src="[ファイル名]" のプレースホルダーにすること
+
+  ### MCP使用ルール
+  - 実装前にFigma MCPで必ず以下を確認すること
+    - width / height
+
+    - padding / margin（上下左右すべて）
+
+    - font-family / size / weight / line-height
+
+    - color（背景・テキスト・ボーダー）
+
+    - border-radius / box-shadow
+
+  - 不明な値はMCPで確認してから実装すること（推測禁止）
