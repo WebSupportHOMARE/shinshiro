@@ -2552,7 +2552,7 @@ voice-area
 ---------------------------------------- */
 #voice-area {
   padding: 100px 0 130px;
-  background: #eeebe5;
+  background: #f5f5f5;
   margin-bottom: 158px;
 }
 @media screen and (max-width: 768px) {
@@ -2635,8 +2635,8 @@ voice-area
   position: absolute;
   top: 0;
   left: 0;
-  width: auto;
-  height: auto;
+  width: 70px;
+  height: 80px;
   z-index: 2;
 }
 
@@ -2682,7 +2682,8 @@ voice-area
 .voice-area__cat span {
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(transparent 60%, #f5ee6e 60%);
+  color: #50b44b;
+  background: linear-gradient(transparent 60%, #fff349 60%);
   padding: 0 2px;
 }
 @media screen and (max-width: 768px) {
@@ -2761,8 +2762,9 @@ voice-area
 }
 
 .voice-area__text {
-  font-size: 1.5rem;
-  line-height: 1.7;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 400;
   background: #f5f5f0;
   border-radius: 8px;
   padding: 10px 14px;
@@ -2770,7 +2772,8 @@ voice-area
 }
 @media screen and (max-width: 768px) {
   .voice-area__text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
     padding: 8px 10px;
     border-radius: 6px;
   }
