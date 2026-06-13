@@ -2197,10 +2197,9 @@ voice-area
 #voice-area {
   padding: 100px 0 130px;
   background: #f5f5f5;
-  margin-bottom: 158px;
+  font-family: "Noto Sans JP", sans-serif;
   @include mq-down(md) {
     padding: 60px 0 70px;
-    margin-bottom: 53.5px;
   }
   .cmn-ttl01 {
     margin-bottom: 40px;
@@ -2223,96 +2222,102 @@ voice-area
 }
 .voice-area__inner {
   max-width: 1000px;
+  width: 71%;
   margin: 0 auto;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-  row-gap: 90px;
+  row-gap: 10px;
+  @media (max-width: 1300px) {
+    row-gap: 100px;
+  }
   @include mq-down(md) {
+    width: 85%;
     padding: 0 16px;
-    row-gap: 55px;
+    row-gap: 5px;
   }
 }
 .voice-area__block {
   position: relative;
-  padding-right: 330px;
-  @include mq-down(md) {
-    padding-right: 0;
-  }
-  &--rev {
-    padding-right: 0;
-    padding-left: 330px;
-    @include mq-down(md) {
-      padding-left: 0;
-    }
-  }
 }
 .voice-area__card-wrap {
+  max-width: 797px;
   position: relative;
-  padding-top: 40px;
-  padding-bottom: 36px;
+  padding-top: 32px;
+  padding-bottom: 88px;
   @include mq-down(md) {
-    padding-top: 28px;
-    padding-bottom: 26px;
+    max-width: 100%;
+    padding-top: 22px;
+    padding-bottom: 52px;
   }
+}
+.voice-area__block--rev .voice-area__card-wrap {
+  margin-left: auto;
 }
 .voice-area__quote-icon {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 27px;
   width: 70px;
-  height: 80px;
+  height: auto;
   z-index: 2;
+  @include mq-down(md) {
+    width: 44px;
+    left: 16px;
+  }
 }
 .voice-area__card {
   background: #fff;
-  border-radius: 16px;
-  padding: 28px 30px 28px;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 32px 32px 32px 0;
   position: relative;
+  box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2);
   &::after {
     content: "";
-    width: 28px;
-    height: 44px;
+    width: 50px;
+    height: 88px;
     background: url("../img/speech_bubble.svg") no-repeat center / cover;
     position: absolute;
-    left: 24px;
-    bottom: -38px;
-    filter: drop-shadow(0 6px 3px rgba(33, 33, 33, 0.06));
+    left: 0;
+    bottom: -87px;
+    filter: drop-shadow(0 4px 4px rgba(33, 33, 33, 0.2));
     will-change: filter;
   }
   @include mq-down(md) {
-    padding: 18px 18px 18px;
-    border-radius: 12px;
+    border-radius: 16px 16px 16px 0;
     &::after {
-      width: 18px;
-      height: 28px;
-      bottom: -24px;
-      left: 16px;
+      width: 30px;
+      height: 52px;
+      bottom: -52px;
     }
   }
 }
 .voice-area__cat {
-  margin-bottom: 18px;
+  padding: clamp(30px, 3.2vw, 60px) clamp(30px, 3.2vw, 60px) 30px;
   @include mq-down(md) {
-    margin-bottom: 12px;
+    padding: 30px 20px 14px;
   }
   span {
-    font-size: 2rem;
+    font-size: 3.2rem;
     font-weight: 700;
+    line-height: 4.2rem;
     color: #50b44b;
-    background: linear-gradient(transparent 60%, #fff349 60%);
-    padding: 0 2px;
+    background: linear-gradient(#fff349, #fff349) no-repeat center / 100% 16px;
+    padding: 0 10px;
+    display: inline;
     @include mq-down(md) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      background: linear-gradient(#fff349, #fff349) no-repeat center / 100% 12px;
     }
   }
 }
 .voice-area__list {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 16px;
+  padding: 0 clamp(30px, 3.2vw, 60px) clamp(30px, 3.2vw, 60px);
   @include mq-down(md) {
+    padding: 0 20px 20px;
     row-gap: 8px;
   }
 }
@@ -2320,81 +2325,48 @@ voice-area
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  background: #f4f9e8;
+  box-shadow: 0 4px 4px 0 rgba(33, 33, 33, 0.2);
+  border-radius: 8px;
+  padding: 10px 20px 10px 62px;
+  position: relative;
   @include mq-down(md) {
+    padding: 8px 12px 8px 42px;
     gap: 8px;
   }
 }
 .voice-area__person-icon {
-  flex-shrink: 0;
+  position: absolute;
+  left: 20px;
+  top: 10px;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: #c8d8e8;
-  position: relative;
   overflow: hidden;
-  &::before {
-    content: "";
-    width: 13px;
-    height: 13px;
-    border-radius: 50%;
-    background: #7da6c8;
-    position: absolute;
-    top: 4px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  &::after {
-    content: "";
-    width: 22px;
-    height: 15px;
-    border-radius: 11px 11px 0 0;
-    background: #7da6c8;
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   @include mq-down(md) {
     width: 26px;
     height: 26px;
-    &::before {
-      width: 10px;
-      height: 10px;
-      top: 3px;
-    }
-    &::after {
-      width: 17px;
-      height: 12px;
-    }
+    left: 10px;
+    top: 8px;
   }
 }
 .voice-area__text {
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 400;
-  background: #f5f5f0;
-  border-radius: 8px;
-  padding: 10px 14px;
-  flex: 1;
+  color: #212121;
   @include mq-down(md) {
     font-size: 1.4rem;
     line-height: 2.2rem;
-    padding: 8px 10px;
-    border-radius: 6px;
   }
 }
 .voice-area__illust {
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 280px;
+  width: clamp(280px, 25vw, 380px);
   @include mq-down(md) {
     position: static;
-    width: 70%;
-    max-width: 240px;
-    margin: 24px auto 0;
-    transform: none;
+    margin: 0 auto 0;
   }
   img {
     width: 100%;
@@ -2404,6 +2376,34 @@ voice-area
 .voice-area__block--rev .voice-area__illust {
   right: auto;
   left: 0;
+}
+.voice-area__inner > .voice-area__block:nth-child(1) .voice-area__illust {
+  top: -40px;
+  right: -140px;
+}
+.voice-area__inner > .voice-area__block:nth-child(2) .voice-area__illust {
+  top: 134px;
+  left: -30%;
+  @media (max-width: 1300px) {
+    top: -145px;
+    left: -31%;
+  }
+}
+.voice-area__inner > .voice-area__block:nth-child(3) .voice-area__illust {
+  top: 76px;
+  right: -23%;
+  @media (max-width: 1300px) {
+    top: -100px;
+    right: -20%;
+  }
+}
+.voice-area__inner > .voice-area__block:nth-child(4) .voice-area__illust {
+  top: 117px;
+  left: -23%;
+  @media (max-width: 1300px) {
+    top: -140px;
+    left: -30%;
+  }
 }
 
 /*=======================================
