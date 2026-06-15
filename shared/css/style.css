@@ -36,6 +36,7 @@
 - float-btn
 - menu-sp
 - campaign-area
+- deco-utils
 - about-area
 - features-area
 - cmn-block
@@ -1122,12 +1123,8 @@ footer .footer-copy {
 　campaign-area
 =======================================*/
 #campaign-area {
-  margin-bottom: 188px;
-}
-@media screen and (max-width: 768px) {
-  #campaign-area {
-    margin-bottom: 50.5px;
-  }
+  position: relative;
+  padding: clamp(100px, 10vw, 200px) 0;
 }
 #campaign-area .inner {
   max-width: 960px;
@@ -1167,76 +1164,179 @@ footer .footer-copy {
   background: var(--main_green);
 }
 
+/*
+deco-utils
+---------------------------------------- */
+.deco-side-r {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 800/1440;
+  background: url("../img/renew/side-imageR.png") no-repeat top right/contain;
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  .deco-side-r {
+    display: none;
+  }
+}
+
+.deco-side-l {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 920/1100;
+  background: url("../img/renew/side-imageL.png") no-repeat top left/contain;
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  .deco-side-l {
+    display: none;
+  }
+}
+
+.deco-ilex-watermark {
+  position: absolute;
+  top: 76px;
+  left: 60px;
+  right: 60px;
+  aspect-ratio: 3/1;
+  background: url("../img/renew/ilex_grey.png") no-repeat top left/100% 100%;
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  .deco-ilex-watermark {
+    top: 40px;
+    left: 20px;
+    right: 20px;
+  }
+}
+
+.deco-side-r-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 800/1440;
+  background: url("../img/renew/side-imageR.png") no-repeat bottom right/contain;
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  .deco-side-r-bottom {
+    display: none;
+  }
+}
+
+.deco-side-l-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 920/1100;
+  background: url("../img/renew/side-imageL.png") no-repeat bottom left/contain;
+  pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+  .deco-side-l-bottom {
+    display: none;
+  }
+}
+
+.back-green {
+  background: url("../img/renew/back-green.png") no-repeat center/cover;
+}
+
 /*=======================================
 　about-area
 =======================================*/
+#about-area {
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
+}
 #about-area .bg-img {
   position: relative;
 }
-#about-area .bg-img .txt-box {
+#about-area .deco-side-l {
+  top: 48%;
+}
+#about-area .deco-side-r-bottom {
+  bottom: auto;
+  top: calc(100% + 589px);
+}
+#about-area .img-box picture {
+  display: block;
+}
+#about-area .img-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#about-area .txt-box {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  top: 80px;
+  max-width: 960px;
   text-align: center;
-  top: 0%;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
-  #about-area .bg-img .txt-box {
-    top: 3%;
-    width: 90%;
+  #about-area .txt-box {
+    top: 40px;
   }
 }
-#about-area .bg-img .txt-box .ttl {
-  margin-bottom: 2.1875vw;
-  font-size: 1.875vw;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  line-height: 2.2222222222;
-}
-@media screen and (max-width: 768px) {
-  #about-area .bg-img .txt-box .ttl {
-    font-size: 5.0666666667vw;
-    letter-spacing: 0.02em;
-    line-height: 1.8421052632;
-  }
-}
-#about-area .bg-img .txt-box .txt {
-  font-size: 1.1458333333vw;
+#about-area .ttl {
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 3.125vw;
+  font-weight: 700;
+  line-height: 1.47;
   letter-spacing: 0.02em;
-  line-height: 2.3636363636;
+  background: linear-gradient(to right, #35b531, #afd152 75%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 768px) {
-  #about-area .bg-img .txt-box .txt {
-    font-size: 3.4666666667vw;
-    line-height: 2.1538461538;
+  #about-area .ttl {
+    font-size: 3.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
 }
-#about-area .bg-img .txt-box .btn a {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  justify-content: center;
-  color: #fff;
-  max-width: 510px;
-  margin: 4rem auto;
-  border-radius: 50px;
-  background: linear-gradient(90deg, #f56329 0%, #f77e30 25%, #f99936 50%, #fecf43 100%);
-  padding: 3rem;
+#about-area .sub {
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-size: 1.6vw;
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.04em;
+  color: #212121;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  #about-area .sub {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+}
+#about-area .txt {
   font-size: 1.1458333333vw;
+  line-height: 2;
+  letter-spacing: 0.02em;
+  color: #212121;
 }
-@media screen and (max-width: 1024px) {
-  #about-area .bg-img .txt-box .btn a {
-    padding: 1rem;
-    margin: 2rem auto;
-  }
+#about-area .txt p + p {
+  margin-top: 4.4rem;
 }
 @media screen and (max-width: 768px) {
-  #about-area .bg-img .txt-box .btn a {
-    font-size: 4vw;
-    width: 80%;
-    margin: 4rem auto;
-    padding: 2rem;
+  #about-area .txt {
+    font-size: 1.4rem;
+    line-height: 1.86;
+  }
+  #about-area .txt p + p {
+    margin-top: 2.6rem;
   }
 }
 
@@ -2446,6 +2546,7 @@ section:has(.cmn-swiper) .inner .copy {
 voice-area
 ---------------------------------------- */
 #voice-area {
+  position: relative;
   padding: 100px 0 130px;
   background: #f5f5f5;
   font-family: "Noto Sans JP", sans-serif;
@@ -2454,6 +2555,9 @@ voice-area
   #voice-area {
     padding: 60px 0 70px;
   }
+}
+#voice-area .deco-side-r {
+  top: 614px;
 }
 #voice-area .cmn-ttl01 {
   margin-bottom: 40px;
@@ -2497,7 +2601,7 @@ voice-area
   .voice-area__inner {
     width: 85%;
     padding: 0 16px;
-    row-gap: 5px;
+    row-gap: 100px;
   }
 }
 
@@ -2659,8 +2763,10 @@ voice-area
 }
 @media screen and (max-width: 768px) {
   .voice-area__illust {
-    position: static;
-    margin: 0 auto 0;
+    width: 45%;
+    top: -70px;
+    right: 0;
+    left: auto;
   }
 }
 .voice-area__illust img {
@@ -2672,10 +2778,47 @@ voice-area
   right: auto;
   left: 0;
 }
+@media screen and (max-width: 768px) {
+  .voice-area__block--rev .voice-area__illust {
+    right: auto;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .voice-area__block--rev .voice-area__card {
+    border-radius: 16px 16px 0 16px;
+  }
+  .voice-area__block--rev .voice-area__card::after {
+    left: auto;
+    right: 0;
+    transform: scaleX(-1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .voice-area__block--rev .voice-area__quote-icon {
+    left: auto;
+    right: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .voice-area__block--rev .voice-area__cat {
+    text-align: right;
+  }
+}
 
 .voice-area__inner > .voice-area__block:nth-child(1) .voice-area__illust {
   top: -40px;
   right: -140px;
+}
+@media screen and (max-width: 768px) {
+  .voice-area__inner > .voice-area__block:nth-child(1) .voice-area__illust {
+    top: -70px;
+    right: 0;
+    left: auto;
+  }
 }
 
 .voice-area__inner > .voice-area__block:nth-child(2) .voice-area__illust {
@@ -2686,6 +2829,13 @@ voice-area
   .voice-area__inner > .voice-area__block:nth-child(2) .voice-area__illust {
     top: -145px;
     left: -31%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .voice-area__inner > .voice-area__block:nth-child(2) .voice-area__illust {
+    top: -70px;
+    left: 0;
+    right: auto;
   }
 }
 
@@ -2699,6 +2849,13 @@ voice-area
     right: -20%;
   }
 }
+@media screen and (max-width: 768px) {
+  .voice-area__inner > .voice-area__block:nth-child(3) .voice-area__illust {
+    top: -70px;
+    right: 0;
+    left: auto;
+  }
+}
 
 .voice-area__inner > .voice-area__block:nth-child(4) .voice-area__illust {
   top: 117px;
@@ -2708,6 +2865,13 @@ voice-area
   .voice-area__inner > .voice-area__block:nth-child(4) .voice-area__illust {
     top: -140px;
     left: -30%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .voice-area__inner > .voice-area__block:nth-child(4) .voice-area__illust {
+    top: -70px;
+    left: 0;
+    right: auto;
   }
 }
 

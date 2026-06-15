@@ -18,6 +18,7 @@
 - float-btn
 - menu-sp
 - campaign-area
+- deco-utils
 - about-area
 - features-area
 - cmn-block
@@ -1057,10 +1058,8 @@ footer {
 　campaign-area
 =======================================*/
 #campaign-area {
-  margin-bottom: 188px;
-  @include mq-down(md) {
-    margin-bottom: 50.5px;
-  }
+  position: relative;
+  padding: clamp(100px, 10vw, 200px) 0;
   .inner {
     max-width: 960px;
     .campaign-swiper {
@@ -1094,72 +1093,158 @@ footer {
   }
 }
 
+/*
+deco-utils
+---------------------------------------- */
+.deco-side-r {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 800 / 1440;
+  background: url("../img/renew/side-imageR.png") no-repeat top right / contain;
+  pointer-events: none;
+  @include mq-down(md) {
+    display: none;
+  }
+}
+.deco-side-l {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 920 / 1100;
+  background: url("../img/renew/side-imageL.png") no-repeat top left / contain;
+  pointer-events: none;
+  @include mq-down(md) {
+    display: none;
+  }
+}
+.deco-ilex-watermark {
+  position: absolute;
+  top: 76px;
+  left: 60px;
+  right: 60px;
+  aspect-ratio: 3 / 1;
+  background: url("../img/renew/ilex_grey.png") no-repeat top left / 100% 100%;
+  pointer-events: none;
+  @include mq-down(md) {
+    top: 40px;
+    left: 20px;
+    right: 20px;
+  }
+}
+.deco-side-r-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 800 / 1440;
+  background: url("../img/renew/side-imageR.png") no-repeat bottom right /
+    contain;
+  pointer-events: none;
+  @include mq-down(md) {
+    display: none;
+  }
+}
+.deco-side-l-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: clamp(160px, 20vw, 320px);
+  aspect-ratio: 920 / 1100;
+  background: url("../img/renew/side-imageL.png") no-repeat bottom left /
+    contain;
+  pointer-events: none;
+  @include mq-down(md) {
+    display: none;
+  }
+}
+.back-green {
+  background: url("../img/renew/back-green.png") no-repeat center / cover;
+}
+
 /*=======================================
 　about-area
 =======================================*/
 #about-area {
+  position: relative;
+  font-family: "Noto Sans JP", sans-serif;
   .bg-img {
     position: relative;
-    .txt-box {
-      @include center(x);
-      text-align: center;
-      top: 0%;
-      @include mq-down(md) {
-        top: 3%;
-        width: 90%;
-      }
-      .ttl {
-        margin-bottom: vw-pc(42);
-        font-size: vw-pc(36);
-        font-weight: 500;
-        letter-spacing: 0.12em;
-        line-height: calc(80 / 36);
-        @include mq-down(md) {
-          font-size: vw-sp(38);
-          letter-spacing: 0.02em;
-          line-height: calc(70 / 38);
-        }
-      }
-      .txt {
-        font-size: vw-pc(22);
-        letter-spacing: 0.02em;
-        line-height: calc(52 / 22);
-        @include mq-down(md) {
-          font-size: vw-sp(26);
-          line-height: calc(56 / 26);
-        }
-      }
-      .btn {
-        a {
-          height: 40px;
-          display: flex;
-          align-items: center;
-          font-weight: bold;
-          justify-content: center;
-          color: #fff;
-          max-width: 510px;
-          margin: 4rem auto;
-          border-radius: 50px;
-          background: linear-gradient(
-            90deg,
-            #f56329 0%,
-            #f77e30 25%,
-            #f99936 50%,
-            #fecf43 100%
-          );
-          padding: 3rem;
-          font-size: vw-pc(22);
-          @include mq-down(xl) {
-            padding: 1rem;
-            margin: 2rem auto;
-          }
-          @include mq-down(md) {
-            font-size: vw-sp(30);
-            width: 80%;
-            margin: 4rem auto;
-            padding: 2rem;
-          }
-        }
+  }
+  .deco-side-l {
+    top: 48%;
+  }
+  .deco-side-r-bottom {
+    bottom: auto;
+    top: calc(100% + 589px);
+  }
+  .img-box {
+    picture {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  .txt-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
+    max-width: 960px;
+    text-align: center;
+    z-index: 1;
+    @include mq-down(md) {
+      top: 40px;
+    }
+  }
+  .ttl {
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    font-size: 3.125vw;
+    font-weight: 700;
+    line-height: 1.47;
+    letter-spacing: 0.02em;
+    background: linear-gradient(to right, #35b531, #afd152 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 40px;
+    @include mq-down(md) {
+      font-size: 3.2rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+  }
+  .sub {
+    font-family: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+    font-size: 1.6vw;
+    font-weight: 700;
+    line-height: 1.875;
+    letter-spacing: 0.04em;
+    color: #212121;
+    margin-bottom: 40px;
+    @include mq-down(md) {
+      font-size: 1.6rem;
+      margin-bottom: 24px;
+    }
+  }
+  .txt {
+    font-size: 1.1458333333vw;
+    line-height: 2;
+    letter-spacing: 0.02em;
+    color: #212121;
+    p + p {
+      margin-top: 4.4rem;
+    }
+    @include mq-down(md) {
+      font-size: 1.4rem;
+      line-height: 1.86;
+      p + p {
+        margin-top: 2.6rem;
       }
     }
   }
@@ -2195,11 +2280,15 @@ section:has(.cmn-swiper) {
 voice-area
 ---------------------------------------- */
 #voice-area {
+  position: relative;
   padding: 100px 0 130px;
   background: #f5f5f5;
   font-family: "Noto Sans JP", sans-serif;
   @include mq-down(md) {
     padding: 60px 0 70px;
+  }
+  .deco-side-r {
+    top: 614px;
   }
   .cmn-ttl01 {
     margin-bottom: 40px;
@@ -2234,7 +2323,7 @@ voice-area
   @include mq-down(md) {
     width: 85%;
     padding: 0 16px;
-    row-gap: 5px;
+    row-gap: 100px;
   }
 }
 .voice-area__block {
@@ -2365,8 +2454,10 @@ voice-area
   right: 0;
   width: clamp(280px, 25vw, 380px);
   @include mq-down(md) {
-    position: static;
-    margin: 0 auto 0;
+    width: 45%;
+    top: -70px;
+    right: 0;
+    left: auto;
   }
   img {
     width: 100%;
@@ -2376,10 +2467,40 @@ voice-area
 .voice-area__block--rev .voice-area__illust {
   right: auto;
   left: 0;
+  @include mq-down(md) {
+    right: auto;
+    left: 0;
+  }
+}
+.voice-area__block--rev .voice-area__card {
+  @include mq-down(md) {
+    border-radius: 16px 16px 0 16px;
+    &::after {
+      left: auto;
+      right: 0;
+      transform: scaleX(-1);
+    }
+  }
+}
+.voice-area__block--rev .voice-area__quote-icon {
+  @include mq-down(md) {
+    left: auto;
+    right: 16px;
+  }
+}
+.voice-area__block--rev .voice-area__cat {
+  @include mq-down(md) {
+    text-align: right;
+  }
 }
 .voice-area__inner > .voice-area__block:nth-child(1) .voice-area__illust {
   top: -40px;
   right: -140px;
+  @include mq-down(md) {
+    top: -70px;
+    right: 0;
+    left: auto;
+  }
 }
 .voice-area__inner > .voice-area__block:nth-child(2) .voice-area__illust {
   top: 134px;
@@ -2387,6 +2508,11 @@ voice-area
   @media (max-width: 1300px) {
     top: -145px;
     left: -31%;
+  }
+  @include mq-down(md) {
+    top: -70px;
+    left: 0;
+    right: auto;
   }
 }
 .voice-area__inner > .voice-area__block:nth-child(3) .voice-area__illust {
@@ -2396,6 +2522,11 @@ voice-area
     top: -100px;
     right: -20%;
   }
+  @include mq-down(md) {
+    top: -70px;
+    right: 0;
+    left: auto;
+  }
 }
 .voice-area__inner > .voice-area__block:nth-child(4) .voice-area__illust {
   top: 117px;
@@ -2403,6 +2534,11 @@ voice-area
   @media (max-width: 1300px) {
     top: -140px;
     left: -30%;
+  }
+  @include mq-down(md) {
+    top: -70px;
+    left: 0;
+    right: auto;
   }
 }
 
