@@ -926,6 +926,28 @@ footer {
     margin-bottom: -1px;
   }
 }
+/*
+mv-swiper
+---------------------------------------- */
+.mv-swiper {
+  .swiper-slide {
+    picture {
+      display: block;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .swiper-pagination-bullet {
+    background: #fff;
+    opacity: 0.6;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #35b531;
+  }
+}
 
 /*=======================================
 　float-bnr
@@ -935,19 +957,29 @@ footer {
   width: 208px;
   right: 51px;
   bottom: 22px;
-  z-index: 2;
+  z-index: 99;
   @include mq-down(md) {
-    bottom: auto;
-    top: 100px;
+    bottom: 30%;
     right: 12px;
     width: 104px;
   }
   .popup-close {
     position: absolute;
     width: 11.53%;
+    aspect-ratio: 1;
     top: 4.8%;
     right: 12.98%;
     cursor: pointer;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
   }
 }
 
@@ -1233,7 +1265,7 @@ deco-utils
 features-area
 ---------------------------------------- */
 #features-area {
-  padding: 130px 0 100px;
+  padding: 130px 0 clamp(250px, 32vw, 400px);
   background: #fff;
   position: relative;
   font-family: "Noto Sans JP", sans-serif;
@@ -1253,9 +1285,6 @@ features-area
   position: relative;
   padding-top: 110px;
 }
-.features-area__block--02 {
-  margin-top: 140px;
-}
 .features-area__num {
   position: absolute;
   top: -3px;
@@ -1265,6 +1294,9 @@ features-area
   line-height: 1;
   font-weight: 400;
   color: #35b531;
+  @include mq-down(md) {
+    top: 1%;
+  }
 }
 .features-area__subtitle {
   position: absolute;
@@ -1275,7 +1307,12 @@ features-area
   line-height: 1.37;
   color: #50b44b;
   letter-spacing: 0.76px;
-  white-space: nowrap;
+  @include mq-down(xl) {
+    top: 5px;
+    .xl {
+      display: block !important;
+    }
+  }
 }
 .features-area__card {
   width: calc(100% - 82px);
@@ -1333,6 +1370,35 @@ features-area
   }
   @include mq-down(md) {
     bottom: -100px;
+  }
+}
+.features-area__block--02 {
+  margin-top: 140px;
+  .features-area__card {
+    min-height: clamp(445px, 58vw, 600px);
+  }
+  .features-area__card-text {
+    width: 50%;
+    @include mq-down(md) {
+      width: 100%;
+    }
+  }
+}
+.features-area__card-img--02 {
+  top: 8%;
+  left: auto;
+  right: -82px;
+  width: clamp(609px, 79vw, 816px);
+  height: auto;
+  border-radius: 0;
+  overflow: visible;
+  picture {
+    display: block;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: initial;
   }
 }
 .features-area__bubble-head {
@@ -1584,7 +1650,7 @@ features-area SP
 ---------------------------------------- */
 @include mq-down(md) {
   #features-area {
-    padding: vw-sp(80) 0 vw-sp(60);
+    padding-bottom: clamp(80px, 21vw, 180px);
     .cmn-ttl01 {
       margin-bottom: vw-sp(60);
     }
@@ -1603,6 +1669,27 @@ features-area SP
   }
   .features-area__block--02 {
     margin-top: vw-sp(120);
+    .features-area__card {
+      min-height: clamp(620px, 164vw, 1250px);
+    }
+  }
+  .features-area__card-img--02 {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    overflow: visible;
+    margin-top: -20vw;
+    picture {
+      display: block;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
   .features-area__num {
     font-size: vw-sp(180);
@@ -1641,7 +1728,7 @@ features-area SP
     width: 100%;
     height: vw-sp(460);
     border-radius: 0;
-    margin-top: -20vw;
+    margin-top: clamp(-100px, -20vw, -75px);
   }
   .features-area__bubble-head {
     padding: vw-sp(60) 0 vw-sp(20);
@@ -1788,7 +1875,30 @@ features-area SP
     font-size: vw-sp(26);
   }
 }
+.features-area {
+  &__card {
+    &__bubble {
+      position: absolute;
+      bottom: calc(-1 * clamp(170px, calc(170px + 60 * (100vw - 769px) / 1151), 230px));
+      left: 50%;
+      transform: translateX(-50%);
+      width: 83.8%;
+      aspect-ratio: 736 / 173;
 
+      &__img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+
+      @include mq-down(md) {
+        bottom: calc(-1 * clamp(50px, calc(50px + 50 * (100vw - 375px) / 393), 100px));
+        width: 89%;
+        aspect-ratio: 670 / 208;
+      }
+    }
+  }
+}
 /*=======================================
 　cmn-block
 =======================================*/
@@ -2032,7 +2142,22 @@ section:has(.cmn-swiper) {
   position: relative;
   .deco-side-l {
     display: block;
-    top: 135px;
+    top: 435px;
+    @include mq-down(xl) {
+      top: 2%;
+    }
+  }
+  .deco-side-l-bottom {
+    bottom: 27%;
+    @include mq-down(xl) {
+      bottom: 31%;
+    }
+  }
+  .deco-side-r {
+    top: 31%;
+    @include mq-down(xl) {
+      top: 26%;
+    }
   }
   #studio-area {
     margin-bottom: 108px;
@@ -2089,9 +2214,18 @@ section:has(.cmn-swiper) {
 　GYM
 =======================================*/
 #gym-block {
+  .cmn-block {
+    padding-bottom: clamp(200px, 18vw, 300px);
+  }
   @include mq-down(md) {
     .inner {
       width: 100%;
+    }
+  }
+  .ttl-area {
+    position: relative;
+    .deco-side-r-bottom {
+      bottom: -60%;
     }
   }
   .intro-area {
@@ -2124,19 +2258,22 @@ section:has(.cmn-swiper) {
     }
   }
 }
+#gym-block.cmn-block {
+  padding-bottom: clamp(200px, 18vw, 300px);
+}
 #support-area {
   position: relative;
   .deco-side-l {
     top: -10%;
   }
   .deco-side-r-bottom {
-    bottom: -30%;
+    bottom: -40%;
   }
   .support-area__inner {
     position: relative;
     width: min(65%, 1260px);
     margin: 0 auto;
-    padding: clamp(25px, 2.5vw, 50px) clamp(80px, 8vw, 150px) clamp(130px, 21.2vw, 267px);
+    padding: clamp(25px, 2.5vw, 50px) clamp(70px, 7vw, 150px) 0;
     background: #fff;
     box-shadow: 0px 0px 8px 0px rgba(33, 33, 33, 0.2);
     border-radius: 48px;
@@ -2144,6 +2281,10 @@ section:has(.cmn-swiper) {
     &__wrap {
       margin-top: clamp(40px, 5vw, 64px);
     }
+    @include mq-down(md) {
+      width: 80%;
+    }
+
     @include mq-down(md) {
       width: 100%;
       padding: vw-sp(60) 0 vw-sp(80);
@@ -2166,7 +2307,7 @@ section:has(.cmn-swiper) {
   .support-area__ttl {
     display: block;
     margin: 0 auto;
-    width: 90%;
+    width: fit-content;
     font-family: "Noto Sans JP", sans-serif;
     font-size: clamp(2.8rem, 3vw, 3.2rem);
     font-weight: 700;
@@ -2189,11 +2330,11 @@ section:has(.cmn-swiper) {
     }
     &::before {
       background: url("../img/renew/slashL.png") no-repeat center / contain;
-      left: 0;
+      left: -2%;
     }
     &::after {
       background: url("../img/renew/slashR.png") no-repeat center / contain;
-      right: 0;
+      right: -2%;
     }
     span {
       background: linear-gradient(#fff349, #fff349) no-repeat center / 100% 12px;
@@ -2227,7 +2368,7 @@ section:has(.cmn-swiper) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: clamp(20px, 3.1vw, 39px);
-    row-gap: 0;
+    row-gap: clamp(28px, 2vw, 44px);
     margin-bottom: clamp(40px, 5vw, 64px);
     @include mq-down(xl) {
       grid-template-columns: 1fr;
@@ -2278,77 +2419,13 @@ section:has(.cmn-swiper) {
       box-shadow: none;
       background: transparent;
     }
-    &__header {
-      display: flex;
-      align-items: center;
-      gap: clamp(8px, 1.1vw, 14px);
-      padding: 0 clamp(12px, 1.5vw, 20px);
-      margin-bottom: clamp(20px, 2.4vw, 30px);
-      @include mq-down(md) {
-        min-height: 0;
-        padding: 0;
-        gap: vw-sp(20);
-      }
-    }
-    &__ttl {
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: clamp(1.6rem, 1.5vw, 2.4rem);
-      font-weight: 700;
-      line-height: 1.5;
-      color: #50b44b;
-      letter-spacing: 0.02em;
-      flex: 1;
-      @include mq-down(md) {
-        font-size: vw-sp(40);
-        line-height: calc(56 / 40);
-      }
-    }
-    &__img {
-      width: 100%;
-      aspect-ratio: 460 / 252;
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      @include mq-down(md) {
-        aspect-ratio: 670 / 372;
-        border-radius: vw-sp(16);
-      }
-    }
-    &__body {
-      padding: clamp(16px, 2.4vw, 30px) clamp(20px, 3.2vw, 40px);
-      p {
-        font-family: "Noto Sans JP", sans-serif;
-        font-size: clamp(1.4rem, 1.6vw, 2rem);
-        font-weight: 400;
-        line-height: calc(36 / 20);
-        color: #212121;
-        letter-spacing: -0.02em;
-        text-align: justify;
-      }
-      @include mq-down(md) {
-        padding: vw-sp(20) 0;
-        p {
-          font-size: vw-sp(26);
-          line-height: calc(48 / 26);
-        }
-      }
-    }
   }
   .support-area__lead {
-    position: absolute;
-    bottom: clamp(-60px, -7.93vw, -100px);
-    left: clamp(80px, 8vw, 150px);
-    right: clamp(80px, 8vw, 150px);
-    min-height: clamp(152px, 24vw, 304px);
     border-radius: 0 clamp(24px, 3.8vw, 48px) clamp(24px, 3.8vw, 48px) clamp(24px, 3.8vw, 48px);
     background: linear-gradient(270deg, #afd152 25%, #35b531 100%);
     font-family: "Noto Sans JP", sans-serif;
     font-weight: 500;
-    font-size: clamp(1.6rem, 2.2vw, 2.8rem);
+    font-size: clamp(1.4rem, 1.9vw, 2.8rem);
     line-height: calc(54 / 28);
     letter-spacing: 0.01em;
     text-align: center;
@@ -2356,7 +2433,9 @@ section:has(.cmn-swiper) {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: clamp(20px, 3vw, 40px) clamp(24px, 5vw, 60px);
+    transform: translateY(100px);
+    margin-top: -100px;
+    padding: clamp(20px, 3vw, 40px) clamp(24px, 2vw, 40px);
     @include mq-down(md) {
       position: static;
       bottom: auto;
@@ -2477,6 +2556,9 @@ staff-area
   font-family: "Noto Sans JP", sans-serif;
   position: relative;
   padding-bottom: clamp(140px, 19vw, 200px);
+  .deco-side-l {
+    top: 11%;
+  }
 }
 .staff-area__hero {
   position: relative;
@@ -3081,6 +3163,63 @@ staff-area
   }
 }
 
+/* price
+ * ========================================== */
+.price {
+  &__container {
+    &__itemBox {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &.--regular {
+        padding-bottom: clamp(35px, 2.172vw + 18.3px, 60px);
+
+        @include mq-down(md) {
+          padding-bottom: 20px;
+        }
+      }
+
+      &.--gym {
+        padding-bottom: clamp(40px, 3.475vw + 13.28px, 80px);
+
+        @include mq-down(md) {
+          padding-bottom: 30px;
+        }
+      }
+
+      &__imgWrap {
+        &.--regular-free {
+          @include mq-down(md) {
+            order: 3;
+          }
+        }
+
+        &.--regular {
+          @include mq-down(md) {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+
+  &__campaign {
+    width: 100%;
+    aspect-ratio: 960 / 1332;
+
+    &__link {
+      &__imgWrap {
+        &__img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
 /*=======================================
 　option-area
 =======================================*/
@@ -3098,7 +3237,7 @@ staff-area
   .inner {
     max-width: 796px;
     @include mq-down(md) {
-      width: calc(64% + 16px);
+      width: calc(76% + 16px);
     }
     .intro-area {
       margin-bottom: 53px;
@@ -3156,7 +3295,7 @@ staff-area
           justify-content: space-between;
           row-gap: 33px;
           @include mq-down(md) {
-            padding: 11px 15px 18px !important;
+            padding: 18px 34px 27px !important;
             row-gap: 0;
           }
           .cmn-ttl03 {
@@ -3256,7 +3395,7 @@ staff-area
           font-size: 45px;
         }
         @include mq-down(md) {
-          font-size: 28px;
+          font-size: clamp(34px, 9vw, 68px);
         }
       }
       span,
@@ -3272,7 +3411,7 @@ staff-area
           font-size: 20px;
         }
         @include mq-down(md) {
-          font-size: 13px;
+          font-size: clamp(14px, 3.7vw, 28px);
         }
       }
       small {
@@ -3283,7 +3422,7 @@ staff-area
           font-size: 18px;
         }
         @include mq-down(md) {
-          font-size: 12px;
+          font-size: clamp(14px, 3.7vw, 28px);
         }
       }
     }
@@ -3605,7 +3744,7 @@ voice-area
     font-size: clamp(5rem, 5.5vw, 6rem);
     @include mq-down(md) {
       margin-bottom: 30px;
-      font-size: 7.2rem;
+      line-height: 1;
     }
     .en {
       letter-spacing: -0.15em;
@@ -3628,10 +3767,10 @@ voice-area
           flex-direction: column;
           justify-content: center;
           @include mq-down(md) {
-            padding: 9px 40px 9px 19.5px;
+            padding: 9px 55px 9px 19.5px;
             min-height: 50px;
           }
-          zw span {
+          span {
             font-family: "Noto Sans JP", sans-serif;
             font-weight: 500;
             font-size: 2.2rem;
@@ -3641,8 +3780,8 @@ voice-area
             display: block;
             position: relative;
             @include mq-down(md) {
-              font-size: 3.2rem;
-              padding-left: 42px;
+              font-size: clamp(1.6rem, 4.2vw, 3.2rem);
+              padding-left: clamp(42px, 11vw, 95px);
             }
             &::before {
               content: "Q";
@@ -3663,9 +3802,9 @@ voice-area
               align-items: center;
               border-radius: 50vw;
               @include mq-down(md) {
-                width: 32px;
-                height: 32px;
-                font-size: 20px;
+                width: clamp(32px, 8.5vw, 56px);
+                height: clamp(32px, 8.5vw, 56px);
+                font-size: clamp(20px, 5.3vw, 34px);
               }
             }
             &::after {
@@ -3678,9 +3817,9 @@ voice-area
               height: 48px;
               transition: all 0.3s ease;
               @include mq-down(md) {
-                width: 24px;
-                height: 24px;
-                right: -25px;
+                width: clamp(24px, 6.4vw, 44px);
+                height: clamp(24px, 6.4vw, 44px);
+                right: -30px;
               }
             }
           }

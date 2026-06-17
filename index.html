@@ -272,10 +272,24 @@
       <section id="mv-area">
         <h1>新城市的場の24時間ジム＆ヨガ＆エクササイズ アイレクス・ライト+24 新城</h1>
         <div class="mv-contents">
-          <picture>
-            <source srcset="./shared/img/renew/mv-sp.png" media="(max-width: 768px)" />
-            <img src="./shared/img/renew/mv-pc.png" alt="アイレクス・ライト＋24新城 トレーナーサポート付ジム" />
-          </picture>
+          <div class="swiper mv-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./shared/img/renew/fv-sp.png" media="(max-width: 768px)" />
+                  <img src="./shared/img/renew/fv-pc.jpg" alt="新城フィットネスライフ 応援プロジェクト始動！" />
+                </picture>
+              </div>
+
+              <div class="swiper-slide">
+                <picture>
+                  <source srcset="./shared/img/renew/mv-sp.png" media="(max-width: 768px)" />
+                  <img src="./shared/img/renew/mv-pc.png" alt="アイレクス・ライト＋24新城 トレーナーサポート付ジム" />
+                </picture>
+              </div>
+            </div>
+            <div class="mv-swiper-pagination swiper-pagination"></div>
+          </div>
         </div>
       </section>
       <!-- /#mv-area -->
@@ -355,6 +369,7 @@
                 フィットネス施設です。
               </p>
 
+              <!--
               <p>
                 24時間使える快適なジム空間に、
                 <br />
@@ -374,6 +389,7 @@
                 <br class="sp" />
                 自分らしく続けられるように。
               </p>
+              -->
 
               <p>
                 毎日に、少し前向きな習慣を。
@@ -447,17 +463,19 @@
               <div class="features-area__card-text">
                 <h3 class="features-area__heading">
                   無人ジムでは
-                  <br class="sp" />
+                  <br />
                   何をすればいいかわからない。
-                  <br class="sp" />
-                  続けられるか不安。
+                  <br />
+                  情報はたくさんあるけど、
+                  <br />
+                  それが自分に合うかわからない。
                   <br />
                   そんな方こそ、アイレクスへ。
                 </h3>
                 <p class="features-area__body">
-                  あなたの目的や体力、ペースに寄り添うスタッフが、マシンの使い方から運動メニューなどをサポート。
+                  あなたの目的や体力に合わせて、
                   <br />
-                  ただ場所を提供するだけではなく、一人ひとりの「続けたい」を近くで支えていきます。
+                  運動メニューのサポートを行います。
                 </p>
               </div>
               <div class="features-area__card-img">
@@ -467,7 +485,9 @@
           </div>
 
           <div class="features-area__bubble-head">
-            <p class="features-area__bubble-lead"><span>このような方々に選ばれています！</span></p>
+            <p class="features-area__bubble-lead">
+              <span>このような方々に選ばれています！</span>
+            </p>
           </div>
 
           <ul class="features-area__bubble-list">
@@ -475,13 +495,13 @@
               <img src="./shared/img/renew/lady.png" alt="" class="features-area__bubble-chara" />
               <div class="features-area__bubble-box features-area__bubble-box--tail">
                 <p>
-                  ジムが初めてで、
+                  貴重な時間を使う
                   <br />
-                  何から
-                  <br class="pc" />
-                  始めればいいか
+                  からこそ、効率よ
                   <br />
-                  わからない方
+                  く、効果的に成果
+                  <br />
+                  を目指したい方。
                 </p>
               </div>
             </li>
@@ -491,7 +511,7 @@
               <div class="features-area__bubble-box">
                 <p>
                   運動を
-                  <br class="pc" />
+                  <br />
                   始めたいけれど、
                   <br />
                   続けられるか
@@ -500,49 +520,10 @@
                 </p>
               </div>
             </li>
-
-            <li class="features-area__bubble-item">
-              <img src="./shared/img/renew/guy.png" alt="" class="features-area__bubble-chara" />
-              <div class="features-area__bubble-box">
-                <p>
-                  自分に合った
-                  <br />
-                  トレーニング
-                  <br class="pc" />
-                  方法を
-                  <br />
-                  知りたい方
-                </p>
-              </div>
-            </li>
           </ul>
-
-          <p class="features-area__catch">
-            ひとりで頑張るジムではなく、
-            <br />
-            一緒に続けていけるジムへ。
-          </p>
 
           <div class="features-area__pill-wrap">
             <p class="features-area__pill">ジムにスタッフサポートという安心を。</p>
-          </div>
-
-          <div class="features-area__price">
-            <p class="features-area__price-main">
-              <span class="features-area__price-br">［</span>
-              <span class="features-area__price-label">ジム会員</span>
-              <span class="features-area__price-br">］</span>
-              <br class="sp" />
-              <span class="features-area__price-text">月額</span>
-              <span class="features-area__price-num">6,800</span>
-              <span class="features-area__price-unit">円</span>
-              （税込7,480円）〜
-            </p>
-            <p class="features-area__price-sub">
-              はじめての方も、スタッフが
-              <br class="sp" />
-              マシンの使い方からサポートします。
-            </p>
           </div>
 
           <div class="features-area__block features-area__block--02">
@@ -552,7 +533,7 @@
 
             <p class="features-area__subtitle">
               LIVEレッスンだから、
-              <br class="sp" />
+              <br class="sp xl" />
               楽しく続けられる。
             </p>
 
@@ -566,75 +547,25 @@
                   楽しさがある。
                 </h3>
                 <p class="features-area__body">
-                  ホットヨガ、ダンス、ストレッチ、エクササイズなど、インストラクターによる多彩なスタジオレッスンをご用意。同じ空間で、音楽に合わせて、インストラクターや仲間と一緒にカラダを動かす。運動が義務ではなく、毎日の楽しみになるのが、アイレクスのLIVEレッスンです。
+                  初めての方が多いのか、お疲れ気味なのか、思い切り汗を流したいのか。LIVEレッスンでは、インストラクターがその瞬間に合わせて、最適な時間を創り上げています。
                 </p>
               </div>
               <div class="features-area__card-img features-area__card-img--02">
-                <img src="./shared/img/renew/feature02.png" alt="" />
+                <picture>
+                  <source srcset="./shared/img/renew/lesson02sp.png" media="(max-width: 768px)" />
+                  <img src="./shared/img/renew/lesson02.png" alt="" />
+                </picture>
+              </div>
+
+              <div class="features-area__card__bubble">
+                <img
+                  class="features-area__card__bubble__img"
+                  src="./shared/img/renew/feature_bubble.png"
+                  alt="地域最多クラス数※を誇る、インストラクターによる多彩なプログラムが充実!（※自社調べ）"
+                />
               </div>
             </div>
           </div>
-
-          <div class="features-area__lesson-head">
-            <p class="features-area__lesson-ttl">
-              <span>
-                地域最多クラス数
-                <small><span>※</span></small>
-                を誇る、
-                <br class="sp" />
-              </span>
-              <br class="pc" />
-              <span>
-                インストラクターによる
-                <br class="sp" />
-                多彩なプログラムが充実！
-              </span>
-            </p>
-            <p class="features-area__lesson-note">（※自社調べ）</p>
-          </div>
-
-          <ul class="features-area__lesson-list">
-            <li class="features-area__lesson-item">
-              <div class="features-area__lesson-img">
-                <img src="./shared/img/renew/yoga.png" alt="" />
-              </div>
-              <p class="features-area__lesson-label">ヨガ</p>
-            </li>
-
-            <li class="features-area__lesson-item">
-              <div class="features-area__lesson-img">
-                <img src="./shared/img/renew/piratis.png" alt="" />
-              </div>
-              <p class="features-area__lesson-label">ピラティス</p>
-            </li>
-
-            <li class="features-area__lesson-item">
-              <div class="features-area__lesson-img">
-                <img src="./shared/img/renew/dance.png" alt="" />
-              </div>
-              <p class="features-area__lesson-label">ダンス</p>
-            </li>
-
-            <li class="features-area__lesson-item">
-              <div class="features-area__lesson-img">
-                <img src="./shared/img/renew/weight.png" alt="" />
-              </div>
-              <p class="features-area__lesson-label">ボディメイク</p>
-            </li>
-
-            <li class="features-area__lesson-item">
-              <div class="features-area__lesson-img">
-                <img src="./shared/img/renew/relax.png" alt="" />
-              </div>
-              <p class="features-area__lesson-label">リラックス系</p>
-            </li>
-          </ul>
-
-          <p class="features-area__catch features-area__catch--last">
-            ひとりで頑張るジムではなく、
-            <br />
-            一緒に続けていけるジムへ。
-          </p>
         </div>
       </section>
       <!-- /#features-area -->
@@ -679,7 +610,7 @@
                   <li class="voice-area__item">
                     <img src="./shared/img/renew/voice_icon.png" alt="" class="voice-area__person-icon" />
                     <p class="voice-area__text">
-                      「入会して4ヶ月で、履けなくて捨てようと思っていたパンツが履けた。仕事着にゆとりができた」
+                      「産後なかなか戻らなかった体型が、少しずつ引き締まってきた気がします。無理なく続けられるので、前向きに通えています」
                     </p>
                   </li>
                   <li class="voice-area__item">
@@ -792,7 +723,7 @@
       <div id="yoga-anc" class="anchor"></div>
       <section id="yoga-block" class="cmn-block">
         <div class="deco-side-l"></div>
-        <div class="deco-side-r-bottom"></div>
+        <div class="deco-side-r"></div>
         <div class="deco-side-l-bottom"></div>
         <div class="ttl-area">
           <div class="img">
@@ -808,10 +739,13 @@
         <div class="inner">
           <div class="intro-area">
             <p class="copy">
-              ホットヨガからアクティブレッスンまで、
+              ホットヨガから
+              <br class="sp" />
+              アクティブレッスンまで、
               <br />
               多彩に楽しめるスタジオ
             </p>
+            <!--
             <p class="lead-txt">
               心とカラダをゆるめるホットヨガから、
               <br class="sp" />
@@ -821,6 +755,7 @@
               <br class="sp" />
               暮らしに心地よいリズムが生まれます。
             </p>
+            -->
           </div>
 
           <div id="studio-area">
@@ -896,11 +831,14 @@
               </span>
               <span class="jp">ヨガプログラム</span>
             </h3>
+
+            <!--
             <p class="lead-txt">
               やさしく体をほぐすクラスから、本格的に集中できるクラスまで。
               <br />
               気分や体調に合わせて、自分らしい心地よさを見つけられます。
             </p>
+            -->
             <div class="swiper-container">
               <div class="swiper cmn-swiper yoga-swiper">
                 <div class="swiper-wrapper">
@@ -1040,11 +978,9 @@
               <span class="jp">エクササイズプログラム</span>
             </h3>
             <p class="lead-txt">
-              ただカラダを動かすだけじゃない。
+              アイレクス認定の
               <br />
-              インストラクターのもと、仲間と一緒に、
-              <br />
-              汗をかく楽しさや挑戦する喜びを分かち合えます。
+              プロのインストラクターと共に。
             </p>
             <div class="logo-area">
               <div class="logo ub">
@@ -1208,6 +1144,7 @@
       <div id="gym-anc" class="anchor"></div>
       <section id="gym-block" class="cmn-block">
         <div class="ttl-area">
+          <div class="deco-side-r-bottom"></div>
           <div class="img">
             <picture>
               <source srcset="./shared/img/2511/gym_main_img_sp.jpg" media="(max-width: 768px)" />
@@ -1418,89 +1355,25 @@
               <ul class="support-area__list">
                 <li class="support-area__item">
                   <div class="support-area__card">
-                    <div class="support-area__card__header">
-                      <div class="support-area__badge">
-                        <span class="support-area__badge__label">STEP</span>
-                        <span class="support-area__badge__num">1</span>
-                      </div>
-                      <p class="support-area__card__ttl">館内の使い方をご案内</p>
-                    </div>
-                    <div class="support-area__card__img">
-                      <img src="./shared/img/renew/step1.png" alt="館内の使い方をご案内" />
-                    </div>
-                    <div class="support-area__card__body">
-                      <p>
-                        ロッカー、更衣室、ジムエリア、スタジオなど、施設の使い方をスタッフがご案内します。初めての来館でも、迷わず安心してご利用いただけます。
-                      </p>
-                    </div>
+                    <img src="./shared/img/renew/step1.png" alt="館内の使い方をご案内" />
                   </div>
                 </li>
 
                 <li class="support-area__item">
                   <div class="support-area__card">
-                    <div class="support-area__card__header">
-                      <div class="support-area__badge">
-                        <span class="support-area__badge__label">STEP</span>
-                        <span class="support-area__badge__num">2</span>
-                      </div>
-                      <p class="support-area__card__ttl">マシンの使い方をレクチャー</p>
-                    </div>
-                    <div class="support-area__card__img">
-                      <img src="./shared/img/renew/step2.png" alt="マシンの使い方をレクチャー" />
-                    </div>
-                    <div class="support-area__card__body">
-                      <p>
-                        トレーニングマシンの基本的な使い方や、正しい姿勢、重さの設定方法などを丁寧にお伝えします。「触ったことがないから不安」という方も、安心して始められます。
-                      </p>
-                    </div>
+                    <img src="./shared/img/renew/step2.png" alt="マシンの使い方をレクチャー" />
                   </div>
                 </li>
 
                 <li class="support-area__item">
                   <div class="support-area__card">
-                    <div class="support-area__card__header">
-                      <div class="support-area__badge">
-                        <span class="support-area__badge__label">STEP</span>
-                        <span class="support-area__badge__num">3</span>
-                      </div>
-                      <p class="support-area__card__ttl">
-                        目的に合わせた
-                        <br />
-                        運動メニューをご提案
-                      </p>
-                    </div>
-                    <div class="support-area__card__img">
-                      <img src="./shared/img/renew/step3.png" alt="目的に合わせた運動メニューをご提案" />
-                    </div>
-                    <div class="support-area__card__body">
-                      <p>
-                        ダイエット、健康づくり、筋力アップ、姿勢改善、運動不足解消など、目的に合わせておすすめの運動をご提案します。何から始めればいいかわからない方も、最初の一歩が見つかります。
-                      </p>
-                    </div>
+                    <img src="./shared/img/renew/step3.png" alt="目的に合わせた運動メニューをご提案" />
                   </div>
                 </li>
 
                 <li class="support-area__item">
                   <div class="support-area__card">
-                    <div class="support-area__card__header">
-                      <div class="support-area__badge">
-                        <span class="support-area__badge__label">STEP</span>
-                        <span class="support-area__badge__num">4</span>
-                      </div>
-                      <p class="support-area__card__ttl">
-                        続けやすい通い方を
-                        <br />
-                        アドバイス
-                      </p>
-                    </div>
-                    <div class="support-area__card__img">
-                      <img src="./shared/img/renew/step4.png" alt="続けやすい通い方をアドバイス" />
-                    </div>
-                    <div class="support-area__card__body">
-                      <p>
-                        週に何回通うのがいいか、どの時間帯が続けやすいか、ジムとスタジオをどう組み合わせるかなど、生活リズムに合わせてご相談いただけます。無理なく続けられるペースを一緒に考えます。
-                      </p>
-                    </div>
+                    <img src="./shared/img/renew/step4.png" alt="続けやすい通い方をアドバイス" />
                   </div>
                 </li>
               </ul>
@@ -1774,16 +1647,6 @@
               </div>
             </li>
           </ul>
-
-          <div class="staff-area__cta">
-            <p>
-              運動を始めたい理由も、続けたいペースも、人それぞれ。
-              <br />
-              アイレクス・ライト＋24新城のスタッフが、
-              <br />
-              あなたに合わせて楽しみながら続けられる運動をご提案します。
-            </p>
-          </div>
         </div>
       </section>
       <!-- /#staff-area -->
@@ -1795,9 +1658,65 @@
             <span class="jp">料金プラン</span>
           </h2>
 
-          <!--<p class="lead-txt">利用開始月は日割り料金でムダなく始められます。</p>-->
+          <p class="lead-txt">目的に合わせて選べる料金プラン</p>
 
-          <ul class="price-list">
+          <div class="price__container">
+            <div class="price__container__itemBox --regular">
+              <h3>
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./shared/img/renew/price_regular_title_sp.png" />
+                  <img
+                    src="./shared/img/renew/price_regular_title.png"
+                    alt="【レギュラー会員】LIVEレッスンまで楽しみたい方へ。"
+                  />
+                </picture>
+              </h3>
+
+              <div class="price__container__itemBox__imgWrap --regular-free">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./shared/img/renew/price_regular_free_sp.png" />
+                  <img
+                    src="./shared/img/renew/price_regular_free.png"
+                    alt="レギュラーフリー会員 キャンペーン適用で半年間8,800円（税込9,680円）"
+                  />
+                </picture>
+              </div>
+
+              <div class="price__container__itemBox__imgWrap --regular">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./shared/img/renew/price_regular_sp.png" />
+                  <img
+                    src="./shared/img/renew/price_regular.png"
+                    alt="レギュラー会員 キャンペーン適用で半年間6,450円（税込7,095円）"
+                  />
+                </picture>
+              </div>
+            </div>
+
+            <div class="price__container__itemBox --gym">
+              <h3>
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./shared/img/renew/price_gym_title_sp.png" />
+                  <img
+                    src="./shared/img/renew/price_gym_title.png"
+                    alt="【レギュラー会員】LIVEレッスンまで楽しみたい方へ。"
+                  />
+                </picture>
+              </h3>
+
+              <div class="price__container__itemBox__imgWrap">
+                <picture>
+                  <source media="(max-width: 768px)" srcset="./shared/img/renew/price_gym_sp.png" />
+                  <img
+                    src="./shared/img/renew/price_gym.png"
+                    alt="レギュラーフリー会員 キャンペーン適用で半年間8,800円（税込9,680円）"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+
+          <!--<ul class="price-list">
             <li class="price-item">
               <div class="ttl-box">
                 <h3 class="ttl">レギュラー会員</h3>
@@ -1825,6 +1744,7 @@
                 </p>
               </div>
             </li>
+
             <li class="price-item">
               <div class="ttl-box">
                 <h3 class="ttl">レギュラーフリー会員</h3>
@@ -1936,6 +1856,8 @@
               </div>
             </li>
           </ul>
+          -->
+
           <!--
 					<ul class="price-list">
 						<li class="price-item">
@@ -2025,10 +1947,8 @@
 								<p class="note">※1口で2名以上の同時利用はできません。</p>
 							</div>
 						</li>
-
-
 					</ul>
-									-->
+					-->
 
           <ul class="other-price-list">
             <li class="other-item">
@@ -2039,6 +1959,12 @@
                 月～水・金／10:00～22:00、土・日・祝 ／10:00～17:00 利用可能
               </p>
               <p class="note">※18歳以下の高校生限定プランとなります。</p>
+            </li>
+
+            <li class="other-item">
+              <p class="ttl">カンパニー会員／月会費9,800円（税込10,780円）</p>
+              <p class="txt">ジム、リラクゼーション+スタジオレッスン（10回まで）利用可能</p>
+              <p class="note">※1口で2名以上の同時利用はできません。</p>
             </li>
           </ul>
           <p class="note_list">
@@ -2051,8 +1977,22 @@
             ※当クラブは16歳以上の方からご入会できます。
           </p>
 
+          <div class="price__campaign">
+            <a href="#" class="price__campaign__link">
+              <picture class="price__campaign__link__imgWrap">
+                <source media="(max-width: 768px)" srcset="./shared/img/renew/bannar.png" />
+
+                <img
+                  class="price__campaign__link__imgWrap__img"
+                  src="./shared/img/renew/bannar.png"
+                  alt="新城フィットネスクラブ 応援特割キャンペーン！ なんと総額最大33,970円が0円"
+                />
+              </picture>
+            </a>
+          </div>
+
+          <!--
           <div class="op-bnr">
-            <!--
             <?php foreach (slider('毎月のキャンペーン') as $slider) : ?>
             <p>
               <a href="https://www.slim-sng.jp/slim/web/d/sng/web_admission_procedure/?c=Pq7Hr8dEzU&f=00026" target="_blank">
@@ -2065,7 +2005,6 @@
               </a>
             </p>
             <?php endforeach; ?>
-            -->
           </div>
 
           <div class="btn-area">
@@ -2078,6 +2017,7 @@
               </a>
             </div>
           </div>
+          -->
         </div>
       </section>
       <!-- /#price-area -->
@@ -3248,6 +3188,11 @@
             <img src="./shared/img/float_btn02_0912.png" alt="9/12（金）12:00〜 WEB入会開始!" />
           </a>
         </div>
+      </div>
+
+      <div class="float-bnr">
+        <button id="popup-close" class="popup-close" type="button" aria-label="閉じる">×</button>
+        <img src="./shared/img/renew/fixed-bannar.png" alt="特割キャンペーン" />
       </div>
     </main>
 

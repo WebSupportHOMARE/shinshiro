@@ -42,6 +42,23 @@
 	});
 
 
+	/* MV Swiper
+	--------------------------------------------------------- */
+	const swiper_mv = new Swiper('.mv-swiper', {
+		loop: true,
+		pagination: {
+			el: '.mv-swiper-pagination',
+			clickable: true,
+		},
+		slidesPerView: 1,
+		speed: 1000,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
+	});
+
+
 	/* STUDIO AREA Swiper
 	--------------------------------------------------------- */
 	const swiper_studio = new Swiper('.studio-swiper', {
