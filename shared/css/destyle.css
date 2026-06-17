@@ -5,7 +5,7 @@
 ::before,
 ::after {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   border-style: solid;
   border-width: 0;
 }
@@ -21,7 +21,6 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-tap-highlight-color: transparent; /* 3*/
-  font-size: 10px;
 }
 
 /* Sections */
@@ -99,7 +98,7 @@ dd {
  */
 hr {
   -webkit-box-sizing: content-box;
-  box-sizing: content-box; /* 1 */
+          box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
   border-top-width: 1px;
@@ -142,7 +141,7 @@ a {
  */
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted; /* 2 */
+          text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -234,7 +233,7 @@ select,
 textarea {
   -webkit-appearance: none; /* 1 */
   -moz-appearance: none;
-  appearance: none;
+       appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -250,16 +249,16 @@ textarea {
  * Correct cursors for clickable elements.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
   cursor: pointer;
 }
 
 button:disabled,
-[type="button"]:disabled,
-[type="reset"]:disabled,
-[type="submit"]:disabled {
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
   cursor: default;
 }
 
@@ -311,22 +310,22 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
   height: auto;
 }
 
 /**
  * Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   outline-offset: -2px; /* 1 */
 }
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -342,7 +341,7 @@ textarea {
 /**
  * Fix appearance for Firefox
  */
-[type="number"] {
+[type=number] {
   -moz-appearance: textfield;
 }
 
@@ -399,4 +398,4 @@ th {
 th {
   text-align: left;
   font-weight: bold;
-} /*# sourceMappingURL=reset.css.map */
+}/*# sourceMappingURL=reset.css.map */
