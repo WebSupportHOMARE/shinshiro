@@ -761,7 +761,7 @@ footer {
   padding-bottom: 15px;
   margin-bottom: 12px;
   @include mq-down(xl) {
-    font-size: clamp(1.9rem, 5vw, 3.8rem);
+    font-size: clamp(1.9rem, 2.1vw, 3.8rem);
   }
   @include mq-down(md) {
     line-height: 1.266;
@@ -961,7 +961,7 @@ mv-swiper
   @include mq-down(md) {
     bottom: 30%;
     right: 12px;
-    width: 104px;
+    width: clamp(104px, 28vw, 208px);
   }
   .popup-close {
     position: absolute;
@@ -1108,6 +1108,11 @@ mv-swiper
     }
   }
 }
+#campaign-area.back-green {
+  @include mq-down(md) {
+    background: none;
+  }
+}
 
 /*
 deco-utils
@@ -1150,6 +1155,7 @@ deco-utils
   z-index: 5;
   @include mq-down(md) {
     display: none;
+    width: clamp(90px, 24vw, 156px);
   }
 }
 .deco-side-l-bottom {
@@ -1161,6 +1167,7 @@ deco-utils
   background: url("../img/renew/side-imageL.png") no-repeat bottom left / contain;
   pointer-events: none;
   @include mq-down(md) {
+    width: clamp(100px, 26vw, 179px);
     display: none;
   }
 }
@@ -1752,21 +1759,23 @@ features-area SP
     }
   }
   .features-area__bubble-list {
-    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     padding: 0 vw-sp(40);
     gap: vw-sp(30);
     margin-top: 20px;
   }
   .features-area__bubble-item {
-    width: vw-sp(480);
+    display: flex;
+    justify-content: flex-end;
+    width: 46%;
   }
   .features-area__bubble-box {
-    width: vw-sp(480);
+    width: 80%;
     height: vw-sp(240);
     border-radius: vw-sp(60);
     p {
-      font-size: vw-sp(28);
+      font-size: clamp(12px, 3.2vw, 24px);
       line-height: 1.86;
       width: vw-sp(368);
     }
@@ -1775,9 +1784,10 @@ features-area SP
     border-radius: vw-sp(60) vw-sp(60) vw-sp(60) 0;
   }
   .features-area__bubble-chara {
-    left: vw-sp(-60);
-    top: vw-sp(50);
-    height: vw-sp(160);
+    left: 0;
+    top: auto;
+    bottom: 0;
+    height: 60%;
   }
   .features-area__catch {
     font-size: vw-sp(40);
@@ -2028,13 +2038,13 @@ section:has(.cmn-swiper) {
           }
         }
         .txt-area {
-          padding: 20px 24px 25px;
+          padding: 20px 24px 70px;
           flex: 1;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           @include mq-down(md) {
-            padding: 20px 15px 25px;
+            padding: 20px 15px 50px;
           }
         }
         .cmn-txt01 {
@@ -2146,6 +2156,9 @@ section:has(.cmn-swiper) {
     @include mq-down(xl) {
       top: 2%;
     }
+    @include mq-down(md) {
+      top: 7%;
+    }
   }
   .deco-side-l-bottom {
     bottom: 27%;
@@ -2157,6 +2170,11 @@ section:has(.cmn-swiper) {
     top: 31%;
     @include mq-down(xl) {
       top: 26%;
+    }
+    @include mq-down(md) {
+      display: block;
+      top: 7%;
+      z-index: 5;
     }
   }
   #studio-area {
@@ -2226,19 +2244,26 @@ section:has(.cmn-swiper) {
     position: relative;
     .deco-side-r-bottom {
       bottom: -60%;
+      @include mq-down(md) {
+        bottom: -45%;
+        display: block;
+      }
+    }
+    .deco-side-l {
+      @include mq-down(md) {
+        bottom: -22%;
+        display: block;
+        top: auto;
+      }
     }
   }
   .intro-area {
-    .lead-txt {
-      margin-bottom: 110px;
-      @include mq-down(md) {
-        margin-bottom: 40px;
-      }
-    }
     .teca-img {
+      margin-top: 110px;
       margin-bottom: 130px;
       @include mq-down(md) {
         margin-bottom: 60px;
+        margin-top: 40px;
       }
     }
   }
@@ -2260,6 +2285,9 @@ section:has(.cmn-swiper) {
 }
 #gym-block.cmn-block {
   padding-bottom: clamp(200px, 18vw, 300px);
+  @include mq-down(md) {
+    padding-bottom: clamp(80px, 21vw, 150px);
+  }
 }
 #support-area {
   position: relative;
@@ -2268,6 +2296,9 @@ section:has(.cmn-swiper) {
   }
   .deco-side-r-bottom {
     bottom: -40%;
+    @include mq-down(xl) {
+      bottom: -23%;
+    }
   }
   .support-area__inner {
     position: relative;
@@ -2441,6 +2472,7 @@ section:has(.cmn-swiper) {
       bottom: auto;
       left: auto;
       right: auto;
+      transform: none;
       margin: 0 vw-sp(40);
       min-height: vw-sp(320);
       border-radius: 0 vw-sp(48) vw-sp(48) vw-sp(48);
@@ -2469,6 +2501,20 @@ section:has(.cmn-swiper) {
     }
     .cmn-ttl01 {
       margin-bottom: 60px;
+      .deco-side-l {
+        display: none;
+        @include mq-down(md) {
+          top: -95%;
+          display: block;
+        }
+      }
+      .deco-side-r-bottom {
+        display: none;
+        @include mq-down(md) {
+          bottom: -140%;
+          display: block;
+        }
+      }
       @include mq-down(md) {
         margin-bottom: 40px;
       }
@@ -2558,6 +2604,23 @@ staff-area
   padding-bottom: clamp(140px, 19vw, 200px);
   .deco-side-l {
     top: 11%;
+    @include mq-down(md) {
+      display: block;
+      top: 6%;
+    }
+  }
+  .deco-side-r-bottom {
+    bottom: -5%;
+  }
+  .deco-side-r {
+    @include mq-down(md) {
+      display: block;
+      top: 7%;
+      z-index: 5;
+    }
+  }
+  @include mq-down(md) {
+    padding-bottom: clamp(80px, 21vw, 150px);
   }
 }
 .staff-area__hero {
@@ -2906,9 +2969,28 @@ staff-area
 	price-area
 =======================================*/
 #price-area {
+  position: relative;
   padding: 142px 0 163px;
   background: #f5f5f5;
   margin-bottom: 149px;
+  .deco-side-l-bottom {
+    bottom: -7.5%;
+    @include mq-down(xl) {
+      bottom: -3.5%;
+    }
+    @include mq-down(md) {
+      display: block;
+      bottom: auto;
+      top: -1.5%;
+    }
+  }
+  .deco-side-r {
+    @include mq-down(md) {
+      display: block;
+      top: -2%;
+      z-index: 5;
+    }
+  }
   @include mq-down(md) {
     padding: 50px 0 58.5px;
     margin-bottom: 52px;
@@ -3121,7 +3203,7 @@ staff-area
             font-size: clamp(13px, calc(26 / 1400 * 100vw), 26px);
           }
           @include mq-down(md) {
-            font-size: 13px;
+            font-size: clamp(13px, 3.4vw, 2.6rem);
           }
         }
         .txt {
@@ -3131,7 +3213,7 @@ staff-area
             font-size: clamp(12px, calc(24 / 1400 * 100vw), 24px);
           }
           @include mq-down(md) {
-            font-size: 12px;
+            font-size: clamp(12px, 3.2vw, 24px);
           }
         }
         .note {
@@ -3141,7 +3223,7 @@ staff-area
             font-size: clamp(11px, calc(22 / 1400 * 100vw), 22px);
           }
           @include mq-down(md) {
-            font-size: 11px;
+            font-size: clamp(11px, 2.9vw, 22px);
           }
         }
       }
@@ -3155,7 +3237,7 @@ staff-area
       }
       @include mq-down(md) {
         margin-bottom: 43px;
-        font-size: 10px;
+        font-size: clamp(10px, 2.6vw, 20px);
       }
     }
     .op-bnr {
@@ -3224,9 +3306,20 @@ staff-area
 　option-area
 =======================================*/
 #option-area {
-  margin-bottom: 94px;
-  @include mq-down(md) {
-    margin-bottom: 51.5px;
+  padding-bottom: 94px !important;
+  position: relative;
+  .deco-side-l {
+    @include mq-down(md) {
+      top: -5%;
+      display: block;
+    }
+  }
+  .deco-side-r {
+    @include mq-down(md) {
+      top: -4%;
+      bottom: auto;
+      display: block;
+    }
   }
   .cmn-ttl01 {
     margin-bottom: 26.5px;
@@ -3302,10 +3395,14 @@ staff-area
             margin-bottom: 23px;
             @include mq-down(md) {
               margin-bottom: 10px;
+              font-size: clamp(1.8rem, 4.8vw, 3.6rem);
             }
           }
           .cmn-ttl04 {
             margin-bottom: 5px;
+            @include mq-down(md) {
+              font-size: clamp(1.4rem, 3.7vw, 2.8rem);
+            }
           }
           ul {
             display: flex;
@@ -3459,7 +3556,7 @@ voice-area
     top: -10.5%;
     @include mq-down(xl) {
       display: block;
-      top: -5%;
+      top: -2%;
     }
   }
   .deco-side-l {
@@ -3735,9 +3832,35 @@ voice-area
 　qa-area
 =======================================*/
 #qa-area {
-  margin-bottom: 160px;
-  @include mq-down(md) {
-    margin-bottom: 59px;
+  padding: clamp(100px, 13vw, 186px) 0 clamp(120px, 15vw, 200px) !important;
+  position: relative;
+  background: #f5f5f5;
+  margin-top: 0 !important;
+
+  .deco-side-l-bottom {
+    bottom: -13%;
+    @include mq-down(xl) {
+      bottom: -8%;
+    }
+  }
+  .deco-side-r {
+    top: -14%;
+    @include mq-down(xl) {
+      top: -5%;
+    }
+  }
+  .deco-side-l-bottom {
+    @include mq-down(md) {
+      bottom: auto;
+      top: -2%;
+      display: block;
+    }
+  }
+  .deco-side-r {
+    @include mq-down(md) {
+      top: -0.5%;
+      display: block;
+    }
   }
   .cmn-ttl01 {
     margin-bottom: 59.5px;
@@ -3926,8 +4049,21 @@ voice-area
 　news-area
 =======================================*/
 #news-area {
+  position: relative;
   padding: 159px 0;
-  background: #f5f5f5;
+  .deco-side-l {
+    @include mq-down(md) {
+      top: -11%;
+      display: block;
+    }
+  }
+  .deco-side-r {
+    @include mq-down(md) {
+      top: -8%;
+      bottom: auto;
+      display: block;
+    }
+  }
   @include mq-down(md) {
     padding: 54px 0 60px;
   }
@@ -3969,7 +4105,7 @@ voice-area
           font-weight: 500;
           @include mq-down(md) {
             padding: 0 7.5px;
-            font-size: 11px;
+            font-size: clamp(1.2rem, 3.2vw, 2.4rem);
           }
         }
         dd.news-date {
@@ -3977,7 +4113,7 @@ voice-area
           font-family: "Oswald", sans-serif;
           font-size: 30px;
           @include mq-down(md) {
-            font-size: 15px;
+            font-size: clamp(1.5rem, 4vw, 3rem);
           }
         }
         dd {
@@ -3989,7 +4125,7 @@ voice-area
             font-size: 22px;
             @include mq-down(md) {
               padding-right: 10px;
-              font-size: 11px;
+              font-size: clamp(1.3rem, 3.4vw, 2.6rem);
             }
           }
         }
@@ -4026,6 +4162,7 @@ voice-area
   }
 
   #info-area {
+    position: relative;
     padding: 182px 0 180px;
     background: #f5f5f5;
     margin-bottom: 180px;
@@ -4033,13 +4170,20 @@ voice-area
       padding: 50px 0 56px;
       margin-bottom: 53.5px;
     }
+    .deco-side-r-bottom {
+      bottom: -16%;
+      @include mq-down(xl) {
+        bottom: -30%;
+        display: block;
+      }
+    }
     .w796 {
       max-width: 796px;
       text-align: center;
       font-size: 24px;
       font-weight: 500;
       @include mq-down(md) {
-        font-size: 12px;
+        font-size: clamp(14px, 3.7vw, 2.8rem);
       }
       > div {
         &:not(:last-child) {
@@ -4072,7 +4216,7 @@ voice-area
         font-size: 22px;
         font-weight: 400;
         @include mq-down(md) {
-          font-size: 11px;
+          font-size: clamp(13px, 3.4vw, 2.6rem);
           line-height: calc(32 / 22);
         }
       }
@@ -4138,8 +4282,8 @@ voice-area
       font-size: 3.5rem;
     }
     @include mq-down(md) {
-      font-size: 2.8rem;
-      line-height: 4rem;
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      line-height: calc(76 / 52);
     }
   }
   .inner {
@@ -4158,7 +4302,7 @@ voice-area
         font-weight: 500;
         margin-top: 5%;
         @include mq-down(md) {
-          font-size: 1.4rem;
+          font-size: clamp(1.3rem, 3.4vw, 2.6rem);
         }
       }
       @include mq-down(md) {
