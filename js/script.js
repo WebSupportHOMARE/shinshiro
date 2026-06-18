@@ -14,6 +14,25 @@ $(function () {
   });
 });
 
+/* FV Floating Banner
+	--------------------------------------------------------- */
+const fvFloat = document.getElementById("fv-float");
+const FV_SCROLL_THRESHOLD = 100; // px スクロールでバナー表示
+
+if (fvFloat) {
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (window.scrollY > FV_SCROLL_THRESHOLD) {
+        fvFloat.classList.add("is-visible");
+      } else {
+        fvFloat.classList.remove("is-visible");
+      }
+    },
+    { passive: true },
+  );
+}
+
 /* MV Swiper
 	--------------------------------------------------------- */
 const swiper_mv = new Swiper(".mv-swiper", {
