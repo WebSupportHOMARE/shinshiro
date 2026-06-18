@@ -31,6 +31,20 @@ header .header-pc .logo {
   padding: 0% 1%;
   align-items: center;
 }
+@media screen and (max-width: 960px) {
+  header .header-pc {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+  }
+  header .header-pc .logo {
+    float: none;
+    width: clamp(160px, 30vw, 225px);
+    height: auto;
+    padding: 0;
+  }
+}
 /*=======================================
 　footer
 =======================================*/
@@ -104,46 +118,58 @@ footer .footer-copy {
 /*=======================================
 　mv-area
 =======================================*/
-@media screen and (min-width: 1161px) {
+#mv-area {
+  background: #f7f7f7;
+}
+@media screen and (min-width: 961px) {
   #mv-area {
     padding-top: 92px;
   }
 }
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 960px) {
   #mv-area {
-    padding-top: 0;
+    padding-top: 112px;
   }
 }
 #mv-area h1 {
-  text-align: center;
-  background: #353535;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #44ade9 20%, #914c93);
   color: #fff;
-  font-size: 16px;
-  letter-spacing: 0.09em;
-  padding: 0.3% 0%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+  text-align: center;
+  padding: 16px 0 20px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   #mv-area h1 {
-    font-size: 1rem;
-    padding: 1% 0%;
-    letter-spacing: 0.025em;
+    font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+    letter-spacing: 0.72px;
+    padding: 12px 16px 14px;
+    height: 48px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 }
 #mv-area .mv-contents {
   position: relative;
-  transform: translateY(-1px);
-  margin-bottom: -1px;
 }
 
 /*
 mv-swiper
 ---------------------------------------- */
-.mv-swiper .swiper-slide picture {
-  display: block;
-}
 .mv-swiper .swiper-slide img {
   display: block;
   width: 100%;
+  aspect-ratio: 1920 / 836;
+  object-fit: cover;
+}
+@media screen and (max-width: 960px) {
+  .mv-swiper .swiper-slide img {
+    aspect-ratio: 750 / 1020;
+  }
 }
 .mv-swiper .swiper-pagination-bullet {
   background: #fff;
@@ -209,126 +235,112 @@ mv-swiper
 /*=======================================
 　shopinfo-area
 =======================================*/
-.shopinfo-area .logo-area {
+#shopinfo-area {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #ffffff 60%);
+}
+#shopinfo-area .shopinfo-area__inner {
+  max-width: 752px;
+  margin: 0 auto;
+  padding: 160px 0 0;
+}
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__inner {
+    padding: 80px 35px 0;
+  }
+}
+#shopinfo-area .shopinfo-area__title {
   text-align: center;
-  background: #afd152;
+  padding-bottom: 60px;
 }
-.shopinfo-area .logo-area .inner {
-  padding: 80px 0 74px;
-  max-width: 384px;
+#shopinfo-area .shopinfo-area__title__en {
+  font-family: "Syncopate", sans-serif;
+  font-size: 6.4rem;
+  background: linear-gradient(to right, #44ade9 20%, #914c93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 2.56px;
+  line-height: normal;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area .logo-area .inner {
-    padding: 23px 0 20px;
-    max-width: 182px;
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__title__en {
+    font-size: clamp(3.6rem, 8.5vw, 6.4rem);
   }
 }
-.shopinfo-area #map-area {
-  width: 100%;
-}
-.shopinfo-area #map-area iframe {
-  width: 100%;
-  aspect-ratio: 1920/640;
-}
-@media screen and (max-width: 768px) {
-  .shopinfo-area #map-area iframe {
-    aspect-ratio: 750/476;
-  }
-}
-.shopinfo-area #info-area {
-  position: relative;
-  padding: 182px 0 180px;
-  background: #f5f5f5;
-  margin-bottom: 180px;
-}
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area {
-    padding: 50px 0 56px;
-    margin-bottom: 53.5px;
-  }
-}
-.shopinfo-area #info-area .deco-side-r-bottom {
-  bottom: -16%;
-}
-@media screen and (max-width: 1024px) {
-  .shopinfo-area #info-area .deco-side-r-bottom {
-    bottom: -30%;
-    display: block;
-  }
-}
-.shopinfo-area #info-area .w796 {
-  max-width: 796px;
-  text-align: center;
-  font-size: 24px;
+#shopinfo-area .shopinfo-area__title__ja {
+  font-size: 2.2rem;
   font-weight: 500;
+  color: #212121;
+  letter-spacing: 0.44px;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 {
-    font-size: clamp(14px, 3.7vw, 2.8rem);
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__title__ja {
+    font-size: clamp(2.2rem, 4vw, 3rem);
   }
 }
-.shopinfo-area #info-area .w796 > div:not(:last-child) {
-  padding-bottom: 32px;
-  border-bottom: 1px solid #212121;
+#shopinfo-area .shopinfo-area__row {
+  border-bottom: 1px solid #1d1c24;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #1d1c24;
+  letter-spacing: 0.88px;
+  line-height: 3.2rem;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 > div:not(:last-child) {
-    padding-bottom: 16px;
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__row {
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    letter-spacing: 0.52px;
+    line-height: 4rem;
   }
 }
-.shopinfo-area #info-area .w796 > div:not(:first-child) {
-  padding-top: 32px;
+#shopinfo-area .shopinfo-area__row__main {
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  line-height: 3.8rem;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 > div:not(:first-child) {
-    padding-top: 16px;
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__row__main {
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    letter-spacing: 0.52px;
+    line-height: 4rem;
   }
 }
-.shopinfo-area #info-area .w796 > div p {
-  letter-spacing: 0.05em;
+#shopinfo-area .shopinfo-area__row__small {
+  font-size: 2rem;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 > div p {
-    letter-spacing: 0;
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__row__small {
+    font-size: clamp(1.3rem, 2.7vw, 2rem);
   }
 }
-.shopinfo-area #info-area .w796 > div p:not(:last-child) {
-  margin-bottom: 5px;
-}
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 > div p:not(:last-child) {
-    margin-bottom: 3px;
-  }
-}
-.shopinfo-area #info-area .w796 .note {
-  font-size: 22px;
+#shopinfo-area .shopinfo-area__note {
+  font-size: 2rem;
   font-weight: 400;
+  letter-spacing: 0.4px;
+  line-height: 3.4rem;
+  margin-top: 10px;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 .note {
-    font-size: clamp(13px, 3.4vw, 2.6rem);
-    line-height: 1.4545454545;
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__note {
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    letter-spacing: 0.44px;
+    line-height: 3.6rem;
   }
 }
-.shopinfo-area #info-area .w796 .small {
-  font-size: 22px;
-}
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 .small {
-    font-size: 11px;
-  }
-}
-.shopinfo-area #info-area .w796 .access a {
+#shopinfo-area .shopinfo-area__row--access a {
   display: inline-block;
   position: relative;
   padding-right: 40px;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 .access a {
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__row--access a {
     padding-right: 20px;
   }
 }
-.shopinfo-area #info-area .w796 .access a::after {
+#shopinfo-area .shopinfo-area__row--access a::after {
   content: "";
   position: absolute;
   top: 0.55em;
@@ -338,15 +350,32 @@ mv-swiper
   background: url(../img/info_link.svg) no-repeat;
   background-size: cover;
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 .access a::after {
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__row--access a::after {
     width: 16.5px;
     height: 11.5px;
   }
 }
-@media screen and (max-width: 768px) {
-  .shopinfo-area #info-area .w796 .time .txt_slim {
-    letter-spacing: -0.05em;
+#shopinfo-area .shopinfo-area__map {
+  padding: 60px 0;
+}
+#shopinfo-area .shopinfo-area__map iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+  display: block;
+}
+@media screen and (max-width: 960px) {
+  #shopinfo-area .shopinfo-area__map {
+    padding: 40px 0;
+  }
+  #shopinfo-area .shopinfo-area__map iframe {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 520px) {
+  #shopinfo-area .shopinfo-area__map iframe {
+    height: 300px;
   }
 }
 
@@ -402,9 +431,17 @@ mv-swiper
   line-height: 4rem;
   margin-top: 30px;
 }
+@media screen and (max-width: 960px) {
+  #tenpo-area .inner div .tenpo-area-text {
+    font-size: 2.6rem;
+    line-height: 5.2rem;
+    letter-spacing: 0.44px;
+  }
+}
 @media screen and (max-width: 520px) {
   #tenpo-area .inner div .tenpo-area-text {
-    font-size: clamp(1.3rem, 3.4vw, 2.6rem);
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    line-height: 1.8;
   }
 }
 @media screen and (max-width: 520px) {
