@@ -54,7 +54,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <div class="tb-pc header-pc">
         <p class="logo">
           <img src="./img/ai-logo.png" alt="アイレクスAIジム24" />
@@ -71,50 +71,57 @@
               <div class="swiper-slide">
                 <picture>
                   <source
-                    media="(max-width: 960px)"
+                    media="(max-width: 750px)"
+                    srcset="./img/mv-sp4.png"
+                  />
+                  <img src="./img/mv-pc1.png" alt="駅ナカ×AIジムついに誕生" />
+                </picture>
+              </div>
+
+              <div class="swiper-slide">
+                <picture>
+                  <source
+                    media="(max-width: 750px)"
                     srcset="./img/mv-sp1.png"
                   />
-                  <img src="./img/mv-pc1.png" alt="いつも改札から 秒でジム" />
+                  <img src="./img/mv-pc2.png" alt="いつも改札から 秒でジム" />
                 </picture>
               </div>
+
               <div class="swiper-slide">
                 <picture>
                   <source
-                    media="(max-width: 960px)"
+                    media="(max-width: 750px)"
                     srcset="./img/mv-sp2.png"
                   />
-                  <img src="./img/mv-pc2.png" alt="AIジムで楽トレ" />
+                  <img
+                    src="./img/mv-pc3.png"
+                    alt="AIジムで楽トレ あなただけの、運動メニューを"
+                  />
                 </picture>
               </div>
-              <div class="swiper-slide">
+
+              <div class="swiper-slide sp">
                 <picture>
                   <source
-                    media="(max-width: 960px)"
+                    media="(max-width: 750px)"
                     srcset="./img/mv-sp3.png"
                   />
                   <img
                     src="./img/mv-pc3.png"
-                    alt="あなただけの、運動メニューを"
+                    alt="AIジムで楽トレ あなただけの、運動メニューを"
                   />
                 </picture>
               </div>
+
               <div class="swiper-slide">
                 <picture>
                   <source
-                    media="(max-width: 960px)"
-                    srcset="./img/mv-sp4.png"
-                  />
-                  <img src="./img/mv-pc4.png" alt="駅ナカ×AIジムついに誕生" />
-                </picture>
-              </div>
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    media="(max-width: 960px)"
+                    media="(max-width: 750px)"
                     srcset="./img/mv-sp5.png"
                   />
                   <img
-                    src="./img/mv-pc1.png"
+                    src="./img/mv-pc4.png"
                     alt="豊橋駅、改札すぐ横 2026.9.1 Grand Open!"
                   />
                 </picture>
@@ -123,115 +130,238 @@
             <div class="mv-swiper-pagination swiper-pagination"></div>
           </div>
         </div>
+
         <div class="mv-open">
           <picture>
-            <source media="(max-width: 960px)" srcset="./img/fv-bottomSp.png" />
+            <source media="(max-width: 750px)" srcset="./img/fv-bottomSp.png" />
             <img
               src="./img/fv-bottom.png"
               alt="豊橋駅に9月オープン（予定）/ 7月会員募集 開始!!"
             />
           </picture>
         </div>
+
+        <div class="fv-float" id="fv-float">
+          <a
+            href="https://lin.ee/O67jOv2"
+            class="fv-float__line"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="./img/line-bannar.png" alt="LINEで友だち追加はこちら" />
+          </a>
+        </div>
       </section>
       <!-- /#mv-area -->
 
-      <div class="tab menu-sp">
-        <nav>
-          <ul>
+      <section class="concept-area">
+        <div class="concept-area__bg">
+          <div class="concept-area__text">
+            <h2 class="concept-area__title">
+              もう迷わない、<br />AIフィットネス。
+            </h2>
+
+            <p class="concept-area__body">
+              通勤・通学、駅利用のついでに立ち寄れる、<br
+                class="tab sp"
+              />豊橋駅改札すぐのジムが誕生。<br />AIがあなたに合わせて<br
+                class="tab sp"
+              />
+              トレーニングメニューを考案 するから、<br />何をどう運動すればいいかを考えなくていい。<br />着替え不要、短時間でOKだから、<br
+                class="tab sp"
+              />
+              時間がない日も無理なく続けられる。<br />AIと始める迷わないフィットネスライフが、<br
+                class="tab sp"
+              />
+              あなたの駅から始まります。
+            </p>
+          </div>
+        </div>
+
+        <div class="concept-area__point">
+          <ul class="concept-area__point__list">
             <li>
-              <a href="./#yoga-anc">
-                <img src="./img/img_menu-icon.svg" alt="" />
-                <p>ヨガプログラム</p>
-              </a>
+              <picture>
+                <source
+                  media="(max-width: 960px)"
+                  srcset="./img/point-icon1Sp.png"
+                />
+                <img src="./img/point-icon1.png" alt="豊橋駅構内" />
+              </picture>
             </li>
+
             <li>
-              <a href="./#gym-anc">
-                <img src="./img/img_menu-icon2.svg" alt="" />
-                <p>ジムトレーニング</p>
-              </a>
+              <picture>
+                <source
+                  media="(max-width: 960px)"
+                  srcset="./img/point-icon2Sp.png"
+                />
+                <img src="./img/point-icon2.png" alt="24時間いつでも" />
+              </picture>
             </li>
+
             <li>
-              <a href="./#price-area">
-                <img src="./img/img_menu-icon4.svg" alt="" />
-                <p>料金プラン</p>
-              </a>
+              <picture>
+                <source
+                  media="(max-width: 960px)"
+                  srcset="./img/point-icon3Sp.png"
+                />
+                <img src="./img/point-icon3.png" alt="最短30分" />
+              </picture>
             </li>
+
             <li>
-              <a href="./#shopinfo-anc">
-                <img src="./img/img_menu-icon6.svg" alt="" />
-                <p>店舗情報・アクセス</p>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.ilex-light.com/lp/beginner/">
-                <img src="./img/img_menu-icon7.svg" alt="" />
-                <p>ジムが初めての方へ</p>
-              </a>
+              <picture>
+                <source
+                  media="(max-width: 960px)"
+                  srcset="./img/point-icon4Sp.png"
+                />
+                <img src="./img/point-icon4.png" alt="着替え不要" />
+              </picture>
             </li>
           </ul>
-        </nav>
-      </div>
-      <!-- /.menu-sp -->
+        </div>
+
+        <picture class="concept-area__human">
+          <source media="(max-width: 960px)" srcset="./img/point-humanSp.png" />
+          <img src="./img/point-human.png" alt="" />
+        </picture>
+      </section>
+      <!-- /.concept-area -->
+
+      <section class="point">
+        <h2 class="point__ttl flex">
+          <div class="point__ttl__imgBox">
+            <img
+              src="./img/ai logo2.png"
+              alt=""
+              class="point__ttl__imgBox__img"
+            />
+          </div>
+
+          ここがポイント！
+        </h2>
+
+        <div class="point__inner">
+          <div class="point__inner__box">
+            <div class="point__inner__box__imgBox --point01">
+              <picture>
+                <source
+                  media="(max-width: 750px)"
+                  srcset="./img/point-backSp.png"
+                />
+                <img
+                  src="./img/point-back.png"
+                  alt="POINT1"
+                  class="point__inner__box__imgBox__img"
+                />
+              </picture>
+
+              <div class="point__inner__box__imgBox__txtBox --point01">
+                <h3 class="point__inner__box__imgBox__txtBox__ttl">
+                  <p class="point__inner__box__imgBox__txtBox__ttl--big">
+                    豊橋駅改札すぐ、
+                  </p>
+                  <p class="point__inner__box__imgBox__txtBox--small">
+                    “ついでに寄れる”運動習慣。
+                  </p>
+                </h3>
+
+                <p class="point__inner__box__imgBox__txtBox__desc">
+                  「改札を出てすぐにジム」という好ポジション。通勤や通学、お買い物といった目的のついでに、
+                  いつでもふらっと立ち寄れる。これまでジムが続かなかった人でも、きっと続けられるあなたの生活動線にあるジムです。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="point__inner__box">
+            <div class="point__inner__box__imgBox --point02">
+              <picture>
+                <source
+                  media="(max-width: 750px)"
+                  srcset="./img/point-back2Sp.png"
+                />
+                <img
+                  src="./img/point-back2.png"
+                  alt="POINT2"
+                  class="point__inner__box__imgBox__img"
+                />
+              </picture>
+
+              <div class="point__inner__box__imgBox__txtBox --point02">
+                <h3 class="point__inner__box__imgBox__txtBox__ttl">
+                  <p class="point__inner__box__imgBox__txtBox__ttl--big">
+                    もう考えなくていい!
+                  </p>
+                  <p class="point__inner__box__imgBox__txtBox--small">
+                    AIがあなたに合う30分をつくる！
+                  </p>
+                </h3>
+
+                <p class="point__inner__box__imgBox__txtBox__desc">
+                  AIがあなたに合ったトレーニングメニューを考案してくれるから、何をどうやるかを考えなくてOK。
+                  迷わず、無理なく、バランスよく、カラダを整えることができます。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="shopinfo-area">
         <div class="shopinfo-area__inner">
           <div class="shopinfo-area__title">
             <p class="shopinfo-area__title__en">INFORMATION</p>
+
             <p class="shopinfo-area__title__ja">店舗情報</p>
           </div>
 
           <div class="shopinfo-area__row shopinfo-area__row--access">
-            <p>〒441-1375　愛知県新城市字的場22-1</p>
-            <a href="https://maps.app.goo.gl/KEDd36AQET6SakJ29" target="_blank"
-              >Google Map</a
-            >
+            <p>〒440-00755　愛知県豊橋市花田町字西宿 豊橋駅内</p>
           </div>
 
           <div class="shopinfo-area__row">
             <p>24時間営業</p>
           </div>
 
-          <div class="shopinfo-area__row">
-            <p>駐車場80台（共同利用含む）</p>
-          </div>
-
           <div class="shopinfo-area__row shopinfo-area__row--multi">
             <div class="shopinfo-area__row__main">
               <p>【 スタッフ在館時間 】</p>
-              <p>
-                ●月～水・金 / 10:00~15:00、　18:00~22:00<span
-                  class="shopinfo-area__row__small"
-                  >（木曜日は終日不在）</span
-                >
-              </p>
+
+              <p>●月～金 / 10:00~14:00、18:00~22:00</p>
               <p>●土・日・祝 / 10:00~17:00</p>
             </div>
+
             <p class="shopinfo-area__note">
               ※受付はスタッフ在館終了１時間前までです。
             </p>
-          </div>
-
-          <div class="shopinfo-area__row">
-            <p>【 電話番号 】</p>
-            <p><a href="tel:0536-25-7772">0536-25-7772</a></p>
           </div>
 
           <div class="shopinfo-area__row shopinfo-area__row--multi">
             <div class="shopinfo-area__row__main">
               <p>【 休館日 】</p>
 
-              <p>毎月最終木曜日・夏季・年末年始</p>
+              <p>毎月最終日曜日・夏季・年末年始</p>
             </div>
+
             <p class="shopinfo-area__note">
-              ※最終木曜日前日の水曜日は22時まで。
+              ※最終日曜日前日の土曜日は22時まで。
               <br class="sp" />
-              金曜日は10時から営業開始
+              月曜日は10時から営業開始
+            </p>
+          </div>
+
+          <div class="shopinfo-area__row shopinfo-area__row--multi">
+            <p class="shopinfo-area__note">
+              ※スタッフ在館時間や受付時間は <br class="sp" />
+              予告なく変更する場合がございます。
             </p>
           </div>
 
           <div class="shopinfo-area__map" id="map-area">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4627.549737504858!2d137.49539408547062!3d34.902137910721954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601b35216eaa5611%3A0x9a61f0ebb575887d!2z44Oo44Ks77yG44K444OgIOOCouOCpOODrOOCr-OCueODu-ODqeOCpOODiCsyNCDmlrDln44!5e0!3m2!1sja!2sjp!4v1754382357943!5m2!1sja!2sjp"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1638.8475113560135!2d137.38049278888658!3d34.76327459670035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004d208cbebfcef%3A0xcbf9877c27483b85!2z5oSb55-l55yM6LGK5qmL5biC6Iqx55Sw55S66KW_5a6_!5e0!3m2!1sja!2sjp!4v1781846153603!5m2!1sja!2sjp"
               width="800"
               height="600"
               style="border: 0"
@@ -249,9 +379,10 @@
           <div>
             <h2>
               アイレクスは
-              <br />
-              愛知県に29店舗を展開中
+              <br class="pc" />
+              愛知県に<br class="sp" />29店舗を展開中
             </h2>
+
             <p class="tenpo-area-text">
               地域密着×多業態で展開する、
               <br />
@@ -262,6 +393,7 @@
               地域の一人ひとりにご提案します。
             </p>
           </div>
+
           <div>
             <p>
               <img src="./img/img_maparea2511.svg" alt="愛知県地図" />
@@ -276,39 +408,23 @@
       <div>
         <ul class="footer-link">
           <li><a href="https://www.ilex-sports.com/company/">企業情報</a></li>
+
           <li>
             <a href="https://www.ilex-sports.com/privacy/">個人情報保護方針</a>
           </li>
+
           <li>
             <a href="https://ilex-sports.jp/recruit/" target="_blank"
               >採用情報</a
             >
           </li>
         </ul>
+
         <p class="tac footer-copy">
           Copyright&copy; 2026 ILEX SPORTS LIFE INC. All Rights Reserved.
         </p>
       </div>
     </footer>
-
-    <div class="fv-float" id="fv-float">
-      <a
-        href="#"
-        class="fv-float__line"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="./img/line-bannar.png" alt="LINEで友だち追加はこちら" />
-      </a>
-    </div>
-
-    <!-- ❯ https://www.figma.com/design/BmPfc9DUL2nD5wrJgRdYwq/2606_AI-GYM24--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=4321-838&t=JQTjqeWfUUJsQgUN-0
-  その下のセクションです
-  人物はpoint-human,point-humanSp,です
-  下にある白帯の中も画像で行きます
-  point-icon1~4,spも共通でお願いします
-  SPこちら
-  https://www.figma.com/design/BmPfc9DUL2nD5wrJgRdYwq/2606_AI-GYM24--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2516-1136&t=JQTjqeWfUUJsQgUN-0https://www.figma.com/design/BmPfc9DUL2nD5wrJgRdYwq/2606_AI-GYM24--%E3%82%B3%E3%83%94%E3%83%BC-?node-id=2516-1136&t=JQTjqeWfUUJsQgUN-0 -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
