@@ -411,6 +411,7 @@ mv-open
 body {
   line-height: 1.6;
   min-width: 375px;
+  font-family: var(--main-font);
 }
 
 img {
@@ -451,7 +452,7 @@ a {
 /* 共通クラス */
 /* フォント */
 :root {
-  --main-font: "Noto Sans CJK JP", sans-serif;
+  --main-font: "Noto Sans JP", sans-serif;
   --sub-font01: "Oswald", sans-serif;
   --sub-font02: ;
 }

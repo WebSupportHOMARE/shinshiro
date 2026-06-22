@@ -48,3 +48,16 @@ const swiper_mv = new Swiper(".mv-swiper", {
     disableOnInteraction: false,
   },
 });
+/* header高さ取得
+	--------------------------------------------------------- */
+function setHeaderHeight() {
+  const headerHeight = document.querySelector(".header-pc").offsetHeight;
+
+  document.documentElement.style.setProperty(
+    "--header-height",
+    `${headerHeight}px`,
+  );
+}
+
+window.addEventListener("load", setHeaderHeight);
+window.addEventListener("resize", setHeaderHeight);
