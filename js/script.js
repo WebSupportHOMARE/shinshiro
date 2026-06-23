@@ -61,3 +61,36 @@ function setHeaderHeight() {
 
 window.addEventListener("load", setHeaderHeight);
 window.addEventListener("resize", setHeaderHeight);
+
+/* Machine Swiper
+	--------------------------------------------------------- */
+const swiper_machine = new Swiper(".machine__swiper", {
+  loop: true,
+  centeredSlides: true,
+  slidesPerView: 1.2,
+  spaceBetween: 16,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    521: {
+      centeredSlides: true,
+      slidesPerView: 2,
+      spaceBetween: 24,
+    },
+    961: {
+      centeredSlides: false,
+      slidesPerView: 3.2,
+      spaceBetween: 32,
+    },
+  },
+});
+
+/* QA アコーディオン
+	--------------------------------------------------------- */
+document.querySelectorAll(".js-qa").forEach(function (btn) {
+  btn.addEventListener("click", function () {
+    this.closest(".qa__list__item").classList.toggle("is-open");
+  });
+});
