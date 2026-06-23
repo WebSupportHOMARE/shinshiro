@@ -11,7 +11,7 @@ comSec__ttl
   padding-bottom: clamp(30px, 8vw, 60px);
 }
 .comSec__ttl__en {
-  font-family: "Syncopate", sans-serif;
+  font-family: var(--sub-font02);
   font-size: 6.4rem;
   background: linear-gradient(to right, #44ade9 20%, #914c93);
   -webkit-background-clip: text;
@@ -124,7 +124,7 @@ comSec__imgTtl
   gap: 10px;
 }
 .comSec__imgTtl__en {
-  font-family: "Syncopate", sans-serif;
+  font-family: var(--sub-font02);
   font-size: clamp(3.2rem, 5vw, 6.4rem);
   color: #fff;
   letter-spacing: 0.04em;
@@ -344,6 +344,135 @@ mv-open
 @media screen and (max-width: 750px) {
   .mv-open {
     width: 100%;
+  }
+}
+
+/*
+support
+---------------------------------------- */
+.support {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #fff 60%);
+  position: relative;
+  padding-bottom: clamp(80px, 8.3vw, 160px);
+  overflow: hidden;
+}
+.support::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 7px,
+    rgba(0, 0, 0, 0.06) 7px,
+    rgba(0, 0, 0, 0.06) 8px
+  );
+  background-size: 200px 8px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.support__inner {
+  width: min(90%, 1140px);
+  margin: 0 auto;
+  position: relative;
+  padding-top: 60px;
+}
+.support__lead {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #1d1c24;
+  text-align: center;
+  line-height: 1.57;
+  letter-spacing: 0.04em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.support__desc {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  max-width: 800px;
+  margin: 20px auto 0;
+  padding-bottom: 80px;
+}
+.support__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+  max-width: 992px;
+  margin: 0 auto;
+}
+.support__card__img img {
+  aspect-ratio: 480 / 320;
+}
+.support__card__video video {
+  width: 100%;
+  aspect-ratio: 480 / 320;
+  object-fit: cover;
+  display: block;
+  background: #222;
+}
+.support__card__ttl {
+  font-family: var(--sub-font02);
+  font-weight: 700;
+  font-size: 3rem;
+  background: linear-gradient(to right, #44ade9 20%, #914c93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 40px 60px 20px;
+}
+.support__card__desc {
+  font-size: 2rem;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  padding: 0 40px 60px;
+  text-align: justify;
+}
+@media screen and (max-width: 960px) {
+  .support__lead {
+    font-size: clamp(2rem, 2.9vw, 2.8rem);
+  }
+  .support__desc {
+    font-size: clamp(1.6rem, 2.1vw, 2rem);
+  }
+  .support__card__ttl {
+    font-size: clamp(1.8rem, 3.1vw, 3rem);
+    padding: clamp(20px, 4.2vw, 40px) 40px clamp(10px, 2.1vw, 20px);
+  }
+  .support__card__desc {
+    font-size: clamp(1.4rem, 1.9vw, 2rem);
+    padding: 0 clamp(16px, 2.5vw, 40px) clamp(30px, 4.2vw, 60px);
+  }
+}
+@media screen and (max-width: 520px) {
+  .support {
+    padding-bottom: clamp(40px, 10vw, 80px);
+  }
+  .support__inner {
+    padding-top: 30px;
+  }
+  .support__lead {
+    font-size: clamp(1.6rem, 4.8vw, 2.4rem);
+  }
+  .support__desc {
+    font-size: clamp(1.2rem, 3.7vw, 1.8rem);
+    padding-bottom: 40px;
+  }
+  .support__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .support__card__ttl {
+    font-size: clamp(1.6rem, 6vw, 3rem);
+    padding: 20px 30px 10px;
+  }
+  .support__card__desc {
+    font-size: clamp(1.2rem, 3.7vw, 2rem);
+    padding: 0 20px 40px;
   }
 }
 
@@ -1083,7 +1212,7 @@ a {
 :root {
   --main-font: "Noto Sans JP", sans-serif;
   --sub-font01: "Oswald", sans-serif;
-  --sub-font02: ;
+  --sub-font02: "Syncopate", sans-serif;
 }
 .mainFont {
   font-family: var(--main-font);
