@@ -76,70 +76,14 @@
     <main>
       <section id="mv-area">
         <h1>豊橋駅で24時間　駅ナカ×AIジム　アイレクス AIジム24</h1>
-        <div class="mv-contents">
-          <div class="swiper mv-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    media="(max-width: 750px)"
-                    srcset="./img/mv-sp4.png"
-                  />
-                  <img src="./img/mv-pc1.png" alt="駅ナカ×AIジムついに誕生" />
-                </picture>
-              </div>
+        <div class="mv-video">
+          <video class="mv-video__pc" autoplay muted loop playsinline>
+            <source src="./img/ilex_FV_pc.mp4" type="video/mp4" />
+          </video>
 
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    media="(max-width: 750px)"
-                    srcset="./img/mv-sp1.png"
-                  />
-                  <img src="./img/mv-pc2.png" alt="いつも改札から 秒でジム" />
-                </picture>
-              </div>
-
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    media="(max-width: 750px)"
-                    srcset="./img/mv-sp2.png"
-                  />
-                  <img
-                    src="./img/mv-pc3.png"
-                    alt="AIジムで楽トレ あなただけの、運動メニューを"
-                  />
-                </picture>
-              </div>
-
-              <div class="swiper-slide sp">
-                <picture>
-                  <source
-                    media="(max-width: 750px)"
-                    srcset="./img/mv-sp3.png"
-                  />
-                  <img
-                    src="./img/mv-pc3.png"
-                    alt="AIジムで楽トレ あなただけの、運動メニューを"
-                  />
-                </picture>
-              </div>
-
-              <div class="swiper-slide">
-                <picture>
-                  <source
-                    media="(max-width: 750px)"
-                    srcset="./img/mv-sp5.png"
-                  />
-                  <img
-                    src="./img/mv-pc4.png"
-                    alt="豊橋駅、改札すぐ横 2026.9.1 Grand Open!"
-                  />
-                </picture>
-              </div>
-            </div>
-            <div class="mv-swiper-pagination swiper-pagination"></div>
-          </div>
+          <video class="mv-video__sp" autoplay muted loop playsinline>
+            <source src="./img/ilex_FV_sp.mp4" type="video/mp4" />
+          </video>
         </div>
 
         <div class="mv-open">
@@ -320,7 +264,21 @@
         </div>
       </section>
 
-      <section class="support">
+      <section class="guidance comSec comStripeBg">
+        <div class="guidance__inner">
+          <div class="guidance__ttl comSec__ttl">
+            <p class="guidance__ttl__en comSec__ttl__en">GUIDANCE</p>
+
+            <p class="guidance__ttl__ja comSec__ttl__ja">施設のご案内</p>
+          </div>
+
+          <div class="guidance__img">
+            <img src="./img/guidance.png" alt="施設案内 館内MAP" />
+          </div>
+        </div>
+      </section>
+
+      <section class="support comStripeBg">
         <div class="support__ttl comSec__imgTtl">
           <div class="support__ttl__bg comSec__imgTtl__bg">
             <img src="./img/support-image.png" alt="" />
@@ -396,7 +354,7 @@
         </div>
       </section>
 
-      <section class="machine">
+      <section class="machine comStripeBg">
         <div class="machine__ttl comSec__imgTtl">
           <div class="machine__ttl__bg comSec__imgTtl__bg">
             <img src="./img/DRAX-image.png" alt="DRAXマシン" />
@@ -486,7 +444,7 @@
         </div>
       </section>
 
-      <section class="price comSec">
+      <section class="price comSec comStripeBg">
         <div class="price__inner">
           <div class="price__ttl comSec__ttl">
             <p class="price__ttl__en comSec__ttl__en">PRICE</p>
@@ -597,18 +555,20 @@
             ※料金は全て1人(1口)あたりの金額となります。<br />
             ※当クラブは16歳以上の方からご入会できます。
           </p>
+        </div>
+      </section>
 
-          <div class="price__banner">
-            <img src="./img/campaign-banner.png" alt="キャンペーンバナー" />
-          </div>
+      <section class="campaign comSec">
+        <div class="campaign__inner">
+          <img src="./img/campaign-banner.png" alt="キャンペーンバナー" />
 
-          <div class="price__btn comSec__btn">
+          <div class="campaign__btn comSec__btn">
             <a href="#">WEB入会手続きはこちら</a>
           </div>
         </div>
       </section>
 
-      <section class="guide comSec">
+      <section class="guide comSec comStripeBg">
         <div class="guide__inner">
           <div class="guide__ttl comSec__ttl">
             <p class="guide__ttl__en comSec__ttl__en">USER GUIDE</p>
@@ -747,7 +707,7 @@
         </div>
       </section>
 
-      <section class="qa comSec">
+      <section class="qa comSec comStripeBg">
         <div class="qa__inner">
           <div class="qa__ttl comSec__ttl">
             <p class="qa__ttl__en comSec__ttl__en">Q&A</p>
@@ -973,7 +933,7 @@
         </div>
       </section>
 
-      <section id="shopinfo-area">
+      <section id="shopinfo-area" class="comStripeBg">
         <div class="shopinfo-area__inner">
           <div class="shopinfo-area__title comSec__ttl">
             <p class="shopinfo-area__title__en comSec__ttl__en">INFORMATION</p>
@@ -1061,6 +1021,352 @@
             <p>
               <img src="./img/img_maparea2511.svg" alt="愛知県地図" />
             </p>
+          </div>
+        </div>
+        <div class="tenpo-area-contents">
+          <div class="btnBox">
+            <!--名古屋・尾張エリア-->
+            <input id="nagoya_store" type="radio" name="tab_item" checked />
+            <label class="tab_item nagoyaitem" for="nagoya_store"
+              >名古屋・尾張エリア（8店舗）</label
+            >
+            <!--西三河エリア-->
+            <input id="nimikawa_store" type="radio" name="tab_item" />
+            <label class="tab_item nimikawaitem" for="nimikawa_store"
+              >西三河エリア（6店舗）</label
+            >
+            <!--東三河エリア-->
+            <input id="himikawa_store" type="radio" name="tab_item" />
+            <label class="tab_item himikawaiitem" for="himikawa_store"
+              >東三河エリア（9店舗）</label
+            >
+            <div id="nagoyaarea" class="tab_content">
+              <div class="nagoyaareaBox">
+                <!--名古屋-->
+                <div class="number">
+                  <ul>
+                    <li class="mf no7">アイレクス マイフィットネス mozo</li>
+                    <li>
+                      〒452-0817<br />名古屋市西区二方町40<br />スポーツ棟1F･2F
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/nagoya-mozo/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                  <p><small>※相互利用対象外店舗</small></p>
+                </div>
+                <div class="number">
+                  <ul>
+                    <li class="tc no8">アイレクス・ザ・クラブ覚王山+24</li>
+                    <li>
+                      〒464-0057<br />名古屋市千種区法王町2-5 <br />ルナプラザ1F
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/kakuozan/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no12">アイレクス・ライト+24 名古屋天白</li>
+                    <li>
+                      〒468-0039<br />名古屋市天白区西入町167<span class="pc"
+                        ><br />&nbsp;</span
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-light.com/tempaku/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no16">アイレクス・ライト+24 名古屋八事</li>
+                    <li>
+                      〒466-0834<br />名古屋市昭和区広路町字梅園1-1<br />八事フィットネスプラザ
+                      2F
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-light.com/yagoto/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="ms no20">アイレクス マイスタイル+24 白壁</li>
+                    <li>
+                      〒461-0011<br />名古屋市東区白壁3-11-20<span class="pc"
+                        ><br />&nbsp;</span
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/shirakabe/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <!--尾張-->
+                <div>
+                  <ul>
+                    <li class="no4">アイレクススポーツクラブ春日井+24</li>
+                    <li>
+                      〒486-0851<br />春日井市篠木町7-43-6<span class="pc"
+                        ><br />&nbsp;</span
+                      >
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/kasugai/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no17">アイレクス・ライト+24 日進赤池</li>
+                    <li>
+                      〒470-0126<br />日進市赤池町箕ノ手2-115 2F<span
+                        class="pc"
+                      ></span>
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-light.com/akaike/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="ms no21">アイレクス マイスタイル+24 豊明</li>
+                    <li>
+                      〒470-1151<br />豊明市前後町螺貝1384-1<span
+                        class="pc"
+                      ></span>
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/toyoake/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="pc"></div>
+              </div>
+            </div>
+            <div id="nimikawaarea" class="tab_content">
+              <div class="nimikawaareaBox">
+                <!--豊田エリア-->
+                <div>
+                  <ul>
+                    <li class="no2">アイレクススポーツクラブPREMIA+24</li>
+                    <li>〒471-0027<br />豊田市喜多町2-160 コモ・スクエア3F</li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/premia/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="ms no5">アイレクス マイスタイル+24 豊田</li>
+                    <li>
+                      <span class="pc"></span
+                      >〒471-0855<br />豊田市柿本町3丁目2-1
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/toyota/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="no12">アイレクス・ザ・クラブ豊田+24</li>
+                    <li>
+                      <span class="pc"></span
+                      >〒471-0828<br />豊田市前山町1丁目27 メグリアエムパーク内
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/tc-toyota/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no13">アイレクス・ライト+24 豊田陣中</li>
+                    <li>〒471-0079<br />豊田市陣中町2-1-2</li>
+                    <li>
+                      <a href="https://www.ilex-light.com/jinnaka/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <!--岡崎エリア-->
+                <div>
+                  <ul>
+                    <li class="light no15">アイレクス・ライト+24 岡崎北</li>
+                    <li>〒444-2133<br />岡崎市井ノ口町字河原西4</li>
+                    <li>
+                      <a href="https://www.ilex-light.com/okazakikita/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no19">アイレクス・ライト+24 岡崎戸崎</li>
+                    <li>〒444-0840<br />岡崎市戸崎町字屋敷3-2 1F</li>
+                    <li>
+                      <a href="https://www.ilex-light.com/okazakitosaki/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div id="himikawaarea" class="tab_content">
+              <div class="himikawaareaBox">
+                <!--豊川エリア-->
+                <div>
+                  <ul>
+                    <li class="no1">アイレクススポーツクラブGRANDE+24</li>
+                    <li>〒442-0029<br />豊川市末広通3-45-1</li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/grande/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no10">アイレクス・ライト+24 豊川国府</li>
+                    <li>
+                      <span class="pc"></span
+                      >〒442-0854<br />豊川市国府町桜田111
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-light.com/toyokawakou/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="fit no22">ヨガ＆ジム24 アイレクス デュオ</li>
+                    <li>
+                      <span class="pc"></span>〒442-0888<br />豊川市千歳通4-18
+                      アイレクステラスクラシック内
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/duo/toyokawa/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <!--豊橋エリア-->
+                <div>
+                  <ul>
+                    <li class="no6">アイレクススポーツクラブ豊橋ミラまち+24</li>
+                    <li>
+                      〒441-8151<br />豊橋市曙町字松並101-9
+                      コモンステージミラまち内
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/toyohashi/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no11">アイレクス・ライト+24 豊橋藤沢</li>
+                    <li>
+                      <span class="pc"></span>〒441-8058<br />豊橋市柱六番町142
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-light.com/fujisawa/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul>
+                    <li class="light no18">アイレクス・ライト+24 豊橋東田</li>
+                    <li>
+                      <span class="pc"></span>〒440-0042<br />豊橋市栄町16番地
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-light.com/azumada/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <!--田原-->
+                <div>
+                  <ul>
+                    <li class="no3">アイレクススポーツクラブ田原+24</li>
+                    <li>
+                      〒441-3421<br />田原市田原町萱町1番地 セントファーレ内
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-sports.com/tahara/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <!--蒲郡エリア-->
+                <div>
+                  <ul>
+                    <li class="light no14">アイレクス・ライト+24 蒲郡三谷</li>
+                    <li>
+                      〒443-0022<br />蒲郡市三谷北通6-228 精文館書店蒲郡三谷店
+                      2F
+                    </li>
+                    <li>
+                      <a href="https://www.ilex-light.com/gamagori/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+                <!--新城エリア-->
+                <div>
+                  <ul>
+                    <li class="light no28">アイレクス・ライト+24 新城</li>
+                    <li>〒441-1375<br />新城市字的場22-1</li>
+                    <li>
+                      <a href="https://www.ilex-light.com/shinshiro/"
+                        ><p>店舗ページはこちら<i class="arrow"></i></p
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

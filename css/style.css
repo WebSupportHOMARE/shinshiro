@@ -4,6 +4,156 @@ html {
 }
 
 /*
+--------------------------------------------------
+-------------------------------------------------- */
+body {
+  line-height: 1.6;
+  min-width: 375px;
+  font-family: var(--main-font);
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  object-position: top;
+}
+a {
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: 0.4s;
+}
+/* 操作アクション */
+/* ホバー時 */
+@media (hover: hover) {
+  a:hover {
+    transform: scale(0.95);
+    transition: 0.4s;
+  }
+  a:active {
+    transform: scale(0.9);
+    transition: 0.1s;
+  }
+}
+/* クリック（タップ）時 */
+@media (hover: none) {
+  a:active {
+    transform: scale(0.9);
+    transition: 0.1s;
+  }
+}
+
+/* 共通クラス */
+/* フォント */
+:root {
+  --main-font: "Noto Sans JP", sans-serif;
+  --sub-font01: "Oswald", sans-serif;
+  --sub-font02: "Syncopate", sans-serif;
+  --main_green: #afd152;
+}
+.mainFont {
+  font-family: var(--main-font);
+}
+.subFont01 {
+  font-family: var(--sub-font01);
+}
+.subFont02 {
+  font-family: var(--sub-font02);
+}
+.arrow {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+}
+.arrow:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 0px;
+  border-top: solid 2px #000;
+  border-right: solid 2px #000;
+  position: absolute;
+  top: 10px;
+  transform: rotate(45deg);
+  left: 5px;
+  margin-top: -10px;
+}
+/* 要素最大幅 */
+.mw {
+  width: min(86%, 1280px);
+  margin: 0 auto;
+}
+.mws {
+  width: min(80%, 1080px);
+  margin: 0 auto;
+}
+/* レスポンシブ */
+.tab {
+  display: none;
+}
+.pc.tab {
+  display: block;
+}
+.sp {
+  display: none;
+}
+/* フレックス */
+.flex {
+  display: flex;
+}
+/* 非表示 */
+.none {
+  display: none;
+}
+/* テキストリンク */
+.tLink {
+  text-decoration: underline;
+  display: inline-block;
+}
+
+/* セクション */
+.comSec {
+  padding: clamp(80px, 8.3vw, 160px) 0;
+}
+@media screen and (max-width: 520px) {
+  .comSec {
+    padding: clamp(40px, 10vw, 80px) 0;
+  }
+}
+/* メディアクエリ */
+/* SP時 */
+@media (max-width: 960px) {
+  .tab {
+    display: block;
+  }
+  .tab.sp {
+    display: block;
+  }
+}
+@media (max-width: 750px) {
+  .pc {
+    display: none;
+  }
+  .pc.tab {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+  .mw {
+    width: 90%;
+  }
+  .mws {
+    width: 84%;
+  }
+}
+
+/*
 comSec__ttl
 ---------------------------------------- */
 .comSec__ttl {
@@ -301,30 +451,25 @@ footer .footer-copy {
     padding: 7px 0 11px;
   }
 }
-#mv-area .mv-contents {
-  position: relative;
-}
-
 /*
-mv-swiper
+mv-video
 ---------------------------------------- */
-.mv-swiper .swiper-slide img {
+.mv-video__pc,
+.mv-video__sp {
   display: block;
   width: 100%;
-  aspect-ratio: 1920 / 836;
-  object-fit: cover;
+  height: auto;
 }
-@media screen and (max-width: 750px) {
-  .mv-swiper .swiper-slide img {
-    aspect-ratio: 750 / 1020;
+.mv-video__sp {
+  display: none;
+}
+@media screen and (max-width: 520px) {
+  .mv-video__pc {
+    display: none;
   }
-}
-.mv-swiper .swiper-pagination-bullet {
-  background: #fff;
-  opacity: 0.6;
-}
-.mv-swiper .swiper-pagination-bullet-active {
-  opacity: 1;
+  .mv-video__sp {
+    display: block;
+  }
 }
 
 /*
@@ -345,6 +490,37 @@ mv-open
   .mv-open {
     width: 100%;
   }
+}
+
+/*
+guidance
+---------------------------------------- */
+.guidance {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #fff 60%);
+  position: relative;
+}
+.guidance::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 7px,
+    rgba(0, 0, 0, 0.06) 7px,
+    rgba(0, 0, 0, 0.06) 8px
+  );
+  background-size: 200px 8px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+.guidance__inner {
+  width: min(86%, 984px);
+  margin: 0 auto;
+  position: relative;
+}
+.guidance__img img {
+  aspect-ratio: 1436 / 802;
 }
 
 /*
@@ -1113,7 +1289,7 @@ qa
   justify-content: space-between;
   max-width: 1136px;
   margin: clamp(90px, 12vw, 160px) auto 0;
-  padding: 30px clamp(40px, 5.3vw, 70px) clamp(80px, 10vw, 120px);
+  padding: 30px clamp(40px, 5.3vw, 70px) 20px;
 }
 @media screen and (max-width: 1050px) {
   #tenpo-area .inner {
@@ -1162,137 +1338,350 @@ qa
     padding: 0 5%;
   }
 }
-
-/*
---------------------------------------------------
--------------------------------------------------- */
-body {
-  line-height: 1.6;
-  min-width: 375px;
-  font-family: var(--main-font);
-}
-
-img {
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-  object-fit: cover;
-  object-position: top;
-}
-a {
-  display: block;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  transition: 0.4s;
-}
-/* 操作アクション */
-/* ホバー時 */
-@media (hover: hover) {
-  a:hover {
-    transform: scale(0.95);
-    transition: 0.4s;
-  }
-  a:active {
-    transform: scale(0.9);
-    transition: 0.1s;
-  }
-}
-/* クリック（タップ）時 */
-@media (hover: none) {
-  a:active {
-    transform: scale(0.9);
-    transition: 0.1s;
-  }
-}
-
-/* 共通クラス */
-/* フォント */
-:root {
-  --main-font: "Noto Sans JP", sans-serif;
-  --sub-font01: "Oswald", sans-serif;
-  --sub-font02: "Syncopate", sans-serif;
-}
-.mainFont {
-  font-family: var(--main-font);
-}
-.subFont01 {
-  font-family: var(--sub-font01);
-}
-.subFont02 {
-  font-family: var(--sub-font02);
-}
-/* 要素最大幅 */
-.mw {
-  width: min(86%, 1280px);
-  margin: 0 auto;
-}
-.mws {
-  width: min(80%, 1080px);
-  margin: 0 auto;
-}
-/* レスポンシブ */
-.pc {
-  display: block;
-}
-.tab {
-  display: none;
-}
-.pc.tab {
-  display: block;
-}
-.sp {
-  display: none;
-}
-/* フレックス */
-.flex {
+.btnBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-/* 非表示 */
-.none {
+.btnBox input:checked + .tab_item {
+  color: #fff;
+}
+.btnBox input:checked + .himikawaiitem,
+.btnBox input:checked + .nagoyaitem,
+.btnBox input:checked + .nimikawaitem {
+  background: var(--main_green);
+}
+.tab_item {
+  font-size: 1.7rem;
+  border: 1px solid #fff;
+  padding: 0.5em;
+  font-weight: 700;
+  width: 33.3333%;
+  text-align: center;
+  background-color: #e6e6e6;
+  margin-bottom: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+input[name="tab_item"] {
   display: none;
 }
-/* テキストリンク */
-.tLink {
-  text-decoration: underline;
-  display: inline-block;
+.tab_content {
+  display: none;
+  clear: both;
+  overflow: hidden;
+  padding: 10px 0 40px;
+  padding: 10px 0 150px;
+  text-align: left;
 }
-
-/* セクション */
-.comSec {
-  padding: clamp(80px, 8.3vw, 160px) 0;
-}
-@media screen and (max-width: 520px) {
-  .comSec {
-    padding: clamp(40px, 10vw, 80px) 0;
+@media screen and (max-width: 768px) {
+  .tenpo-area-contents .pc {
+    display: none !important;
   }
-}
-/* メディアクエリ */
-/* SP時 */
-@media (max-width: 960px) {
-  .tab {
-    display: block;
-  }
-  .tab.sp {
-    display: block;
+  .tab_content {
+    padding-bottom: 30px;
   }
 }
-@media (max-width: 750px) {
-  .pc {
-    display: none;
+#himikawa_store:checked ~ #himikawaarea,
+#nagoya_store:checked ~ #nagoyaarea,
+#nimikawa_store:checked ~ #nimikawaarea {
+  display: block;
+}
+.himikawaareaBox,
+.nagoyaareaBox,
+.nimikawaareaBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.himikawaareaBox div,
+.nagoyaareaBox div,
+.nimikawaareaBox div {
+  font-size: 1.7rem;
+  width: 33.3333%;
+  padding: 2% 0;
+}
+.himikawaareaBox div ul li:first-child,
+.nagoyaareaBox div ul li:first-child,
+.nimikawaareaBox div ul li:first-child {
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-bottom: 3%;
+  text-align: left;
+  font-size: 1.5rem;
+  position: relative;
+  padding-left: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media screen and (max-width: 1050px) {
+  .himikawaareaBox div ul li:first-child,
+  .nagoyaareaBox div ul li:first-child,
+  .nimikawaareaBox div ul li:first-child {
+    padding-left: 3rem;
   }
-  .pc.tab {
-    display: none;
+}
+.himikawaareaBox div ul li:first-child:before,
+.nagoyaareaBox div ul li:first-child:before,
+.nimikawaareaBox div ul li:first-child:before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 23px;
+  height: 23px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: #46539c;
+  border-radius: 100%;
+  color: #fff;
+}
+.himikawaareaBox div ul li:first-child.light:before,
+.nagoyaareaBox div ul li:first-child.light:before,
+.nimikawaareaBox div ul li:first-child.light:before {
+  background: var(--main_green);
+}
+.himikawaareaBox div ul li:first-child.ms:before,
+.nagoyaareaBox div ul li:first-child.ms:before,
+.nimikawaareaBox div ul li:first-child.ms:before {
+  background: #265c9e;
+}
+.himikawaareaBox div ul li:first-child.tc:before,
+.nagoyaareaBox div ul li:first-child.tc:before,
+.nimikawaareaBox div ul li:first-child.tc:before {
+  background: #000;
+}
+.himikawaareaBox div ul li:first-child.mf:before,
+.nagoyaareaBox div ul li:first-child.mf:before,
+.nimikawaareaBox div ul li:first-child.mf:before {
+  background: #d75a00;
+}
+.himikawaareaBox div ul li:first-child.fit:before,
+.nagoyaareaBox div ul li:first-child.fit:before,
+.nimikawaareaBox div ul li:first-child.fit:before {
+  background: #682882;
+}
+.himikawaareaBox div ul li:first-child.no1:before,
+.nagoyaareaBox div ul li:first-child.no1:before,
+.nimikawaareaBox div ul li:first-child.no1:before {
+  content: "1";
+}
+.himikawaareaBox div ul li:first-child.no2:before,
+.nagoyaareaBox div ul li:first-child.no2:before,
+.nimikawaareaBox div ul li:first-child.no2:before {
+  content: "2";
+}
+.himikawaareaBox div ul li:first-child.no3:before,
+.nagoyaareaBox div ul li:first-child.no3:before,
+.nimikawaareaBox div ul li:first-child.no3:before {
+  content: "3";
+}
+.himikawaareaBox div ul li:first-child.no4:before,
+.nagoyaareaBox div ul li:first-child.no4:before,
+.nimikawaareaBox div ul li:first-child.no4:before {
+  content: "4";
+}
+.himikawaareaBox div ul li:first-child.no5:before,
+.nagoyaareaBox div ul li:first-child.no5:before,
+.nimikawaareaBox div ul li:first-child.no5:before {
+  content: "5";
+}
+.himikawaareaBox div ul li:first-child.no6:before,
+.nagoyaareaBox div ul li:first-child.no6:before,
+.nimikawaareaBox div ul li:first-child.no6:before {
+  content: "6";
+}
+.himikawaareaBox div ul li:first-child.no7:before,
+.nagoyaareaBox div ul li:first-child.no7:before,
+.nimikawaareaBox div ul li:first-child.no7:before {
+  content: "7";
+}
+.himikawaareaBox div ul li:first-child.no8:before,
+.nagoyaareaBox div ul li:first-child.no8:before,
+.nimikawaareaBox div ul li:first-child.no8:before {
+  content: "8";
+}
+.himikawaareaBox div ul li:first-child.no9:before,
+.nagoyaareaBox div ul li:first-child.no9:before,
+.nimikawaareaBox div ul li:first-child.no9:before {
+  content: "9";
+}
+.himikawaareaBox div ul li:first-child.no10:before,
+.nagoyaareaBox div ul li:first-child.no10:before,
+.nimikawaareaBox div ul li:first-child.no10:before {
+  content: "10";
+}
+.himikawaareaBox div ul li:first-child.no11:before,
+.nagoyaareaBox div ul li:first-child.no11:before,
+.nimikawaareaBox div ul li:first-child.no11:before {
+  content: "11";
+}
+.himikawaareaBox div ul li:first-child.no12:before,
+.nagoyaareaBox div ul li:first-child.no12:before,
+.nimikawaareaBox div ul li:first-child.no12:before {
+  content: "12";
+}
+.himikawaareaBox div ul li:first-child.no13:before,
+.nagoyaareaBox div ul li:first-child.no13:before,
+.nimikawaareaBox div ul li:first-child.no13:before {
+  content: "13";
+}
+.himikawaareaBox div ul li:first-child.no14:before,
+.nagoyaareaBox div ul li:first-child.no14:before,
+.nimikawaareaBox div ul li:first-child.no14:before {
+  content: "14";
+}
+.himikawaareaBox div ul li:first-child.no15:before,
+.nagoyaareaBox div ul li:first-child.no15:before,
+.nimikawaareaBox div ul li:first-child.no15:before {
+  content: "15";
+}
+.himikawaareaBox div ul li:first-child.no16:before,
+.nagoyaareaBox div ul li:first-child.no16:before,
+.nimikawaareaBox div ul li:first-child.no16:before {
+  content: "16";
+}
+.himikawaareaBox div ul li:first-child.no17:before,
+.nagoyaareaBox div ul li:first-child.no17:before,
+.nimikawaareaBox div ul li:first-child.no17:before {
+  content: "17";
+}
+.himikawaareaBox div ul li:first-child.no18:before,
+.nagoyaareaBox div ul li:first-child.no18:before,
+.nimikawaareaBox div ul li:first-child.no18:before {
+  content: "18";
+}
+.himikawaareaBox div ul li:first-child.no19:before,
+.nagoyaareaBox div ul li:first-child.no19:before,
+.nimikawaareaBox div ul li:first-child.no19:before {
+  content: "19";
+}
+.himikawaareaBox div ul li:first-child.no20:before,
+.nagoyaareaBox div ul li:first-child.no20:before,
+.nimikawaareaBox div ul li:first-child.no20:before {
+  content: "20";
+}
+.himikawaareaBox div ul li:first-child.no21:before,
+.nagoyaareaBox div ul li:first-child.no21:before,
+.nimikawaareaBox div ul li:first-child.no21:before {
+  content: "21";
+}
+.himikawaareaBox div ul li:first-child.no22:before,
+.nagoyaareaBox div ul li:first-child.no22:before,
+.nimikawaareaBox div ul li:first-child.no22:before {
+  content: "22";
+}
+.himikawaareaBox div ul li:first-child.no23:before,
+.nagoyaareaBox div ul li:first-child.no23:before,
+.nimikawaareaBox div ul li:first-child.no23:before {
+  content: "23";
+}
+.himikawaareaBox div ul li:first-child.no24:before,
+.nagoyaareaBox div ul li:first-child.no24:before,
+.nimikawaareaBox div ul li:first-child.no24:before {
+  content: "24";
+}
+.himikawaareaBox div ul li:first-child.no25:before,
+.nagoyaareaBox div ul li:first-child.no25:before,
+.nimikawaareaBox div ul li:first-child.no25:before {
+  content: "25";
+}
+.himikawaareaBox div ul li:first-child.no26:before,
+.nagoyaareaBox div ul li:first-child.no26:before,
+.nimikawaareaBox div ul li:first-child.no26:before {
+  content: "26";
+}
+.himikawaareaBox div ul li:first-child.no27:before,
+.nagoyaareaBox div ul li:first-child.no27:before,
+.nimikawaareaBox div ul li:first-child.no27:before {
+  content: "27";
+}
+.himikawaareaBox div ul li:first-child.no28:before,
+.nagoyaareaBox div ul li:first-child.no28:before,
+.nimikawaareaBox div ul li:first-child.no28:before {
+  content: "28";
+}
+.himikawaareaBox div ul li:nth-child(2),
+.nagoyaareaBox div ul li:nth-child(2),
+.nimikawaareaBox div ul li:nth-child(2) {
+  font-size: 14px;
+  text-align: left;
+  line-height: 2rem;
+}
+.himikawaareaBox div ul li:last-child a,
+.nagoyaareaBox div ul li:last-child a,
+.nimikawaareaBox div ul li:last-child a {
+  color: #000;
+}
+.himikawaareaBox div ul li:last-child p,
+.nagoyaareaBox div ul li:last-child p,
+.nimikawaareaBox div ul li:last-child p {
+  text-align: center;
+  width: 90%;
+  border: 1px solid;
+  border-radius: 25px;
+  font-weight: bold;
+  margin-top: 3%;
+  font-size: 15px;
+  padding: 2%;
+}
+.himikawaareaBox div ul li:last-child p:hover,
+.nagoyaareaBox div ul li:last-child p:hover,
+.nimikawaareaBox div ul li:last-child p:hover {
+  background: #e3dd68;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 768px) {
+  .himikawaareaBox div ul li:last-child p,
+  .nagoyaareaBox div ul li:last-child p,
+  .nimikawaareaBox div ul li:last-child p {
+    width: 80%;
+    margin: 3% auto;
   }
-  .sp {
-    display: block;
+}
+@media screen and (max-width: 768px) {
+  .himikawaareaBox div,
+  .nagoyaareaBox div,
+  .nimikawaareaBox div {
+    width: 100%;
   }
-  .mw {
-    width: 90%;
-  }
-  .mws {
-    width: 84%;
+  .himikawaareaBox div ul li,
+  .nagoyaareaBox div ul li,
+  .nimikawaareaBox div ul li {
+    padding: 0 5%;
   }
 }
 
