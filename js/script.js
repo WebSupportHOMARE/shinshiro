@@ -33,28 +33,6 @@ if (fvFloat) {
   );
 }
 
-/* fv-float PC位置設定（h1 + mv-video の真下）
-	--------------------------------------------------------- */
-function setFvFloatTop() {
-  const fvFloat = document.getElementById("fv-float");
-  if (!fvFloat) return;
-
-  if (window.innerWidth >= 751) {
-    const h1 = document.querySelector("#mv-area h1");
-    const mvVideo = document.querySelector(".mv-video");
-    if (h1 && mvVideo) {
-      fvFloat.style.top = h1.offsetHeight + mvVideo.offsetHeight + "px";
-    }
-    fvFloat.style.bottom = "";
-  } else {
-    fvFloat.style.top = "";
-    fvFloat.style.bottom = "";
-  }
-}
-
-window.addEventListener("load", setFvFloatTop);
-window.addEventListener("resize", setFvFloatTop);
-
 /* header高さ取得
 	--------------------------------------------------------- */
 function setHeaderHeight() {
