@@ -68,8 +68,63 @@
     <header class="header">
       <div class="tb-pc header-pc">
         <p class="logo">
-          <img src="./img/ai-logo.png" alt="アイレクス AIジム24" />
+          <a class="#">
+            <img src="./img/ai-logo.png" alt="アイレクス AIジム24" />
+          </a>
         </p>
+
+        <div class="campaign__btns">
+          <div class="campaign__btns__line comSec__btn">
+            <a
+              href="https://lin.ee/O67jOv2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              友だち追加はこちら
+              <img
+                src="./img/right-arrow.svg"
+                alt=""
+                class="campaign__btns__web__arrow"
+              />
+            </a>
+          </div>
+
+          <div class="campaign__btns__web comSec__btn">
+            <a href="#">
+              WEB入会手続きはこちら
+              <img
+                src="./img/right-arrow.svg"
+                alt=""
+                class="campaign__btns__web__arrow"
+              />
+            </a>
+          </div>
+        </div>
+
+        <button class="spmenu" aria-label="メニューを開く">
+          <span class="spmenu__icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="spmenu__text">
+            <span class="spmenu__text--menu">MENU</span>
+            <span class="spmenu__text--close">CLOSE</span>
+          </span>
+        </button>
+
+        <nav class="spnav" id="spnav">
+          <ul class="spnav__list">
+            <li><a href="#concept">AIジムとは</a></li>
+            <li><a href="#point">AIジム ここがポイント!</a></li>
+            <li><a href="#recommend">AIジム こんな人におススメ!</a></li>
+            <li><a href="#support">AIサポート</a></li>
+            <li><a href="#machine">ジムマシン</a></li>
+            <li><a href="#price">料金プラン</a></li>
+            <li><a href="#shopinfo-area">店舗情報</a></li>
+            <!-- <li><a href="#">お問い合わせ</a></li> -->
+          </ul>
+        </nav>
       </div>
     </header>
 
@@ -105,6 +160,21 @@
           >
             <img src="./img/line-bannar.png" alt="LINEで友だち追加はこちら" />
           </a>
+
+          <div class="fv-float__sp">
+            <a href="#" class="fv-float__sp__imgWrap">
+              <img src="./img/web-bannar-sp.png" alt="WEB入会手続き" />
+            </a>
+
+            <a
+              href="https://lin.ee/O67jOv2"
+              class="fv-float__sp__imgWrap"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src="./img/line-bannar-sp.png" alt="LINE友だち追加" />
+            </a>
+          </div>
         </div>
       </section>
       <!-- /#mv-area -->
@@ -121,12 +191,14 @@
 
           <div class="campaign__btns">
             <div class="campaign__btns__web comSec__btn">
-              <a href="#"
-                >WEB入会手続きはこちら<img
+              <a href="#">
+                WEB入会手続きはこちら
+                <img
                   src="./img/right-arrow.svg"
                   alt=""
                   class="campaign__btns__web__arrow"
-              /></a>
+                />
+              </a>
             </div>
 
             <div class="campaign__btns__line comSec__btn">
@@ -134,33 +206,47 @@
                 href="https://lin.ee/O67jOv2"
                 target="_blank"
                 rel="noopener noreferrer"
-                >LINE友だち追加はこちら</a
               >
+                LINE友だち追加はこちら
+                <img
+                  src="./img/right-arrow.svg"
+                  alt=""
+                  class="campaign__btns__web__arrow"
+                />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="concept-area">
+      <section class="concept-area" id="concept">
         <div class="concept-area__bg">
           <div class="concept-area__text">
             <h2 class="concept-area__title">
-              もう迷わない、<br />AIフィットネス。
+              週2回、<br
+                class="concept-area__title__br"
+              />30分の運動習慣が<br />
+              あなたの人生をも変える。
             </h2>
 
             <p class="concept-area__body">
               通勤・通学、駅利用のついでに立ち寄れる、<br
-                class="tab sp"
-              />豊橋駅改札すぐのジムが誕生。<br />AIがあなたに合わせて<br
-                class="tab sp"
-              />
-              トレーニングメニューを考案 するから、<br />何をどう運動すればいいかを考えなくていい。<br />着替え不要、短時間でOKだから、<br
-                class="tab sp"
-              />
-              時間がない日も無理なく続けられる。<br />AIと始める迷わないフィットネスライフが、<br
-                class="tab sp"
-              />
-              あなたの駅から始まります。
+                class="br1100"
+              />豊橋駅改札すぐのジムが誕生。<br />
+
+              運動しなきゃと思いながら、<br class="tab sp" />
+              なかなか続かなかった毎日も、<br />
+
+              着替え不要、短時間でOKだから、<br class="tab sp" />
+              無理なく続けられる。<br />
+
+              さらにAIが一人ひとりに合った<br class="tab sp" />
+              メニューを提案するから、<br class="br1250" />
+              何をすればいいか迷わなくていい。<br />
+
+              あなたのこれからを変える<br class="tab sp" />
+              新しいフィットネス習慣が、<br class="br1100" />
+              豊橋駅から始まります。<br />
             </p>
           </div>
         </div>
@@ -216,7 +302,7 @@
       </section>
       <!-- /.concept-area -->
 
-      <section class="point">
+      <section class="point" id="point">
         <h2 class="point__ttl flex">
           <div class="point__ttl__imgBox">
             <img
@@ -256,7 +342,9 @@
                 </h3>
 
                 <p class="point__inner__box__imgBox__txtBox__desc">
-                  「改札を出てすぐにジム」という好ポジション。<br />
+                  「改札を出てすぐにジム」という好ポジション。<br
+                    class="br__none750"
+                  />
                   今まで運動が続けられなかった人でも、今度こそ続く、駅ナカ30分で運動習慣を。
                 </p>
               </div>
@@ -289,7 +377,9 @@
                 </h3>
 
                 <p class="point__inner__box__imgBox__txtBox__desc">
-                  AIがあなたの運動メニューを毎回作成してくれる。<br />
+                  AIがあなたの運動メニューを毎回作成してくれる。<br
+                    class="br__none750"
+                  />
                   何をどうすればいいかわからない人も迷わず、無理なく運動を続けられる。
                 </p>
               </div>
@@ -297,7 +387,7 @@
           </div>
 
           <div class="point__inner__box">
-            <div class="point__inner__box__imgBox --point01">
+            <div class="point__inner__box__imgBox --point03">
               <picture>
                 <source
                   media="(max-width: 750px)"
@@ -331,13 +421,13 @@
         </div>
       </section>
 
-      <section class="recommend comSec">
+      <section class="recommend comSec" id="recommend">
         <div class="recommend__inner">
           <div class="recommend__ttlWrap">
             <div class="recommend__logo">
               <img src="./img/ai logo2.png" alt="ilex AI GYM24" />
             </div>
-            <p class="recommend__ttl">こんな人にお<br class="sp">ススメ!</p>
+            <p class="recommend__ttl">こんな人におススメ!</p>
           </div>
 
           <div class="recommend__grid">
@@ -345,42 +435,108 @@
               <div class="recommend__item__img">
                 <img src="./img/reccomend1.png" alt="" />
               </div>
-              <p class="recommend__item__desc">通勤通学途中で<br>サクッと効果的に<br>運動したい人</p>
+              <p class="recommend__item__desc">
+                通勤通学途中で<br />サクッと効果的に<br />運動したい人
+              </p>
             </div>
 
             <div class="recommend__item">
               <div class="recommend__item__img">
                 <img src="./img/reccomend2.png" alt="" />
               </div>
-              <p class="recommend__item__desc">今までジムを<br>続けられなかった人</p>
+              <p class="recommend__item__desc">
+                今までジムを<br />続けられなかった人
+              </p>
             </div>
 
             <div class="recommend__item">
               <div class="recommend__item__img">
                 <img src="./img/reccomend3.png" alt="" />
               </div>
-              <p class="recommend__item__desc">運動不足が<br>気になる人</p>
+              <p class="recommend__item__desc">運動不足が<br />気になる人</p>
             </div>
 
             <div class="recommend__item">
               <div class="recommend__item__img">
                 <img src="./img/reccomend4.png" alt="" />
               </div>
-              <p class="recommend__item__desc">最近体力が<br>落ちたと感じる人</p>
-            </div>
-
-            <div class="recommend__item">
-              <div class="recommend__item__img">
-                <img src="./img/reccomend5.png" alt="" />
-              </div>
-              <p class="recommend__item__desc">健康診断の<br>数値が気になる人</p>
+              <p class="recommend__item__desc">
+                最近体力が<br />落ちたと感じる人
+              </p>
             </div>
 
             <div class="recommend__item">
               <div class="recommend__item__img">
                 <img src="./img/reccomend6.png" alt="" />
               </div>
-              <p class="recommend__item__desc">肩こり・腰痛を<br>改善したい人</p>
+              <p class="recommend__item__desc">
+                健康診断の<br />数値が気になる人
+              </p>
+            </div>
+
+            <div class="recommend__item">
+              <div class="recommend__item__img">
+                <img src="./img/reccomend5.png" alt="" />
+              </div>
+              <p class="recommend__item__desc">
+                肩こり・腰痛を<br />改善したい人
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper recommend__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide recommend__item">
+                <div class="recommend__item__img">
+                  <img src="./img/reccomend1.png" alt="" />
+                </div>
+                <p class="recommend__item__desc">
+                  通勤通学途中で<br />サクッと効果的に<br />運動したい人
+                </p>
+              </div>
+
+              <div class="swiper-slide recommend__item">
+                <div class="recommend__item__img">
+                  <img src="./img/reccomend2.png" alt="" />
+                </div>
+                <p class="recommend__item__desc">
+                  今までジムを<br />続けられ<br />なかった人
+                </p>
+              </div>
+
+              <div class="swiper-slide recommend__item">
+                <div class="recommend__item__img">
+                  <img src="./img/reccomend3.png" alt="" />
+                </div>
+                <p class="recommend__item__desc">運動不足が<br />気になる人</p>
+              </div>
+
+              <div class="swiper-slide recommend__item">
+                <div class="recommend__item__img">
+                  <img src="./img/reccomend4.png" alt="" />
+                </div>
+                <p class="recommend__item__desc">
+                  最近体力が<br />落ちたと<br />感じる人
+                </p>
+              </div>
+
+              <div class="swiper-slide recommend__item">
+                <div class="recommend__item__img">
+                  <img src="./img/reccomend6.png" alt="" />
+                </div>
+                <p class="recommend__item__desc">
+                  健康診断の<br />数値が<br />気になる人
+                </p>
+              </div>
+
+              <div class="swiper-slide recommend__item">
+                <div class="recommend__item__img">
+                  <img src="./img/reccomend5.png" alt="" />
+                </div>
+                <p class="recommend__item__desc">
+                  肩こり・腰痛を<br />改善したい人
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -400,7 +556,7 @@
         </div>
       </section> -->
 
-      <section class="support comStripeBg">
+      <section class="support comStripeBg" id="support">
         <div class="support__ttl comSec__imgTtl">
           <div class="support__ttl__bg comSec__imgTtl__bg">
             <img src="./img/support-image.png" alt="" />
@@ -416,11 +572,19 @@
         </div>
 
         <div class="support__inner">
-          <p class="support__lead">あなた専用の30分をAIが毎日カスタマイズ。</p>
+          <p class="support__lead">
+            あなた専用の30分を<br class="br750" />AIが毎日カスタマイズ。
+          </p>
 
           <p class="support__desc">
-            毎日変わるコンディションに、毎日最適なトレーニングを。<br />
-            AIが心拍数や過去のデータをもとに、その日のメニューをまるごと提案します。<br />
+            毎日変わるコンディションに、<br
+              class="br750"
+            />毎日最適なトレーニングを。<br />
+
+            AIが心拍数や過去のデータをもとに、<br
+              class="br750"
+            />その日のメニューをまるごと提案します。<br />
+
             頑張りすぎず、でも確実に。あなたのペースで続けられる仕組みがここにあります。
           </p>
 
@@ -474,11 +638,71 @@
             </div>
           </div>
 
+          <div class="support__swiper swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide support__card">
+                <div class="support__card__img">
+                  <img src="./img/support-card1.png" alt="KIOSK" />
+                </div>
+
+                <p class="support__card__ttl">KIOSK</p>
+
+                <p class="support__card__desc">
+                  来館時に専用のバンドをかざしてチェックイン。自動であなたの本日のメニューを画面に表示し案内してくれます。アプリにも表示されるため携帯を見ながらメニューを確認することもできます。
+                </p>
+              </div>
+
+              <div class="swiper-slide support__card">
+                <div class="support__card__img">
+                  <img src="./img/support-card2.png" alt="GO TEST" />
+                </div>
+
+                <p class="support__card__ttl">GO TEST</p>
+
+                <p class="support__card__desc">
+                  筋力、柔軟性、バランス、体重、体組成、血圧を測ることができ、現在の身体の状態を正確に把握。データはアプリに自動記録されメニュー作成に活かされます。
+                </p>
+              </div>
+
+              <div class="swiper-slide support__card">
+                <div class="support__card__img">
+                  <img src="./img/support-card3.png" alt="MIRROR" />
+                </div>
+
+                <p class="support__card__ttl">MIRROR</p>
+
+                <p class="support__card__desc">
+                  ミラーに映しだされる150種類以上のエクササイズ動画をみながら、部位別のストレッチやダンベルトレーニングが可能。初心者の方でも簡単に運動ができます。
+                </p>
+              </div>
+
+              <div class="swiper-slide support__card">
+                <div class="support__card__img">
+                  <img src="./img/support-card4.png" alt="Go Flex" />
+                </div>
+
+                <p class="support__card__ttl">Go Flex</p>
+
+                <p class="support__card__desc">
+                  100以上あるストレッチエクササイズから今日のあなたに合うメニューをバランスよく選定。首・肩・腰・背中など部位別にカスタマイズも可能。全身の柔軟性アップと筋肉の緊張緩和を通じて、身体の健康を促進します。
+                </p>
+              </div>
+            </div>
+
+            <div class="support__prev">
+              <img src="./img/support-prev.png" alt="前へ" />
+            </div>
+
+            <div class="support__next">
+              <img src="./img/support-next.png" alt="次へ" />
+            </div>
+          </div>
+
           <p class="support__notes">※画像はイメージです。</p>
         </div>
       </section>
 
-      <section class="machine comStripeBg">
+      <section class="machine comStripeBg" id="machine">
         <div class="machine__ttl comSec__imgTtl">
           <div class="machine__ttl__bg comSec__imgTtl__bg">
             <img src="./img/DRAX-image.png" alt="DRAXマシン" />
@@ -493,82 +717,59 @@
           </div>
         </div>
 
-        <div class="machine__inner">
-          <p class="machine__lead">
-            マシンは韓国DRAXの最上級マシン。<br />全身をカバーするストレングスマシンに、有酸素運動も完備。
+        <div class="machine__intro">
+          <p class="machine__intro__h1">
+            マシンは全て最新・最先端の韓国メーカーDRAXマシン<br />全14台のストレングスマシンと全10台の有酸素マシンを完備
           </p>
-
-          <p class="machine__desc">
-            初めての方でも安心して使えるラインナップで、<br />あなたの目的に合ったトレーニングがここで完結します。<br />もちろん、ハードなトレーニングも対応可能。短時間で部位別の集中トレーニングも可能。
+          <p class="machine__intro__p">
+            ストレングスマシンにもAI機能を搭載。<br />初心者から上級まで幅広い層の方が使える最上級マシン。<br />ガイダンスモニター付きで重量・回数設定もAIが指示してくれるので安心してトレーニングができます。<br />トレーニングの記録は自動でアプリ内へ記録されます。
           </p>
         </div>
 
-        <div class="machine__swiper swiper">
-          <ul class="machine__swiper__list swiper-wrapper">
-            <li class="machine__swiper__item swiper-slide">
-              <div class="machine__swiper__item__img">
-                <img src="./img/machine-image.png" alt="" />
-              </div>
+        <div class="machine__cards">
+          <div class="machine__card">
+            <div class="machine__card__left">
+              <img src="./img/gym-card1.png" alt="有酸素マシン" />
+            </div>
 
-              <p class="machine__swiper__item__ttl">ダミーダミーダミーダミー</p>
-
-              <p class="machine__swiper__item__desc">
-                ダミーです。エクササイズ毎にフィードバックを送ることで、その内容も次回以降のAIプログラム作成に反映します。
+            <div class="machine__card__right">
+              <p class="machine__card__cat">有酸素マシン</p>
+              <div class="machine__card__line"></div>
+              <p class="machine__card__desc">
+                最新のマシンでTVやYoutubeを見ながら、効率的に安全なウエイトダウンができます。
               </p>
-            </li>
-
-            <li class="machine__swiper__item swiper-slide">
-              <div class="machine__swiper__item__img">
-                <img src="./img/machine-image.png" alt="" />
+              <div class="machine__card__img">
+                <img src="./img/gym-card1-img.png" alt="" />
               </div>
-
-              <p class="machine__swiper__item__ttl">ダミーダミーダミーダミー</p>
-
-              <p class="machine__swiper__item__desc">
-                ダミーです。毎日個人に最適化されたメニューを提供。心拍数を計測することで、より正確なプログラムが生成されます。
+              <p class="machine__card__note">
+                最新技術で高度なインテリジェント<br />心拍システムを内蔵。
               </p>
-            </li>
+            </div>
+          </div>
 
-            <li class="machine__swiper__item swiper-slide">
-              <div class="machine__swiper__item__img">
-                <img src="./img/machine-image.png" alt="" />
+          <div class="machine__card">
+            <div class="machine__card__left">
+              <img src="./img/gym-card2.png" alt="ストレングスマシン" />
+            </div>
+
+            <div class="machine__card__right">
+              <p class="machine__card__cat">ストレングスマシン</p>
+              <div class="machine__card__line"></div>
+              <p class="machine__card__desc">
+                カラダの柔軟性を高めるストレッチマシンを導入。怪我をしにくいカラダをつくります。
+              </p>
+              <div class="machine__card__img">
+                <img src="./img/gym-card2-img.png" alt="" />
               </div>
-
-              <p class="machine__swiper__item__ttl">ダミーダミーダミーダミー</p>
-
-              <p class="machine__swiper__item__desc">
-                ダミーです。ワークアウト後は詳細データを表示。これらのデータは、ユーザーのアプリにも保存、蓄積されていきます。
+              <p class="machine__card__note">
+                映像付き解説により、初心者の方でも安心。トレーニング記録（重量・回数）も自動登録されます。
               </p>
-            </li>
-
-            <li class="machine__swiper__item swiper-slide">
-              <div class="machine__swiper__item__img">
-                <img src="./img/machine-image.png" alt="" />
-              </div>
-
-              <p class="machine__swiper__item__ttl">ダミーダミーダミーダミー</p>
-
-              <p class="machine__swiper__item__desc">
-                ダミーです。ワークアウト後は詳細データを表示。これらのデータは、ユーザーのアプリにも保存、蓄積されていきます。
-              </p>
-            </li>
-
-            <li class="machine__swiper__item swiper-slide">
-              <div class="machine__swiper__item__img">
-                <img src="./img/machine-image.png" alt="" />
-              </div>
-
-              <p class="machine__swiper__item__ttl">ダミーダミーダミーダミー</p>
-
-              <p class="machine__swiper__item__desc">
-                ダミーです。全身をカバーするラインナップで、どんなトレーニング目的にも対応できます。
-              </p>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="price comSec comStripeBg">
+      <section class="price comSec comStripeBg" id="price">
         <div class="price__inner">
           <div class="price__ttl comSec__ttl">
             <p class="price__ttl__en comSec__ttl__en">PRICE</p>

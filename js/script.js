@@ -33,6 +33,21 @@ if (fvFloat) {
   );
 }
 
+/* MV Swiper
+	--------------------------------------------------------- */
+const swiper_mv = new Swiper(".mv-swiper", {
+  loop: true,
+  pagination: {
+    el: ".mv-swiper-pagination",
+    clickable: true,
+  },
+  slidesPerView: 1,
+  speed: 1000,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+});
 /* header高さ取得
 	--------------------------------------------------------- */
 function setHeaderHeight() {
@@ -46,6 +61,37 @@ function setHeaderHeight() {
 
 window.addEventListener("load", setHeaderHeight);
 window.addEventListener("resize", setHeaderHeight);
+
+/* Recommend Swiper
+	--------------------------------------------------------- */
+window.addEventListener("DOMContentLoaded", () => {
+  const swiperRecommend = new Swiper(".recommend__swiper", {
+    loop: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    speed: 10000,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+    freeMode: false,
+  });
+});
+
+/* Support Swiper
+	--------------------------------------------------------- */
+window.addEventListener("DOMContentLoaded", () => {
+  const swiperSupport = new Swiper(".support__swiper", {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 70,
+    speed: 600,
+    navigation: {
+      nextEl: ".support__next",
+      prevEl: ".support__prev",
+    },
+  });
+});
 
 /* Machine Swiper
 	--------------------------------------------------------- */
